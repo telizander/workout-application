@@ -1,0 +1,721 @@
+{
+  "program": {
+    "title": "KB AND SANDBAG 8-WEEK PLAN",
+    "subtitle": "Streamlined for 45-Minute Sessions",
+    "weeks": {
+      "1": {
+        "phase": "DENSITY FOUNDATION",
+        "goal": "Build work capacity and movement quality",
+        "days": [
+          {
+            "day": 1,
+            "name": "Heavy Press",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 8'@16",
+                  "Arm Circles :60@BW",
+                  "Band Pull-Apart :60@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "exercises": [
+                  "KB Clean + Press 5@16+16"
+                ]
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "Ring Dip 5-6@BW"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "KB Press 6'@24",
+                  "Ring Push-up 10@BW",
+                  "SB Bear Hug Hold :20@150"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :180@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Lower Power",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :60@BW",
+                  "Leg Swings :60@BW"
+                ]
+              },
+              {
+                "header": "5A150s",
+                "note": "Drop to 100lb if form breaks",
+                "exercises": [
+                  "SB Clean + Front Squat 3@150"
+                ]
+              },
+              {
+                "header": "6B90s",
+                "exercises": [
+                  "KB Swing 12@24"
+                ]
+              },
+              {
+                "header": "3C90s",
+                "exercises": [
+                  "SB Shoulder Carry 20'@150",
+                  "KB Farmer Walk 40@16+16",
+                  "SB Bear Hug Carry 40@100"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :180@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Heavy Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Band Pull-Apart :60@BW",
+                  "Dead Hang :30@BW",
+                  "Scapula Pull :30@BW"
+                ]
+              },
+              {
+                "header": "5A120s",
+                "exercises": [
+                  "Ring Pull-up 6-8@BW"
+                ]
+              },
+              {
+                "header": "4B60s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "SB Shouldering 3'@150",
+                  "Ring L-Sit Hold :15@BW",
+                  "Mace Gravestone 8@15"
+                ]
+              },
+              {
+                "header": "3D60s",
+                "note": "Left-side coordination focus",
+                "exercises": [
+                  "KB Snatch 5 LEFT@16",
+                  "KB Snatch 5 RIGHT@16"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Mace360 Transition Practice :120@15"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Flow & Conditioning",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :180@BW",
+                  "Mace Mobility :120@15"
+                ]
+              },
+              {
+                "header": "12A60s",
+                "note": "EMOM: Odd minutes work, Even minutes rest",
+                "exercises": [
+                  "KB Snatch 6'@16"
+                ]
+              },
+              {
+                "header": "4B60s",
+                "exercises": [
+                  "KB Lateral Raise 10'@16",
+                  "Mace Pressout 8'@15",
+                  "Ring Support Hold :15@BW"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :180@BW",
+                  "Mace360 Transition Practice :120@15"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "2": {
+        "phase": "DENSITY FOUNDATION",
+        "goal": "Increase volume and movement quality",
+        "days": [
+          {
+            "day": 1,
+            "name": "Heavy Press",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 8'@16",
+                  "Arm Circles :60@BW",
+                  "Band Pull-Apart :60@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "exercises": [
+                  "KB Clean + Press 6@16+16"
+                ]
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "Ring Dip 7-8@BW"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "KB Press 6'@24",
+                  "Ring Push-up 10@BW",
+                  "SB Bear Hug Hold :20@150"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :180@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Lower Power",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :60@BW",
+                  "Leg Swings :60@BW"
+                ]
+              },
+              {
+                "header": "5A150s",
+                "note": "Drop to 100lb if form breaks",
+                "exercises": [
+                  "SB Clean + Front Squat 4@150"
+                ]
+              },
+              {
+                "header": "6B90s",
+                "exercises": [
+                  "KB Swing 12@24"
+                ]
+              },
+              {
+                "header": "3C90s",
+                "exercises": [
+                  "SB Shoulder Carry 20'@150",
+                  "KB Farmer Walk 40@16+16",
+                  "SB Bear Hug Carry 40@100"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :180@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Heavy Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Band Pull-Apart :60@BW",
+                  "Dead Hang :30@BW",
+                  "Scapula Pull :30@BW"
+                ]
+              },
+              {
+                "header": "5A120s",
+                "exercises": [
+                  "Ring Pull-up 8-10@BW"
+                ]
+              },
+              {
+                "header": "4B60s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "SB Shouldering 3'@150",
+                  "Ring L-Sit Hold :15@BW",
+                  "Mace Gravestone 8@15"
+                ]
+              },
+              {
+                "header": "3D60s",
+                "note": "Left-side coordination focus",
+                "exercises": [
+                  "KB Snatch 5 LEFT@16",
+                  "KB Snatch 5 RIGHT@16"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Mace360 Transition Practice :120@15"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Flow & Conditioning",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :180@BW",
+                  "Mace Mobility :120@15"
+                ]
+              },
+              {
+                "header": "12A60s",
+                "note": "EMOM: Odd minutes work, Even minutes rest",
+                "exercises": [
+                  "KB Snatch 6'@16"
+                ]
+              },
+              {
+                "header": "4B60s",
+                "exercises": [
+                  "KB Lateral Raise 10'@16",
+                  "Mace Pressout 8'@15",
+                  "Ring Support Hold :15@BW"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :180@BW",
+                  "Mace360 Transition Practice :120@15"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "3": {
+        "phase": "DENSITY FOUNDATION",
+        "goal": "Increase density and refine technique",
+        "days": [
+          {
+            "day": 1,
+            "name": "Heavy Press",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 8'@16",
+                  "Arm Circles :60@BW",
+                  "Band Pull-Apart :60@BW"
+                ]
+              },
+              {
+                "header": "7A150s",
+                "exercises": [
+                  "KB Clean + Press 5@16+16"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "Ring Dip 6-8@BW"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "KB Press 8'@24",
+                  "Ring Push-up 12@BW",
+                  "SB Bear Hug Hold :30@150"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :180@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Lower Power",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :60@BW",
+                  "Leg Swings :60@BW"
+                ]
+              },
+              {
+                "header": "5A180s",
+                "note": "Drop to 100lb if form breaks",
+                "exercises": [
+                  "SB Clean + Front Squat 5@150"
+                ]
+              },
+              {
+                "header": "6B90s",
+                "exercises": [
+                  "KB Swing 15@24"
+                ]
+              },
+              {
+                "header": "4C90s",
+                "exercises": [
+                  "SB Shoulder Carry 30'@150",
+                  "KB Farmer Walk 50@16+16",
+                  "SB Zercher Carry 30@150"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :180@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Heavy Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Band Pull-Apart :60@BW",
+                  "Dead Hang :30@BW",
+                  "Scapula Pull :30@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "exercises": [
+                  "Ring Pull-up 6-8@BW"
+                ]
+              },
+              {
+                "header": "4B60s",
+                "exercises": [
+                  "KB Gorilla Row 10'@24"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "SB Shouldering 4'@150",
+                  "Ring L-Sit Hold :20@BW",
+                  "Mace Gravestone 10@15"
+                ]
+              },
+              {
+                "header": "3D60s",
+                "note": "Left-side coordination focus",
+                "exercises": [
+                  "KB Snatch 5 LEFT@16",
+                  "KB Snatch 5 RIGHT@16"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Mace360 Transition Practice :120@15"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Flow & Conditioning",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :180@BW",
+                  "Mace Mobility :120@15"
+                ]
+              },
+              {
+                "header": "12A60s",
+                "note": "EMOM: Odd minutes work, Even minutes rest",
+                "exercises": [
+                  "KB Snatch 8'@16"
+                ]
+              },
+              {
+                "header": "4B60s",
+                "exercises": [
+                  "KB Lateral Raise 12'@16",
+                  "Mace Pressout 10'@15",
+                  "Ring Support Hold :20@BW"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :180@BW",
+                  "Mace360 Transition Practice :120@15"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "4": {
+        "phase": "DENSITY FOUNDATION",
+        "goal": "Peak density and movement mastery",
+        "days": [
+          {
+            "day": 1,
+            "name": "Heavy Press",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 8'@16",
+                  "Arm Circles :60@BW",
+                  "Band Pull-Apart :60@BW"
+                ]
+              },
+              {
+                "header": "7A150s",
+                "exercises": [
+                  "KB Clean + Press 6@16+16"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "Ring Dip 8-10@BW"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "KB Press 8'@24",
+                  "Ring Push-up 12@BW",
+                  "SB Bear Hug Hold :30@150"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :180@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Lower Power",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :60@BW",
+                  "Leg Swings :60@BW"
+                ]
+              },
+              {
+                "header": "6A180s",
+                "note": "Drop to 100lb if form breaks",
+                "exercises": [
+                  "SB Clean + Front Squat 4@150"
+                ]
+              },
+              {
+                "header": "6B90s",
+                "exercises": [
+                  "KB Swing 15@24"
+                ]
+              },
+              {
+                "header": "4C90s",
+                "exercises": [
+                  "SB Shoulder Carry 30'@150",
+                  "KB Farmer Walk 50@16+16",
+                  "SB Zercher Carry 30@150"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :180@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Heavy Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Band Pull-Apart :60@BW",
+                  "Dead Hang :30@BW",
+                  "Scapula Pull :30@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "exercises": [
+                  "Ring Pull-up 8-10@BW"
+                ]
+              },
+              {
+                "header": "4B60s",
+                "exercises": [
+                  "KB Gorilla Row 10'@24"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "SB Shouldering 4'@150",
+                  "Ring L-Sit Hold :20@BW",
+                  "Mace Gravestone 10@15"
+                ]
+              },
+              {
+                "header": "3D60s",
+                "note": "Left-side coordination focus",
+                "exercises": [
+                  "KB Snatch 5 LEFT@16",
+                  "KB Snatch 5 RIGHT@16"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Mace360 Transition Practice :120@15"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Flow & Conditioning",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :180@BW",
+                  "Mace Mobility :120@15"
+                ]
+              },
+              {
+                "header": "12A60s",
+                "note": "EMOM: Odd minutes work, Even minutes rest",
+                "exercises": [
+                  "KB Snatch 8'@16"
+                ]
+              },
+              {
+                "header": "4B60s",
+                "exercises": [
+                  "KB Lateral Raise 12'@16",
+                  "Mace Pressout 10'@15",
+                  "Ring Support Hold :20@BW"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :180@BW",
+                  "Mace360 Transition Practice :120@15"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "5": {
+        "phase": "POWER DEFINITION",
+        "goal": "Develop explosive power and movement quality",
+        "days": [
+          {
+            "day": 1,
+            "name": "Explosive Press",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Clap Push-up :60@BW",
+                  "Plyo Push-up :60@BW",
+                  "Arm Prep :120@BW"
+                ]
+              },
+              {
+                "header": "6A90s",
+       
