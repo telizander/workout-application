@@ -53,6 +53,29 @@ h1 {
     padding: 2rem 1.5rem;
 }
 
+/* ===== PROGRAM NOTES ===== */
+
+.program-notes {
+    background-color: #0a0a0a;
+    border: 1px solid #1f1f1f;
+    border-left: 3px solid #dc2626;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.notes-label {
+    font-size: 0.75rem;
+    color: #dc2626;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.notes-body {
+    font-size: 0.875rem;
+    color: #a3a3a3;
+    line-height: 1.6;
+}
+
 .week-selector {
     margin-bottom: 2rem;
 }

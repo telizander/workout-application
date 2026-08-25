@@ -18,7 +18,16 @@ async function loadData() {
         // Set program title and subtitle
         document.getElementById('program-title').textContent = workoutData.title;
         document.getElementById('program-subtitle').textContent = workoutData.subtitle;
-        
+
+        // Program notes are optional — hide the panel when a program omits them
+        const notesPanel = document.getElementById('program-notes');
+        if (workoutData.notes) {
+            document.getElementById('program-notes-body').textContent = workoutData.notes;
+            notesPanel.classList.remove('hidden');
+        } else {
+            notesPanel.classList.add('hidden');
+        }
+
         // Default to the first week in the file
         selectedWeek = Object.keys(workoutData.weeks)[0];
 

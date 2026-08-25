@@ -40,12 +40,18 @@ The workout data file must be named `current.json` and placed in the same direct
 - `subtitle` (string): Program subtitle/description
 - `weeks` (object): Container for week objects
 
+**Optional Fields:**
+- `notes` (string): Program-wide guidance — how to run the block, load ceilings,
+  autoregulation rules. Rendered as a "PROGRAM NOTES" panel at the top of the
+  selection view. The panel is hidden entirely when this field is absent.
+
 **Example:**
 ```json
 {
   "program": {
     "title": "STALLONE BRIDGE",
     "subtitle": "6-WEEK MULTI-TOOL PREPARATION",
+    "notes": "Hold primary lifts at tested ceiling. Do not chase progression.",
     "weeks": { ... }
   }
 }
