@@ -91,6 +91,126 @@ function plural(n, word) {
   return n + ' ' + word + (n === 1 ? '' : 's');
 }
 
+/* =========================================================
+   PERSISTENCE
+   A session survives a reload, a backgrounded tab, or the
+   phone locking mid-set. Storage can throw (private mode,
+   blocked site data), so every access is guarded and the app
+   works normally when it fails.
+   ========================================================= */
+
+var STORE_KEY = 'fieldlog.session.v1';
+var SOUND_KEY = 'fieldlog.sound.v1';
+
+function storeGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+function storeSet(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* ignore */ } }
+function storeDel(k) { try { localStorage.removeItem(k); } catch (e) { /* ignore */ } }
+
+// A session only counts as started once the clock has actually moved or a
+// block has been filed, so browsing into a day and back out leaves nothing.
+function sessionHasProgress() {
+  return currentBlockIndex > 0 || blockTimes.length > 0 ||
+         laps.length > 0 || currentElapsed() > 0;
+}
+
+function saveSession() {
+  if (selectedDay === null || !program) return;
+  if (!sessionHasProgress()) { storeDel(STORE_KEY); return; }
+  storeSet(STORE_KEY, JSON.stringify({
+    title: program.title,
+    week: selectedWeek,
+    day: selectedDay,
+    blockIndex: currentBlockIndex,
+    blockTimes: blockTimes,
+    laps: laps,
+    elapsed: currentElapsed(),
+    savedAt: Date.now()
+  }));
+}
+
+function clearSession() { storeDel(STORE_KEY); }
+
+function readSession() {
+  var raw = storeGet(STORE_KEY);
+  if (!raw) return null;
+  var s;
+  try { s = JSON.parse(raw); } catch (e) { return null; }
+  if (!s || typeof s !== 'object') return null;
+
+  // A different or edited programme invalidates the saved session.
+  if (s.title !== program.title) return null;
+  var week = program.weeks[s.week];
+  if (!week) return null;
+  var day = week.days.filter(function (d) { return d.day === s.day; })[0];
+  if (!day) return null;
+  if (typeof s.blockIndex !== 'number' || s.blockIndex < 0 ||
+      s.blockIndex >= day.blocks.length) return null;
+  if (!Array.isArray(s.blockTimes) || !Array.isArray(s.laps)) return null;
+
+  s.dayData = day;
+  return s;
+}
+
+function renderResumePanel() {
+  var slot = el('resume-slot');
+  slot.innerHTML = '';
+  var s = readSession();
+  if (!s) return;
+
+  var block = s.dayData.blocks[s.blockIndex];
+  var label = block.label || parseBlockHeader(block.header).label;
+
+  var panel = document.createElement('div');
+  panel.className = 'panel panel-resume';
+  panel.innerHTML =
+    '<span class="panel-tab">In progress</span>' +
+    '<h4 class="resume-title">' + escapeHtml(s.dayData.name) + '</h4>' +
+    '<p class="resume-meta">Week ' + escapeHtml(s.week) + ' · Day ' + escapeHtml(s.day) +
+      ' — ' + escapeHtml(label) + ', block ' + (s.blockIndex + 1) +
+      ' of ' + s.dayData.blocks.length + ' · ' + clockText(s.elapsed || 0) + ' on the clock</p>' +
+    '<div class="resume-actions">' +
+      '<button class="btn btn-primary" type="button" id="resume-btn">Resume session</button>' +
+      '<button class="btn btn-ghost" type="button" id="discard-btn">Discard</button>' +
+    '</div>';
+  slot.appendChild(panel);
+
+  el('resume-btn').addEventListener('click', function () { openWorkout(s.day, s); });
+  el('discard-btn').addEventListener('click', function () {
+    clearSession();
+    slot.innerHTML = '';
+  });
+}
+
+/* =========================================================
+   SCREEN WAKE LOCK
+   Keeps the phone awake between sets. Unsupported browsers
+   simply carry on without it.
+   ========================================================= */
+
+var wakeLock = null;
+
+function showWakeFlag(on) { el('wake-flag').hidden = !on; }
+
+function acquireWakeLock() {
+  if (!('wakeLock' in navigator)) return;
+  navigator.wakeLock.request('screen').then(function (lock) {
+    wakeLock = lock;
+    showWakeFlag(true);
+    lock.addEventListener('release', function () { showWakeFlag(false); });
+  }).catch(function () {
+    // Denied, or the document was not visible. Not worth surfacing.
+    showWakeFlag(false);
+  });
+}
+
+function releaseWakeLock() {
+  if (wakeLock) {
+    wakeLock.release().catch(function () { /* ignore */ });
+    wakeLock = null;
+  }
+  showWakeFlag(false);
+}
+
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, function (c) {
     return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
@@ -127,6 +247,7 @@ function loadData() {
       renderWeekButtons();
       updatePhaseInfo();
       renderDayGrid();
+      renderResumePanel();
     })
     .catch(function (error) {
       console.error('Error loading workout data:', error);
@@ -211,11 +332,24 @@ function currentDay() {
   })[0];
 }
 
-function openWorkout(day) {
+// `restore` is a saved session from storage; omitted for a fresh start.
+// A restored session always comes back paused at its last saved time —
+// the clock never invents minutes that passed while the phone was asleep.
+function openWorkout(day, restore) {
   selectedDay = day;
-  currentBlockIndex = 0;
-  blockTimes = [];
   swReset();
+
+  if (restore) {
+    currentBlockIndex = restore.blockIndex;
+    blockTimes = restore.blockTimes.slice();
+    laps = restore.laps.slice();
+    accumulated = restore.elapsed || 0;
+    render();
+    renderLaps();
+  } else {
+    currentBlockIndex = 0;
+    blockTimes = [];
+  }
 
   var dayData = currentDay();
   setSessionChrome(true);
@@ -228,6 +362,7 @@ function openWorkout(day) {
   el('workout-view').hidden = false;
   el('action-bar').hidden = false;
   document.body.classList.add('session-open');
+  acquireWakeLock();
   window.scrollTo(0, 0);
 }
 
@@ -328,6 +463,7 @@ function advanceBlock() {
   swZero();            // new block, clock back to zero
   if (wasRunning) swStart();
   renderCurrentBlock();
+  saveSession();
   window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
 }
 
@@ -370,14 +506,20 @@ function showSummary() {
   setSessionChrome(false);
   el('action-bar').hidden = true;
   document.body.classList.remove('session-open');
+  clearSession();
+  renderResumePanel();
+  releaseWakeLock();
   window.scrollTo(0, 0);
 }
 
 function closeWorkout() {
+  saveSession();          // closing the file is not the same as abandoning it
   selectedDay = null;
   currentBlockIndex = 0;
   blockTimes = [];
   swReset();
+  renderResumePanel();
+  releaseWakeLock();
 
   el('selection-view').hidden = false;
   el('workout-view').hidden = true;
@@ -540,6 +682,7 @@ function render() {
     lastWholeSecond = whole;
     barTime.textContent = pad(t.mm) + ':' + pad(t.ss);
     a11yEl.textContent = t.mm + ' minutes ' + t.ss + ' seconds';
+    if (running) saveSession();   // at most one second of the clock is ever lost
   }
 }
 
@@ -581,6 +724,7 @@ function swStart() {
   running = true;
   startTs = performance.now();
   setRunningUi(true);
+  acquireWakeLock();
   loop();
 }
 
@@ -591,6 +735,7 @@ function swStop() {
   cancelAnimationFrame(rafId);
   setRunningUi(false);
   render();
+  saveSession();
 }
 
 // Clock back to zero, laps cleared, running state untouched.
@@ -617,15 +762,20 @@ lapBtn.addEventListener('click', function () {
   if (!running) return;
   laps.push(currentElapsed());
   renderLaps();
+  saveSession();
 });
 
-resetBtn.addEventListener('click', swReset);
+resetBtn.addEventListener('click', function () {
+  swReset();
+  saveSession();
+});
 
 soundBtn.addEventListener('click', function () {
   soundOn = !soundOn;
   soundBtn.querySelector('span').textContent = soundOn ? 'Sound on' : 'Sound off';
   soundBtn.setAttribute('aria-pressed', String(soundOn));
   soundBtn.setAttribute('aria-label', soundOn ? 'Mechanical sound on' : 'Mechanical sound off');
+  storeSet(SOUND_KEY, soundOn ? '1' : '0');
 });
 
 /* =========================================================
@@ -634,6 +784,29 @@ soundBtn.addEventListener('click', function () {
 
 el('back-btn').addEventListener('click', closeWorkout);
 el('advance-btn').addEventListener('click', advanceBlock);
+
+// Restore the sound preference before the first flip can make a noise.
+if (storeGet(SOUND_KEY) === '0') {
+  soundOn = false;
+  soundBtn.querySelector('span').textContent = 'Sound off';
+  soundBtn.setAttribute('aria-pressed', 'false');
+  soundBtn.setAttribute('aria-label', 'Mechanical sound off');
+}
+
+// A wake lock is dropped whenever the page is hidden, so it has to be
+// taken again on return. Backgrounding is also the last reliable moment
+// to write the session down.
+document.addEventListener('visibilitychange', function () {
+  if (document.visibilityState === 'hidden') {
+    saveSession();
+  } else if (document.body.classList.contains('session-open')) {
+    acquireWakeLock();
+  }
+});
+
+// pagehide fires on iOS where beforeunload does not.
+window.addEventListener('pagehide', saveSession);
+window.addEventListener('beforeunload', saveSession);
 
 render();
 renderLaps();

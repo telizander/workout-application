@@ -348,10 +348,33 @@ main{ padding-bottom: 40px; }
 }
 .sw-rivet.tl{ top: 9px; left: 9px; } .sw-rivet.tr{ top: 9px; right: 9px; }
 .sw-rivet.bl{ bottom: 9px; left: 9px; } .sw-rivet.br{ bottom: 9px; right: 9px; }
+.sw-plate-row{
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  margin-bottom: 14px; position: relative;
+}
 .sw-plate-label{
   font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.16em;
-  text-transform: uppercase; color: #A3906C; margin-bottom: 14px; position: relative;
+  text-transform: uppercase; color: #A3906C;
 }
+/* Lit only while a screen wake lock is actually held. */
+.wake-flag{
+  font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: #8FA07E; white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 5px;
+}
+.wake-flag::before{
+  content: ""; width: 5px; height: 5px; border-radius: 50%;
+  background: #8FA07E; box-shadow: 0 0 6px rgba(143,160,126,0.9);
+}
+
+/* ===== RESUME ===== */
+
+.panel-resume{ border-left: 3px solid var(--mustard); }
+.panel-resume .panel-tab{ background: var(--mustard-deep); }
+.resume-title{ margin: 4px 0 4px; }
+.resume-meta{ font-size: 13px; margin: 0 0 14px; }
+.resume-actions{ display: flex; gap: 10px; flex-wrap: wrap; }
+.resume-actions .btn{ flex: 1 1 auto; }
 .sw-digits{
   display: flex; align-items: flex-end; justify-content: center; gap: 5px;
   position: relative;

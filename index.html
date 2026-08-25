@@ -50,6 +50,9 @@
   <section id="selection-view" aria-labelledby="sel-heading">
     <h2 class="sr-only" id="sel-heading">Choose a session</h2>
 
+    <!-- Filled in when an unfinished session is found in storage. -->
+    <div id="resume-slot"></div>
+
     <div class="panel panel-notes" id="program-notes" hidden>
       <span class="panel-tab">Standing orders</span>
       <p class="notes-body" id="program-notes-body"></p>
@@ -95,7 +98,10 @@
     <div class="sw-panel" id="sw-panel">
       <span class="sw-rivet tl"></span><span class="sw-rivet tr"></span>
       <span class="sw-rivet bl"></span><span class="sw-rivet br"></span>
-      <div class="sw-plate-label" id="sw-plate-label">elapsed time</div>
+      <div class="sw-plate-row">
+        <span class="sw-plate-label" id="sw-plate-label">elapsed time</span>
+        <span class="wake-flag" id="wake-flag" hidden>screen held</span>
+      </div>
       <div class="sw-digits" aria-hidden="true">
         <div class="flip-digit" data-role="m1">
           <div class="fd-top"><span>0</span></div>
