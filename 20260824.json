@@ -1,0 +1,1785 @@
+{
+  "program": {
+    "title": "CARL WEATHERS BLOCK",
+    "subtitle": "11-Week Mass + Strength Build \u2014 KB, Sandbag, Rings",
+    "weeks": {
+      "0": {
+        "phase": "REST WEEK",
+        "goal": "Active recovery. Let the nervous system reset. Connective tissue and lower back get a full break before the next block. Opt in to these sessions \u2014 skip any or all if you need full rest.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Light Flow",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              },
+              {
+                "header": "3A60s",
+                "note": "Everything light and easy. No grinding. Move well.",
+                "exercises": [
+                  "KB Halo 8'@16",
+                  "Ring Row 8@BW",
+                  "Dead Hang :20@BW"
+                ]
+              },
+              {
+                "header": "3B60s",
+                "exercises": [
+                  "SB Bear Hug Carry 40@100lbs",
+                  "KB Farmer Walk 40@16+16"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Skill + Mobility",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hip Circles :45@BW",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "3A60s",
+                "note": "Focus on quality and range of motion. Nothing heavy.",
+                "exercises": [
+                  "KB Snatch 3'@16",
+                  "Ring Support Hold :15@BW",
+                  "Scapula Pull :20@BW"
+                ]
+              },
+              {
+                "header": "3B60s",
+                "exercises": [
+                  "Hindu Squat 10@BW",
+                  "KB Swing 10@16",
+                  "Ring L-Sit Hold :10@BW"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 5,
+            "name": "Easy Carries",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW"
+                ]
+              },
+              {
+                "header": "3A60s",
+                "note": "Carries only. No pressing, no pulling, no loading the spine hard. Just move.",
+                "exercises": [
+                  "SB Bear Hug Carry 40@100lbs",
+                  "KB Farmer Walk 60@16+16",
+                  "SB Shoulder Carry 30@100lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "1": {
+        "phase": "HYPERTROPHY BASE",
+        "goal": "Establish volume foundation. Dip belt introduced from day one. Sandbag at 100lbs across all movements. Learn to log dip and pull-up numbers every session.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 8'@16",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW"
+                ]
+              },
+              {
+                "header": "5A120s",
+                "note": "Primary strength indicator. Log weight and reps every session. Dip belt weight in lbs.",
+                "exercises": [
+                  "Ring Dip 6@+10lbs"
+                ]
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "KB Clean + Press 5@16+16"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "Ring Push-up 10@BW",
+                  "KB Press 8@16",
+                  "SB Bear Hug Hold :20@100lbs",
+                  "DB Floor Press 12@20lbs",
+                  "DB Lateral Raise 12@16"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Lower + Hinge",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "5A150s",
+                "note": "This is the 150lb ramp. Non-negotiable form \u2014 no grinding reps. Drop the set if lower back talks.",
+                "exercises": [
+                  "SB Clean + Front Squat 3@100lbs"
+                ]
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "SB Shoulder Carry 40@100lbs",
+                  "SB Bear Hug Carry 40@100lbs",
+                  "KB Farmer Walk 60@16+16"
+                ]
+              },
+              {
+                "header": "6C90s",
+                "exercises": [
+                  "KB Swing 12@24"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Shouldering 3'@100lbs"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull :20@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "5A120s",
+                "note": "Primary strength indicator. Mirror the dip belt progression from Day 1. Log every session. Dip belt weight in lbs.",
+                "exercises": [
+                  "Ring Pull-up 6@+10lbs"
+                ]
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "SB Shouldering 3'@100lbs",
+                  "Ring Row 12@BW"
+                ]
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :15@BW",
+                  "DB Curl 12@16lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Conditioning",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Jump Squat 8@BW"
+                ]
+              },
+              {
+                "header": "12A60s",
+                "note": "EMOM \u2014 odd minutes work, even minutes rest.",
+                "exercises": [
+                  "KB Snatch 6'@16"
+                ]
+              },
+              {
+                "header": "3B60s",
+                "exercises": [
+                  "Ring Dip 8@BW",
+                  "KB Lateral Raise 12@16",
+                  "SB Shouldering 3'@100lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 40@100lbs",
+                  "KB Farmer Walk 40@16+16",
+                  "Rest :60"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "2": {
+        "phase": "HYPERTROPHY BASE",
+        "goal": "Add one set to each primary block. Push rep quality and depth. Dip belt stays at 10lbs \u2014 own it before adding weight.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 8'@16",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "note": "One more set than week 1. Log weight and reps.",
+                "exercises": [
+                  "Ring Dip 6@+10lbs"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "KB Clean + Press 5@16+16"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "Ring Push-up 10@BW",
+                  "KB Press 8@16",
+                  "SB Bear Hug Hold :20@100lbs",
+                  "DB Floor Press 12@20lbs",
+                  "DB Lateral Raise 12@16"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Lower + Hinge",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "5A150s",
+                "note": "Same load as week 1. Add one rep per set.",
+                "exercises": [
+                  "SB Clean + Front Squat 4@100lbs"
+                ]
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "SB Shoulder Carry 40@100lbs",
+                  "SB Bear Hug Carry 40@100lbs",
+                  "KB Farmer Walk 60@16+16"
+                ]
+              },
+              {
+                "header": "6C90s",
+                "exercises": [
+                  "KB Swing 12@24"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Shouldering 3'@100lbs"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull :20@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "note": "One more set than week 1. Log every session.",
+                "exercises": [
+                  "Ring Pull-up 6@+10lbs"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "SB Shouldering 3'@100lbs",
+                  "Ring Row 12@BW"
+                ]
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :15@BW",
+                  "DB Curl 12@16lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Conditioning",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Jump Squat 8@BW"
+                ]
+              },
+              {
+                "header": "12A60s",
+                "note": "EMOM \u2014 odd minutes work, even minutes rest.",
+                "exercises": [
+                  "KB Snatch 6'@16"
+                ]
+              },
+              {
+                "header": "3B60s",
+                "exercises": [
+                  "Ring Dip 8@BW",
+                  "KB Lateral Raise 12@16",
+                  "SB Shouldering 3'@100lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 40@100lbs",
+                  "KB Farmer Walk 40@16+16",
+                  "Rest :60"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "3": {
+        "phase": "HYPERTROPHY BASE",
+        "goal": "Sandbag jumps to 110lbs. Dip belt moves to 15lbs on both ring dips and pull-ups. KB clean + press \u2014 push to 20kg where form allows.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 8'@16",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "note": "Dip belt jumps to 15lbs this week.",
+                "exercises": [
+                  "Ring Dip 6@+15lbs"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "note": "Attempt 20kg. Drop to 16kg if form breaks.",
+                "exercises": [
+                  "KB Clean + Press 5@20+20"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "Ring Push-up 10@BW",
+                  "KB Press 8@16",
+                  "SB Bear Hug Hold :20@110lbs",
+                  "DB Floor Press 12@20lbs",
+                  "DB Lateral Raise 12@16"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Lower + Hinge",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "5A150s",
+                "note": "Sandbag moves to 110lbs. Back form is non-negotiable.",
+                "exercises": [
+                  "SB Clean + Front Squat 3@110lbs"
+                ]
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "SB Shoulder Carry 40@110lbs",
+                  "SB Bear Hug Carry 40@110lbs",
+                  "KB Farmer Walk 60@16+16"
+                ]
+              },
+              {
+                "header": "6C90s",
+                "exercises": [
+                  "KB Swing 12@24"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Shouldering 3'@110lbs"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull :20@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "note": "Dip belt jumps to 15lbs this week.",
+                "exercises": [
+                  "Ring Pull-up 6@+15lbs"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "SB Shouldering 3'@110lbs",
+                  "Ring Row 12@BW"
+                ]
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :15@BW",
+                  "DB Curl 12@16lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Conditioning",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Jump Squat 8@BW"
+                ]
+              },
+              {
+                "header": "12A60s",
+                "note": "EMOM \u2014 odd minutes work, even minutes rest.",
+                "exercises": [
+                  "KB Snatch 6'@16"
+                ]
+              },
+              {
+                "header": "3B60s",
+                "exercises": [
+                  "Ring Dip 8@BW",
+                  "KB Lateral Raise 12@16",
+                  "SB Shouldering 3'@110lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 40@110lbs",
+                  "KB Farmer Walk 40@16+16",
+                  "Rest :60"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "4": {
+        "phase": "HYPERTROPHY BASE",
+        "goal": "Consolidation week. Same load as week 3. Push rep quality and range of motion. Lower intensity on Day 2 by 20% \u2014 active recovery for the lower back before the strength bridge.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 8'@16",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "note": "Same weight as week 3. Focus on depth and control.",
+                "exercises": [
+                  "Ring Dip 8@+15lbs"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "KB Clean + Press 5@20+20"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "Ring Push-up 12@BW",
+                  "KB Press 8@16",
+                  "SB Bear Hug Hold :25@110lbs",
+                  "DB Floor Press 12@20lbs",
+                  "DB Lateral Raise 12@16"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Lower + Hinge",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "4A150s",
+                "note": "Reduced volume this week \u2014 back check-in. Drop a set, keep the weight.",
+                "exercises": [
+                  "SB Clean + Front Squat 3@110lbs"
+                ]
+              },
+              {
+                "header": "3B90s",
+                "note": "Carries only. No shouldering this week.",
+                "exercises": [
+                  "SB Bear Hug Carry 40@110lbs",
+                  "KB Farmer Walk 60@16+16"
+                ]
+              },
+              {
+                "header": "5C90s",
+                "exercises": [
+                  "KB Swing 12@24"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull :20@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "note": "Same weight as week 3. Own every rep.",
+                "exercises": [
+                  "Ring Pull-up 8@+15lbs"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "SB Shouldering 3'@110lbs",
+                  "Ring Row 12@BW"
+                ]
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :20@BW",
+                  "DB Curl 12@16lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Conditioning",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Jump Squat 8@BW"
+                ]
+              },
+              {
+                "header": "12A60s",
+                "note": "EMOM \u2014 odd minutes work, even minutes rest.",
+                "exercises": [
+                  "KB Snatch 6'@16"
+                ]
+              },
+              {
+                "header": "3B60s",
+                "exercises": [
+                  "Ring Dip 8@BW",
+                  "KB Lateral Raise 12@16",
+                  "SB Shouldering 3'@110lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 40@110lbs",
+                  "KB Farmer Walk 40@16+16",
+                  "Rest :60"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "5": {
+        "phase": "STRENGTH BRIDGE",
+        "goal": "Sandbag to 120lbs. Dip belt moves to 20lbs. KB clean + press at 20kg as primary working weight. Volume stays high.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 8'@16",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "note": "Dip belt moves to 20lbs.",
+                "exercises": [
+                  "Ring Dip 6@+20lbs"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "note": "20kg is now the working weight. 16kg only if form completely breaks.",
+                "exercises": [
+                  "KB Clean + Press 5@20+20"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "Ring Push-up 12@BW",
+                  "KB Press 8@20",
+                  "SB Bear Hug Hold :25@120lbs",
+                  "DB Floor Press 12@20lbs",
+                  "DB Lateral Raise 12@16"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Lower + Hinge",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "5A150s",
+                "note": "Sandbag to 120lbs. Reset reps to 3 and rebuild.",
+                "exercises": [
+                  "SB Clean + Front Squat 3@120lbs"
+                ]
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "SB Shoulder Carry 40@120lbs",
+                  "SB Bear Hug Carry 40@120lbs",
+                  "KB Farmer Walk 60@16+16"
+                ]
+              },
+              {
+                "header": "6C90s",
+                "exercises": [
+                  "KB Swing 12@24"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Shouldering 3'@120lbs"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull :20@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "note": "Dip belt moves to 20lbs.",
+                "exercises": [
+                  "Ring Pull-up 6@+20lbs"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "SB Shouldering 3'@120lbs",
+                  "Ring Row 12@BW"
+                ]
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :20@BW",
+                  "DB Curl 12@16lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Conditioning",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Jump Squat 8@BW"
+                ]
+              },
+              {
+                "header": "12A60s",
+                "note": "EMOM \u2014 odd minutes work, even minutes rest.",
+                "exercises": [
+                  "KB Snatch 6'@16"
+                ]
+              },
+              {
+                "header": "4B60s",
+                "exercises": [
+                  "Ring Dip 8@BW",
+                  "KB Lateral Raise 12@16",
+                  "SB Shouldering 3'@120lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 40@120lbs",
+                  "KB Farmer Walk 40@16+16",
+                  "Rest :60"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "6": {
+        "phase": "STRENGTH BRIDGE",
+        "goal": "Volume peak week. Highest set counts of the entire block. Push top sets on ring dips and pull-ups. Sandbag holds at 120lbs \u2014 add reps instead.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 8'@16",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW"
+                ]
+              },
+              {
+                "header": "7A120s",
+                "note": "Volume peak. Push the top sets.",
+                "exercises": [
+                  "Ring Dip 6@+20lbs"
+                ]
+              },
+              {
+                "header": "6B90s",
+                "exercises": [
+                  "KB Clean + Press 5@20+20"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "Ring Push-up 12@BW",
+                  "KB Press 8@20",
+                  "SB Bear Hug Hold :25@120lbs",
+                  "DB Floor Press 12@20lbs",
+                  "DB Lateral Raise 12@16"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Lower + Hinge",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "6A150s",
+                "note": "Add a rep per set. Form still non-negotiable.",
+                "exercises": [
+                  "SB Clean + Front Squat 4@120lbs"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "SB Shoulder Carry 40@120lbs",
+                  "SB Bear Hug Carry 40@120lbs",
+                  "KB Farmer Walk 60@16+16"
+                ]
+              },
+              {
+                "header": "6C90s",
+                "exercises": [
+                  "KB Swing 15@24"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Shouldering 3'@120lbs"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull :20@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "7A120s",
+                "note": "Volume peak. Push the top sets.",
+                "exercises": [
+                  "Ring Pull-up 6@+20lbs"
+                ]
+              },
+              {
+                "header": "6B90s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "SB Shouldering 4'@120lbs",
+                  "Ring Row 12@BW"
+                ]
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :20@BW",
+                  "DB Curl 12@16lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Conditioning",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Jump Squat 8@BW"
+                ]
+              },
+              {
+                "header": "12A60s",
+                "note": "EMOM \u2014 odd minutes work, even minutes rest.",
+                "exercises": [
+                  "KB Snatch 6'@16"
+                ]
+              },
+              {
+                "header": "4B60s",
+                "exercises": [
+                  "Ring Dip 10@BW",
+                  "KB Lateral Raise 12@16",
+                  "SB Shouldering 4'@120lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 40@120lbs",
+                  "KB Farmer Walk 40@16+16",
+                  "Rest :60"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "7": {
+        "phase": "STRENGTH BRIDGE",
+        "goal": "Sandbag to 130lbs. Dip belt moves to 25lbs. KB clean + press at 20kg is the primary \u2014 no dropping back unless injury risk.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 8'@16",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "note": "Dip belt moves to 25lbs.",
+                "exercises": [
+                  "Ring Dip 6@+25lbs"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "KB Clean + Press 5@20+20"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "Ring Push-up 12@BW",
+                  "KB Press 8@20",
+                  "SB Bear Hug Hold :25@130lbs",
+                  "DB Floor Press 12@20lbs",
+                  "DB Lateral Raise 12@16"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Lower + Hinge",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "5A150s",
+                "note": "Sandbag to 130lbs. Reset reps to 3 and rebuild.",
+                "exercises": [
+                  "SB Clean + Front Squat 3@130lbs"
+                ]
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "SB Shoulder Carry 40@130lbs",
+                  "SB Bear Hug Carry 40@130lbs",
+                  "KB Farmer Walk 60@16+16"
+                ]
+              },
+              {
+                "header": "6C90s",
+                "exercises": [
+                  "KB Swing 15@24"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Shouldering 3'@130lbs"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull :20@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "note": "Dip belt moves to 25lbs.",
+                "exercises": [
+                  "Ring Pull-up 6@+25lbs"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "SB Shouldering 4'@130lbs",
+                  "Ring Row 12@BW"
+                ]
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :20@BW",
+                  "DB Curl 12@16lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Conditioning",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Jump Squat 8@BW"
+                ]
+              },
+              {
+                "header": "12A60s",
+                "note": "EMOM \u2014 odd minutes work, even minutes rest.",
+                "exercises": [
+                  "KB Snatch 6'@16"
+                ]
+              },
+              {
+                "header": "4B60s",
+                "exercises": [
+                  "Ring Dip 10@BW",
+                  "KB Lateral Raise 12@16",
+                  "SB Shouldering 4'@130lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 40@130lbs",
+                  "KB Farmer Walk 40@16+16",
+                  "Rest :60"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "8": {
+        "phase": "STRENGTH BRIDGE",
+        "goal": "Deload week. Reduce sets by 30%. Keep all weights exactly the same. Lower back check-in. Do not skip this week \u2014 the next two weeks require full recovery.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 8'@16",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW"
+                ]
+              },
+              {
+                "header": "4A120s",
+                "note": "Deload \u2014 sets reduced. Keep weight identical to week 7.",
+                "exercises": [
+                  "Ring Dip 6@+25lbs"
+                ]
+              },
+              {
+                "header": "3B90s",
+                "exercises": [
+                  "KB Clean + Press 5@20+20"
+                ]
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "Ring Push-up 10@BW",
+                  "KB Press 8@20",
+                  "SB Bear Hug Hold :20@130lbs",
+                  "DB Floor Press 12@20lbs",
+                  "DB Lateral Raise 12@16"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Lower + Hinge",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "3A150s",
+                "note": "Deload \u2014 three sets only. Back check-in. If anything feels off, drop to carries only.",
+                "exercises": [
+                  "SB Clean + Front Squat 3@130lbs"
+                ]
+              },
+              {
+                "header": "3B90s",
+                "exercises": [
+                  "SB Bear Hug Carry 40@130lbs",
+                  "KB Farmer Walk 60@16+16"
+                ]
+              },
+              {
+                "header": "4C90s",
+                "exercises": [
+                  "KB Swing 12@24"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull :20@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "4A120s",
+                "note": "Deload \u2014 sets reduced. Keep weight identical to week 7.",
+                "exercises": [
+                  "Ring Pull-up 6@+25lbs"
+                ]
+              },
+              {
+                "header": "3B90s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "SB Shouldering 3'@130lbs",
+                  "Ring Row 10@BW"
+                ]
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :15@BW",
+                  "DB Curl 12@16lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Conditioning",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Jump Squat 8@BW"
+                ]
+              },
+              {
+                "header": "8A60s",
+                "note": "EMOM \u2014 cut to 8 rounds for deload. Odd minutes work, even minutes rest.",
+                "exercises": [
+                  "KB Snatch 6'@16"
+                ]
+              },
+              {
+                "header": "3B60s",
+                "exercises": [
+                  "Ring Dip 8@BW",
+                  "KB Lateral Raise 10@16",
+                  "SB Shouldering 3'@130lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 40@130lbs",
+                  "KB Farmer Walk 40@16+16",
+                  "Rest :60"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "9": {
+        "phase": "POWER PEAK",
+        "goal": "Sandbag to 140lbs. Dip belt moves to 30lbs. Snatch EMOM density increases. This is where the look starts coming together.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 8'@16",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "note": "Dip belt moves to 30lbs. This is a meaningful jump \u2014 own every rep.",
+                "exercises": [
+                  "Ring Dip 6@+30lbs"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "KB Clean + Press 5@20+20"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "Ring Push-up 12@BW",
+                  "KB Press 8@20",
+                  "SB Bear Hug Hold :25@140lbs",
+                  "DB Floor Press 12@20lbs",
+                  "DB Lateral Raise 12@16"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Lower + Hinge",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "5A150s",
+                "note": "Sandbag to 140lbs. Reset reps to 3. You are two weeks from 150.",
+                "exercises": [
+                  "SB Clean + Front Squat 3@140lbs"
+                ]
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "SB Shoulder Carry 40@140lbs",
+                  "SB Bear Hug Carry 40@140lbs",
+                  "KB Farmer Walk 60@16+16"
+                ]
+              },
+              {
+                "header": "6C90s",
+                "exercises": [
+                  "KB Swing 15@24"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Shouldering 3'@140lbs"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull :20@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "note": "Dip belt moves to 30lbs.",
+                "exercises": [
+                  "Ring Pull-up 6@+30lbs"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "SB Shouldering 4'@140lbs",
+                  "Ring Row 12@BW"
+                ]
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :20@BW",
+                  "DB Curl 12@16lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Conditioning",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Jump Squat 8@BW"
+                ]
+              },
+              {
+                "header": "14A60s",
+                "note": "EMOM density increase \u2014 14 rounds. Odd minutes work, even minutes rest.",
+                "exercises": [
+                  "KB Snatch 6'@16"
+                ]
+              },
+              {
+                "header": "4B60s",
+                "exercises": [
+                  "Ring Dip 10@BW",
+                  "KB Lateral Raise 12@16",
+                  "SB Shouldering 4'@140lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 40@140lbs",
+                  "KB Farmer Walk 40@16+16",
+                  "Rest :60"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "10": {
+        "phase": "POWER PEAK",
+        "goal": "150lbs on the sandbag across all movements. Dip belt at 30lbs \u2014 hold and demonstrate the build. This is the week you prove the block worked.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 8'@16",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "note": "Same dip belt as week 9. Max quality. You've earned this weight.",
+                "exercises": [
+                  "Ring Dip 8@+30lbs"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "KB Clean + Press 5@20+20"
+                ]
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "Ring Push-up 12@BW",
+                  "KB Press 8@20",
+                  "SB Bear Hug Hold :30@150lbs",
+                  "DB Floor Press 12@20lbs",
+                  "DB Lateral Raise 12@16"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Lower + Hinge",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "5A150s",
+                "note": "150lbs. This is the target you set at the start. Clean form only \u2014 no ego reps.",
+                "exercises": [
+                  "SB Clean + Front Squat 3@150lbs"
+                ]
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "SB Shoulder Carry 40@150lbs",
+                  "SB Bear Hug Carry 40@150lbs",
+                  "KB Farmer Walk 60@16+16"
+                ]
+              },
+              {
+                "header": "6C90s",
+                "exercises": [
+                  "KB Swing 15@24"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Shouldering 3'@150lbs"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull :20@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "note": "Same dip belt as week 9. Own every rep.",
+                "exercises": [
+                  "Ring Pull-up 8@+30lbs"
+                ]
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "SB Shouldering 5'@150lbs",
+                  "Ring Row 12@BW"
+                ]
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :25@BW",
+                  "DB Curl 12@16lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "RopeFlow :120@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "Conditioning",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Jump Squat 8@BW"
+                ]
+              },
+              {
+                "header": "14A60s",
+                "note": "EMOM \u2014 14 rounds. Odd minutes work, even minutes rest. Finish strong.",
+                "exercises": [
+                  "KB Snatch 6'@16"
+                ]
+              },
+              {
+                "header": "4B60s",
+                "exercises": [
+                  "Ring Dip 10@BW",
+                  "KB Lateral Raise 12@16",
+                  "SB Shouldering 5'@150lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 40@150lbs",
+                  "KB Farmer Walk 40@16+16",
+                  "Rest :60"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

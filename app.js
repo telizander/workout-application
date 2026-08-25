@@ -1,5 +1,5 @@
 let workoutData = null;
-let selectedWeek = 5;
+let selectedWeek = null;
 let selectedDay = null;
 let currentBlockIndex = 0;
 let timerInterval = null;
@@ -19,6 +19,9 @@ async function loadData() {
         document.getElementById('program-title').textContent = workoutData.title;
         document.getElementById('program-subtitle').textContent = workoutData.subtitle;
         
+        // Default to the first week in the file
+        selectedWeek = Object.keys(workoutData.weeks)[0];
+
         // Initialize the UI
         renderWeekButtons();
         updatePhaseInfo();
@@ -34,10 +37,10 @@ function renderWeekButtons() {
     weekButtonsContainer.innerHTML = '';
     
     const weeks = Object.keys(workoutData.weeks);
-    weeks.forEach((week, index) => {
+    weeks.forEach(week => {
         const btn = document.createElement('button');
         btn.className = 'week-btn';
-        if (index === 0) btn.classList.add('active');
+        if (week === selectedWeek) btn.classList.add('active');
         btn.dataset.week = week;
         btn.innerHTML = `
             <div class="week-label">WEEK</div>
