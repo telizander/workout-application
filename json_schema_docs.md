@@ -156,6 +156,7 @@ All exercises must follow the standardized notation format:
 - `@+10` = Weighted (+10kg added)
 - `@-10` = Assisted (-10kg assistance)
 - `@24+24` = Double kettlebell (24kg each)
+- `10/8/6/4A90s` (header) = Ladder block: one round per rung (10, 8, 6, 4 reps), 90s rest. Exercises inside omit reps (`KB Thruster @16+16/20+20/20+20/24+20`) and do the rung's reps; `/` in the load sets a load per rung.
 
 #### Movement Prefixes
 - `KB` = Kettlebell

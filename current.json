@@ -1,61 +1,59 @@
 {
   "program": {
-    "title": "CARL WEATHERS CUT BLOCK",
-    "subtitle": "12-Week Strength/Muscle Maintenance — Fat Loss Phase (Same Week x12)",
-    "notes": "Repeat this single week for all 12 weeks. Primary lifts are HELD at tested ceiling (+25lb dip belt, +25lb pull-up belt, 120lb sandbag) — do not chase progression in a deficit. If a primary lift feels heavy on a given day, drop reps or 5lb rather than grind. Accessory volume is trimmed ~25% from the mass block. Carries and KB conditioning are the fat-loss lever — these can flex up slightly week to week if recovery allows.",
+    "title": "CARL WEATHERS BUILD",
+    "subtitle": "13-Week Strength + Size — Sandbag, KB, Rings",
+    "notes": "Eating to grow: bodyweight should trend up slowly. Three waves of 3 build weeks plus a lighter week, then test (week 12) and deload (week 13). Schedule: keep a rest day between Sandbag Lower and Pull (e.g. Mon Push, Tue Sandbag, Thu Pull, Sat Legs). Sandbag: own 130lbs in wave 1, touch 140 in wave 2, work at 140 in wave 3, so 140 feels routine by the end. Pull-ups restart at bodyweight with a neutral grip on free-rotating rings, and reps only go up when the elbows and shoulders allow. Pain rule: up to 3/10 that is gone by the next morning is OK. Anything more: band-assisted pull-ups, or KB pullovers if those hurt too. Elbow or shoulder pain that lasts more than 2 weeks is worth a physio visit. 24+20 means a mixed pair: switch which hand holds the 24 each set. If you buy a second 24, use 24+24. If top sets stall two weeks in a row, cut accessory sets first.",
     "weeks": {
       "1": {
-        "phase": "MAINTENANCE / CUT",
-        "goal": "Hold strength and muscle at current ceiling while running a calorie deficit. Primary lifts stay fixed at tested max (not the block's original targets). Accessory volume down, conditioning volume steady-to-up. Autoregulate every session — recovery capacity is lower in a deficit than it was in the mass block. Repeat this week for all 12 weeks.",
+        "phase": "WAVE 1 / BUILD",
+        "goal": "On-ramp. Leave reps in the tank. Pull-ups restart at 3 slow reps; see how elbows and shoulders respond before adding anything.",
         "days": [
           {
             "day": 1,
-            "name": "Push",
+            "name": "Push + 350",
             "blocks": [
               {
                 "header": "WU",
                 "exercises": [
                   "RopeFlow :120@BW",
-                  "KB Halo 8'@16",
                   "Arm Circles :45@BW",
-                  "Band Pull-Apart :45@BW"
+                  "Band Pull-Apart :45@BW",
+                  "Scapula Pull 8@BW"
                 ]
               },
               {
-                "header": "5A120s",
-                "note": "Primary strength indicator. HOLD at +30lbs — your tested ceiling. No progression this phase. Drop to +25lbs if grinding.",
+                "header": "4A90s",
                 "exercises": [
-                  "Ring Dip 6@+30lbs"
-                ]
+                  "Ring Dip 8@+20lbs",
+                  "Ring Face Pull 15@BW"
+                ],
+                "note": "Shoulders stop just below elbows at the bottom; turn the rings out at the top. If the front of the shoulder complains, cut depth first. Drop to +15lbs if it keeps talking. If dips hurt at any load, do KB Floor Press 10@24+20 instead."
               },
               {
                 "header": "4B90s",
-                "note": "Hold at 20+20. Not a progression lift during the cut.",
                 "exercises": [
-                  "KB Clean + Press 5@20+20"
-                ]
+                  "KB Clean + Press 5@20+20",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Clean every rep. "
               },
               {
                 "header": "3C60s",
-                "note": "Trimmed from 5 accessories to 3. Isolation work (lateral raise) dropped — not needed for maintenance.",
                 "exercises": [
-                  "Ring Push-up 10@BW",
-                  "KB Press 8@16",
-                  "DB Floor Press 10@20lbs"
-                ]
-              },
-              {
-                "header": "FIN",
-                "note": "Light conditioning finisher, not a strength set.",
-                "exercises": [
-                  "SB Bear Hug Carry 40@100lbs"
-                ]
+                  "KB Pullover 10@16",
+                  "KB Crush Curl 12@16",
+                  "KB Halo 5'@16",
+                  "KB Around-the-World 5'@16",
+                  "DB Lateral Raise 12@20lbs",
+                  "KB Woodchop 8'@16"
+                ],
+                "note": "The 350 (TREE FITTY): about 70 reps a round, building to 5 rounds (350 reps) in wave 3. Loads stay at 16 all block; progress with a 3s lowering, not weight. Pullover: lie on the floor, knees bent, bell by the horns, ribs down, lower behind your head on a 3-count, pull back with the lats. Lateral raise replaces the upright row. If an elbow goes above 3/10, swap the crush curl for KB Bottoms-Up Hold :20'@16."
               }
             ]
           },
           {
             "day": 2,
-            "name": "Lower + Hinge",
+            "name": "Sandbag Lower",
             "blocks": [
               {
                 "header": "WU",
@@ -63,36 +61,45 @@
                   "RopeFlow :120@BW",
                   "Hindu Squat 15@BW",
                   "Hip Circles :45@BW",
-                  "Leg Swings :45@BW"
+                  "SB Bear Hug Hold :20@100lbs"
                 ]
               },
               {
-                "header": "4A150s",
-                "note": "Primary lower lift. HOLD at 120lbs — your tested ceiling. One set trimmed from mass-block volume. Back form non-negotiable — drop the set if it talks.",
+                "header": "3A75s",
                 "exercises": [
-                  "SB Clean + Front Squat 3@120lbs"
-                ]
+                  "SB Shouldering 2'@130lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
               },
               {
-                "header": "4B90s",
-                "note": "Carries stay at full volume — this is your fat-loss engine, not your strength engine.",
+                "header": "4B150s",
                 "exercises": [
-                  "SB Shoulder Carry 40@120lbs",
-                  "SB Bear Hug Carry 40@120lbs",
-                  "KB Farmer Walk 60@16+16"
-                ]
+                  "SB Clean + Front Squat 3@130lbs",
+                  "Ring Push-up 8@BW"
+                ],
+                "note": "130lbs: own it. Every rep a clean pickup. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
               },
               {
-                "header": "5C90s",
-                "note": "Low joint cost, good conditioning stimulus. Can flex to 6 sets if recovery allows.",
+                "header": "3C120s",
                 "exercises": [
-                  "KB Swing 12@24"
-                ]
+                  "SB Zercher Squat 8@110lbs",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+              },
+              {
+                "header": "3D120s",
+                "exercises": [
+                  "SB Shoulder Carry 40@130lbs",
+                  "SB Bear Hug Carry 40@130lbs"
+                ],
+                "note": "Switch shoulders each round. 130lbs builds distance first; 140lbs starts short and builds again."
               },
               {
                 "header": "FIN",
                 "exercises": [
-                  "SB Shouldering 3'@120lbs"
+                  "KB Farmer Walk 60@20+20"
                 ]
               }
             ]
@@ -105,78 +112,2628 @@
                 "header": "WU",
                 "exercises": [
                   "Dead Hang :30@BW",
-                  "Scapula Pull :20@BW",
+                  "Scapula Pull 10@BW",
                   "Band Pull-Apart :45@BW",
                   "RopeFlow :90@BW"
                 ]
               },
               {
                 "header": "5A120s",
-                "note": "Primary strength indicator. HOLD at +25lbs — your tested ceiling. Mirror Day 1 logic. Drop to +20lbs if grinding.",
                 "exercises": [
-                  "Ring Pull-up 6@+25lbs"
-                ]
+                  "Tempo Ring Pull-up 3@BW",
+                  "Hollow Body Hold :20@BW"
+                ],
+                "note": "Neutral grip, rings free to rotate. 3 seconds down on every rep. Add the next rep only if last session stayed at 3/10 or less and the next morning was fine. Pain rule: up to 3/10 in the elbow or shoulder is OK if it is no worse the next morning. Above that: finish the sets as band-assisted pull-ups (@-20lbs); if those hurt too, do KB Pullover 12@16 instead."
               },
               {
-                "header": "4B90s",
-                "note": "Trimmed — SB Shouldering removed from this slot to avoid redundant lower-back loading with Day 2.",
+                "header": "3B90s",
+                "exercises": [
+                  "KB Supported Row 10'@20",
+                  "KB Floor Press 10@20+20"
+                ],
+                "note": "Supported row: one hand braced on a box or bench so the lower back rests before leg day. Pause 1s at the top. Floor press keeps chest volume up. 24+20: switch hands each set."
+              },
+              {
+                "header": "3C75s",
                 "exercises": [
                   "KB Gorilla Row 8'@24",
-                  "Ring Row 12@BW"
-                ]
+                  "Feet-Up Ring Row 10@BW"
+                ],
+                "note": "Capped at these reps all block to keep elbow load in check. Squeeze 1s at the top."
               },
               {
-                "header": "2C60s",
-                "note": "Trimmed from 3 accessories to 2. DB curl dropped — pure isolation, not load-bearing for maintenance.",
+                "header": "3D60s",
                 "exercises": [
-                  "KB Snatch 5'@16",
-                  "Ring L-Sit Hold :15@BW"
-                ]
+                  "Ring Face Pull 15@BW",
+                  "DB Lateral Raise 12@20lbs",
+                  "DB Overhead Extension 12@20lbs"
+                ],
+                "note": "Rear delts, side delts, triceps: the shoulder caps and arm size."
               },
               {
                 "header": "FIN",
                 "exercises": [
-                  "RopeFlow :120@BW"
-                ]
+                  "SB Bear Hug Hold :40@130lbs"
+                ],
+                "note": "Hug it high and tight, upper back working hard."
               }
             ]
           },
           {
             "day": 4,
-            "name": "Conditioning",
+            "name": "KB Legs + Carries",
             "blocks": [
               {
                 "header": "WU",
                 "exercises": [
                   "RopeFlow :120@BW",
                   "KB Halo 6'@16",
-                  "Jump Squat 8@BW"
+                  "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
+                  "Leg Swings :45@BW"
                 ]
               },
               {
-                "header": "12A60s",
-                "note": "EMOM — odd minutes work, even minutes rest. Unchanged — this is already the right tool for the job.",
+                "header": "10/8/6/4A120s",
                 "exercises": [
-                  "KB Snatch 6'@16"
-                ]
+                  "KB Box Squat @16+16/16+16/20+20/20+20",
+                  "KB Front Squat @16+16/16+16/20+20/20+20",
+                  "KB Thruster @16+16/16+16/20+20/20+20",
+                  "KB Dead Clean @16+16/16+16/20+20/20+20",
+                  "KB Reverse Lunge @16+16/16+16/20+20/20+20"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
               },
               {
                 "header": "3B60s",
-                "note": "Slight rep trim (12→10) on lateral raise — not a priority lift right now.",
                 "exercises": [
-                  "Ring Dip 8@BW",
-                  "KB Lateral Raise 10@16"
+                  "KB Swing 12@24",
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :20@BW"
+                ],
+                "note": "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your EMOM engine and lockout. "
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "RTO Ring Push-up 12@BW",
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 8@BW"
+                ],
+                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 60@100lbs",
+                  "KB Farmer Walk 60@20+20",
+                  "Rest :60",
+                  "SB Shoulder Carry 40@100lbs",
+                  "KB Farmer Walk 40@20+20"
+                ],
+                "note": "Carry medley with the lighter bag. Smooth distance, not max load."
+              }
+            ]
+          }
+        ]
+      },
+      "2": {
+        "phase": "WAVE 1 / BUILD",
+        "goal": "Add reps where the plan says. Eat to grow: bodyweight should trend up.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push + 350",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW",
+                  "Scapula Pull 8@BW"
+                ]
+              },
+              {
+                "header": "4A90s",
+                "exercises": [
+                  "Ring Dip 9@+20lbs",
+                  "Ring Face Pull 15@BW"
+                ],
+                "note": "Shoulders stop just below elbows at the bottom; turn the rings out at the top. If the front of the shoulder complains, cut depth first. Drop to +15lbs if it keeps talking. If dips hurt at any load, do KB Floor Press 10@24+20 instead."
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "KB Clean + Press 5@20+20",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Clean every rep. "
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "KB Pullover 10@16",
+                  "KB Crush Curl 12@16",
+                  "KB Halo 5'@16",
+                  "KB Around-the-World 5'@16",
+                  "DB Lateral Raise 12@20lbs",
+                  "KB Woodchop 8'@16"
+                ],
+                "note": "The 350 (TREE FITTY): about 70 reps a round, building to 5 rounds (350 reps) in wave 3. Loads stay at 16 all block; progress with a 3s lowering, not weight. Pullover: lie on the floor, knees bent, bell by the horns, ribs down, lower behind your head on a 3-count, pull back with the lats. Lateral raise replaces the upright row. If an elbow goes above 3/10, swap the crush curl for KB Bottoms-Up Hold :20'@16."
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Sandbag Lower",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "SB Bear Hug Hold :20@100lbs"
+                ]
+              },
+              {
+                "header": "3A75s",
+                "exercises": [
+                  "SB Shouldering 2'@130lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+              },
+              {
+                "header": "3B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 5@130lbs",
+                  "Ring Push-up 8@BW"
+                ],
+                "note": "130lbs: own it. Every rep a clean pickup. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+              },
+              {
+                "header": "3C120s",
+                "exercises": [
+                  "SB Zercher Squat 8@110lbs",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+              },
+              {
+                "header": "3D120s",
+                "exercises": [
+                  "SB Shoulder Carry 50@130lbs",
+                  "SB Bear Hug Carry 50@130lbs"
+                ],
+                "note": "Switch shoulders each round. 130lbs builds distance first; 140lbs starts short and builds again."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "KB Farmer Walk 60@20+20"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull 10@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "5A120s",
+                "exercises": [
+                  "Tempo Ring Pull-up 3@BW",
+                  "Hollow Body Hold :20@BW"
+                ],
+                "note": "Neutral grip, rings free to rotate. 3 seconds down on every rep. Add the next rep only if last session stayed at 3/10 or less and the next morning was fine. Pain rule: up to 3/10 in the elbow or shoulder is OK if it is no worse the next morning. Above that: finish the sets as band-assisted pull-ups (@-20lbs); if those hurt too, do KB Pullover 12@16 instead."
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "KB Supported Row 10'@20",
+                  "KB Floor Press 10@20+20"
+                ],
+                "note": "Supported row: one hand braced on a box or bench so the lower back rests before leg day. Pause 1s at the top. Floor press keeps chest volume up. 24+20: switch hands each set."
+              },
+              {
+                "header": "3C75s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "Feet-Up Ring Row 10@BW"
+                ],
+                "note": "Capped at these reps all block to keep elbow load in check. Squeeze 1s at the top."
+              },
+              {
+                "header": "3D60s",
+                "exercises": [
+                  "Ring Face Pull 15@BW",
+                  "DB Lateral Raise 12@20lbs",
+                  "DB Overhead Extension 12@20lbs"
+                ],
+                "note": "Rear delts, side delts, triceps: the shoulder caps and arm size."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Hold :40@130lbs"
+                ],
+                "note": "Hug it high and tight, upper back working hard."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "KB Legs + Carries",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "10/8/6/4A120s",
+                "exercises": [
+                  "KB Box Squat @16+16/20+20/20+20/20+20",
+                  "KB Front Squat @16+16/20+20/20+20/20+20",
+                  "KB Thruster @16+16/20+20/20+20/20+20",
+                  "KB Dead Clean @16+16/20+20/20+20/20+20",
+                  "KB Reverse Lunge @16+16/20+20/20+20/20+20"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
+              },
+              {
+                "header": "3B60s",
+                "exercises": [
+                  "KB Swing 12@24",
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :20@BW"
+                ],
+                "note": "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your EMOM engine and lockout. "
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "RTO Ring Push-up 12@BW",
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 8@BW"
+                ],
+                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 60@100lbs",
+                  "KB Farmer Walk 60@20+20",
+                  "Rest :60",
+                  "SB Shoulder Carry 40@100lbs",
+                  "KB Farmer Walk 40@20+20"
+                ],
+                "note": "Carry medley with the lighter bag. Smooth distance, not max load."
+              }
+            ]
+          }
+        ]
+      },
+      "3": {
+        "phase": "WAVE 1 / BUILD",
+        "goal": "Hardest week of wave 1.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push + 350",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW",
+                  "Scapula Pull 8@BW"
+                ]
+              },
+              {
+                "header": "4A90s",
+                "exercises": [
+                  "Ring Dip 10@+20lbs",
+                  "Ring Face Pull 15@BW"
+                ],
+                "note": "Shoulders stop just below elbows at the bottom; turn the rings out at the top. If the front of the shoulder complains, cut depth first. Drop to +15lbs if it keeps talking. If dips hurt at any load, do KB Floor Press 10@24+20 instead."
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "KB Clean + Press 6@20+20",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Clean every rep. "
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "KB Pullover 10@16",
+                  "KB Crush Curl 12@16",
+                  "KB Halo 5'@16",
+                  "KB Around-the-World 5'@16",
+                  "DB Lateral Raise 12@20lbs",
+                  "KB Woodchop 8'@16"
+                ],
+                "note": "The 350 (TREE FITTY): about 70 reps a round, building to 5 rounds (350 reps) in wave 3. Loads stay at 16 all block; progress with a 3s lowering, not weight. Pullover: lie on the floor, knees bent, bell by the horns, ribs down, lower behind your head on a 3-count, pull back with the lats. Lateral raise replaces the upright row. If an elbow goes above 3/10, swap the crush curl for KB Bottoms-Up Hold :20'@16."
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Sandbag Lower",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "SB Bear Hug Hold :20@100lbs"
+                ]
+              },
+              {
+                "header": "3A75s",
+                "exercises": [
+                  "SB Shouldering 2'@130lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+              },
+              {
+                "header": "4B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 3@130lbs",
+                  "Ring Push-up 8@BW"
+                ],
+                "note": "130lbs: own it. Every rep a clean pickup. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+              },
+              {
+                "header": "4C120s",
+                "exercises": [
+                  "SB Zercher Squat 8@110lbs",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+              },
+              {
+                "header": "3D120s",
+                "exercises": [
+                  "SB Shoulder Carry 60@130lbs",
+                  "SB Bear Hug Carry 60@130lbs"
+                ],
+                "note": "Switch shoulders each round. 130lbs builds distance first; 140lbs starts short and builds again."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "KB Farmer Walk 60@20+20"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull 10@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "5A120s",
+                "exercises": [
+                  "Tempo Ring Pull-up 4@BW",
+                  "Hollow Body Hold :20@BW"
+                ],
+                "note": "Neutral grip, rings free to rotate. 3 seconds down on every rep. Add the next rep only if last session stayed at 3/10 or less and the next morning was fine. Pain rule: up to 3/10 in the elbow or shoulder is OK if it is no worse the next morning. Above that: finish the sets as band-assisted pull-ups (@-20lbs); if those hurt too, do KB Pullover 12@16 instead."
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "KB Supported Row 10'@20",
+                  "KB Floor Press 10@20+20"
+                ],
+                "note": "Supported row: one hand braced on a box or bench so the lower back rests before leg day. Pause 1s at the top. Floor press keeps chest volume up. 24+20: switch hands each set."
+              },
+              {
+                "header": "3C75s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "Feet-Up Ring Row 10@BW"
+                ],
+                "note": "Capped at these reps all block to keep elbow load in check. Squeeze 1s at the top."
+              },
+              {
+                "header": "3D60s",
+                "exercises": [
+                  "Ring Face Pull 15@BW",
+                  "DB Lateral Raise 12@20lbs",
+                  "DB Overhead Extension 12@20lbs"
+                ],
+                "note": "Rear delts, side delts, triceps: the shoulder caps and arm size."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Hold :40@130lbs"
+                ],
+                "note": "Hug it high and tight, upper back working hard."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "KB Legs + Carries",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "10/8/6/4A120s",
+                "exercises": [
+                  "KB Box Squat @16+16/20+20/20+20/24+20",
+                  "KB Front Squat @16+16/20+20/20+20/24+20",
+                  "KB Thruster @16+16/20+20/20+20/24+20",
+                  "KB Dead Clean @16+16/20+20/20+20/24+20",
+                  "KB Reverse Lunge @16+16/20+20/20+20/24+20"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
+              },
+              {
+                "header": "3B60s",
+                "exercises": [
+                  "KB Swing 12@24",
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :20@BW"
+                ],
+                "note": "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your EMOM engine and lockout. "
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "RTO Ring Push-up 12@BW",
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 8@BW"
+                ],
+                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 60@100lbs",
+                  "KB Farmer Walk 60@20+20",
+                  "Rest :60",
+                  "SB Shoulder Carry 40@100lbs",
+                  "KB Farmer Walk 40@20+20"
+                ],
+                "note": "Carry medley with the lighter bag. Smooth distance, not max load."
+              }
+            ]
+          }
+        ]
+      },
+      "4": {
+        "phase": "DELOAD",
+        "goal": "Lighter week: fewer rounds, lighter loads. Let elbows and shoulders settle.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push + 350",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW",
+                  "Scapula Pull 8@BW"
+                ]
+              },
+              {
+                "header": "3A120s",
+                "exercises": [
+                  "Ring Dip 6@+15lbs",
+                  "Ring Face Pull 12@BW"
+                ],
+                "note": "Lighter week. Smooth reps, full lockout, rings turned out at the top."
+              },
+              {
+                "header": "3B90s",
+                "exercises": [
+                  "KB Clean + Press 3@20+20",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Lighter week. Crisp reps."
+              },
+              {
+                "header": "2C60s",
+                "exercises": [
+                  "KB Pullover 10@16",
+                  "KB Crush Curl 12@16",
+                  "KB Halo 5'@16",
+                  "KB Around-the-World 5'@16",
+                  "DB Lateral Raise 12@20lbs",
+                  "KB Woodchop 8'@16"
+                ],
+                "note": "The 350 (TREE FITTY): about 70 reps a round, building to 5 rounds (350 reps) in wave 3. Loads stay at 16 all block; progress with a 3s lowering, not weight. Pullover: lie on the floor, knees bent, bell by the horns, ribs down, lower behind your head on a 3-count, pull back with the lats. Lateral raise replaces the upright row. If an elbow goes above 3/10, swap the crush curl for KB Bottoms-Up Hold :20'@16."
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Sandbag Lower",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "SB Bear Hug Hold :20@100lbs"
+                ]
+              },
+              {
+                "header": "3A75s",
+                "exercises": [
+                  "SB Shouldering 2'@130lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+              },
+              {
+                "header": "3B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 3@120lbs",
+                  "Ring Push-up 8@BW"
+                ],
+                "note": "Lighter week. Fast, clean reps. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+              },
+              {
+                "header": "2C120s",
+                "exercises": [
+                  "SB Zercher Squat 6@100lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+              },
+              {
+                "header": "3D90s",
+                "exercises": [
+                  "SB Shoulder Carry 40@120lbs",
+                  "SB Bear Hug Carry 40@120lbs"
+                ],
+                "note": "Switch shoulders each round. 130lbs builds distance first; 140lbs starts short and builds again."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "KB Farmer Walk 60@20+20"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull 10@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "3A120s",
+                "exercises": [
+                  "Tempo Ring Pull-up 3@BW",
+                  "Hollow Body Hold :20@BW"
+                ],
+                "note": "Lighter week. Neutral grip, rings free to rotate. 3 seconds down on every rep. Add the next rep only if last session stayed at 3/10 or less and the next morning was fine. Pain rule: up to 3/10 in the elbow or shoulder is OK if it is no worse the next morning. Above that: finish the sets as band-assisted pull-ups (@-20lbs); if those hurt too, do KB Pullover 12@16 instead."
+              },
+              {
+                "header": "3B90s",
+                "exercises": [
+                  "KB Supported Row 8'@20",
+                  "KB Floor Press 8@20+20"
+                ]
+              },
+              {
+                "header": "2C60s",
+                "exercises": [
+                  "Ring Face Pull 12@BW",
+                  "DB Lateral Raise 12@20lbs",
+                  "DB Overhead Extension 10@20lbs"
                 ]
               },
               {
                 "header": "FIN",
-                "note": "Extended carry medley — this is the added fat-loss volume. Can extend duration week to week if recovery allows; do not add load.",
                 "exercises": [
-                  "SB Bear Hug Carry 60@100lbs",
-                  "KB Farmer Walk 60@16+16",
+                  "Band Pull-Apart 20@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "KB Legs + Carries",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "10/8/6/4A120s",
+                "exercises": [
+                  "KB Box Squat @16+16/16+16/16+16/16+16",
+                  "KB Front Squat @16+16/16+16/16+16/16+16",
+                  "KB Thruster @16+16/16+16/16+16/16+16",
+                  "KB Dead Clean @16+16/16+16/16+16/16+16",
+                  "KB Reverse Lunge @16+16/16+16/16+16/16+16"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
+              },
+              {
+                "header": "2B60s",
+                "exercises": [
+                  "KB Swing 10@24",
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :15@BW"
+                ],
+                "note": "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your EMOM engine and lockout. "
+              },
+              {
+                "header": "2C60s",
+                "exercises": [
+                  "Ring Push-up 10@BW",
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 6@BW"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 40@100lbs",
+                  "KB Farmer Walk 40@20+20"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "5": {
+        "phase": "WAVE 2 / BUILD",
+        "goal": "Heavier wave. Mixed 24+20 pair for presses and floor presses. First sets at 140lbs on the sandbag.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push + 350",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW",
+                  "Scapula Pull 8@BW"
+                ]
+              },
+              {
+                "header": "4A90s",
+                "exercises": [
+                  "Ring Dip 8@+25lbs",
+                  "Ring Face Pull 15@BW"
+                ],
+                "note": "Shoulders stop just below elbows at the bottom; turn the rings out at the top. If the front of the shoulder complains, cut depth first. Drop to +20lbs if it keeps talking. If dips hurt at any load, do KB Floor Press 10@24+20 instead."
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "KB Clean + Press 3@24+20",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Clean every rep. Mixed pair: switch which hand holds the 24 every set (even set counts keep the sides equal). If you buy a second 24, use 24+24."
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "KB Pullover 10@16",
+                  "KB Crush Curl 12@16",
+                  "KB Halo 5'@16",
+                  "KB Around-the-World 5'@16",
+                  "DB Lateral Raise 12@20lbs",
+                  "KB Woodchop 8'@16"
+                ],
+                "note": "The 350 (TREE FITTY): about 70 reps a round, building to 5 rounds (350 reps) in wave 3. Loads stay at 16 all block; progress with a 3s lowering, not weight. Pullover: lie on the floor, knees bent, bell by the horns, ribs down, lower behind your head on a 3-count, pull back with the lats. Lateral raise replaces the upright row. If an elbow goes above 3/10, swap the crush curl for KB Bottoms-Up Hold :20'@16."
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Sandbag Lower",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "SB Bear Hug Hold :20@100lbs"
+                ]
+              },
+              {
+                "header": "3A75s",
+                "exercises": [
+                  "SB Shouldering 3/3/2'@130lbs/130lbs/140lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. Last set(s) at 140lbs: same speed as the 130s, or stay at 130 and try again next week."
+              },
+              {
+                "header": "4B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 3/3/3/2@130lbs/130lbs/130lbs/140lbs",
+                  "Ring Push-up 8@BW"
+                ],
+                "note": "140lbs shows up in the last sets of each block this wave. Same bar speed as the 130s, or stay at 130 and try again next week. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+              },
+              {
+                "header": "3C120s",
+                "exercises": [
+                  "SB Zercher Squat 8@120lbs",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+              },
+              {
+                "header": "3D120s",
+                "exercises": [
+                  "SB Shoulder Carry 50@130lbs",
+                  "SB Bear Hug Carry 50@130lbs"
+                ],
+                "note": "Switch shoulders each round. 130lbs builds distance first; 140lbs starts short and builds again."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "KB Farmer Walk 60@24+20"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull 10@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "5A120s",
+                "exercises": [
+                  "Tempo Ring Pull-up 4@BW",
+                  "Hollow Body Hold :20@BW"
+                ],
+                "note": "Neutral grip, rings free to rotate. 3 seconds down on every rep. Add the next rep only if last session stayed at 3/10 or less and the next morning was fine. Pain rule: up to 3/10 in the elbow or shoulder is OK if it is no worse the next morning. Above that: finish the sets as band-assisted pull-ups (@-20lbs); if those hurt too, do KB Pullover 12@16 instead."
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "KB Supported Row 8'@24",
+                  "KB Floor Press 8@24+20"
+                ],
+                "note": "Supported row: one hand braced on a box or bench so the lower back rests before leg day. Pause 1s at the top. Floor press keeps chest volume up. 24+20: switch hands each set."
+              },
+              {
+                "header": "3C75s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "Feet-Up Ring Row 10@BW"
+                ],
+                "note": "Capped at these reps all block to keep elbow load in check. Squeeze 1s at the top."
+              },
+              {
+                "header": "3D60s",
+                "exercises": [
+                  "Ring Face Pull 15@BW",
+                  "DB Lateral Raise 15@20lbs",
+                  "DB Overhead Extension 12@20lbs"
+                ],
+                "note": "Rear delts, side delts, triceps: the shoulder caps and arm size."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Hold :50@130lbs"
+                ],
+                "note": "Hug it high and tight, upper back working hard."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "KB Legs + Carries",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "10/8/6/4A90s",
+                "exercises": [
+                  "KB Box Squat @16+16/20+20/20+20/24+20",
+                  "KB Front Squat @16+16/20+20/20+20/24+20",
+                  "KB Thruster @16+16/20+20/20+20/24+20",
+                  "KB Dead Clean @16+16/20+20/20+20/24+20",
+                  "KB Reverse Lunge @16+16/20+20/20+20/24+20"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
+              },
+              {
+                "header": "3B60s",
+                "exercises": [
+                  "KB Swing 15@24",
+                  "KB Snatch 6'@16",
+                  "Ring Pull-up 3@BW",
+                  "Ring L-Sit Hold :25@BW"
+                ],
+                "note": "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your EMOM engine and lockout. Pull-ups are an easy second exposure: neutral grip, well short of failure. Skip them if Pull day broke the pain rule this week."
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "Feet-Up Ring Push-up 12@BW",
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 10@BW"
+                ],
+                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 60@110lbs",
+                  "KB Farmer Walk 60@24+20",
                   "Rest :60",
-                  "SB Shoulder Carry 40@100lbs",
-                  "KB Farmer Walk 40@16+16"
+                  "SB Shoulder Carry 40@110lbs",
+                  "KB Farmer Walk 40@24+20"
+                ],
+                "note": "Carry medley with the lighter bag. Smooth distance, not max load."
+              }
+            ]
+          }
+        ]
+      },
+      "6": {
+        "phase": "WAVE 2 / BUILD",
+        "goal": "Keep pull-ups pain-free.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push + 350",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW",
+                  "Scapula Pull 8@BW"
+                ]
+              },
+              {
+                "header": "4A90s",
+                "exercises": [
+                  "Ring Dip 9@+25lbs",
+                  "Ring Face Pull 15@BW"
+                ],
+                "note": "Shoulders stop just below elbows at the bottom; turn the rings out at the top. If the front of the shoulder complains, cut depth first. Drop to +20lbs if it keeps talking. If dips hurt at any load, do KB Floor Press 10@24+20 instead."
+              },
+              {
+                "header": "6B90s",
+                "exercises": [
+                  "KB Clean + Press 3@24+20",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Clean every rep. Mixed pair: switch which hand holds the 24 every set (even set counts keep the sides equal). If you buy a second 24, use 24+24."
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "KB Pullover 10@16",
+                  "KB Crush Curl 12@16",
+                  "KB Halo 5'@16",
+                  "KB Around-the-World 5'@16",
+                  "DB Lateral Raise 12@20lbs",
+                  "KB Woodchop 8'@16"
+                ],
+                "note": "The 350 (TREE FITTY): about 70 reps a round, building to 5 rounds (350 reps) in wave 3. Loads stay at 16 all block; progress with a 3s lowering, not weight. Pullover: lie on the floor, knees bent, bell by the horns, ribs down, lower behind your head on a 3-count, pull back with the lats. Lateral raise replaces the upright row. If an elbow goes above 3/10, swap the crush curl for KB Bottoms-Up Hold :20'@16."
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Sandbag Lower",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "SB Bear Hug Hold :20@100lbs"
+                ]
+              },
+              {
+                "header": "3A75s",
+                "exercises": [
+                  "SB Shouldering 3/2/2'@130lbs/140lbs/140lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. Last set(s) at 140lbs: same speed as the 130s, or stay at 130 and try again next week."
+              },
+              {
+                "header": "4B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 5/5/2/2@130lbs/130lbs/140lbs/140lbs",
+                  "Ring Push-up 8@BW"
+                ],
+                "note": "140lbs shows up in the last sets of each block this wave. Same bar speed as the 130s, or stay at 130 and try again next week. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+              },
+              {
+                "header": "3C120s",
+                "exercises": [
+                  "SB Zercher Squat 8@120lbs",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+              },
+              {
+                "header": "3D120s",
+                "exercises": [
+                  "SB Shoulder Carry 60@130lbs",
+                  "SB Bear Hug Carry 60@130lbs"
+                ],
+                "note": "Switch shoulders each round. 130lbs builds distance first; 140lbs starts short and builds again."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "KB Farmer Walk 60@24+20"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull 10@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "5A120s",
+                "exercises": [
+                  "Tempo Ring Pull-up 5@BW",
+                  "Hollow Body Hold :20@BW"
+                ],
+                "note": "Neutral grip, rings free to rotate. 3 seconds down on every rep. Add the next rep only if last session stayed at 3/10 or less and the next morning was fine. Pain rule: up to 3/10 in the elbow or shoulder is OK if it is no worse the next morning. Above that: finish the sets as band-assisted pull-ups (@-20lbs); if those hurt too, do KB Pullover 12@16 instead."
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "KB Supported Row 8'@24",
+                  "KB Floor Press 8@24+20"
+                ],
+                "note": "Supported row: one hand braced on a box or bench so the lower back rests before leg day. Pause 1s at the top. Floor press keeps chest volume up. 24+20: switch hands each set."
+              },
+              {
+                "header": "3C75s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "Feet-Up Ring Row 10@BW"
+                ],
+                "note": "Capped at these reps all block to keep elbow load in check. Squeeze 1s at the top."
+              },
+              {
+                "header": "3D60s",
+                "exercises": [
+                  "Ring Face Pull 15@BW",
+                  "DB Lateral Raise 15@20lbs",
+                  "DB Overhead Extension 12@20lbs"
+                ],
+                "note": "Rear delts, side delts, triceps: the shoulder caps and arm size."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Hold :50@130lbs"
+                ],
+                "note": "Hug it high and tight, upper back working hard."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "KB Legs + Carries",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "10/8/6/4A90s",
+                "exercises": [
+                  "KB Box Squat @16+16/20+20/24+20/24+20",
+                  "KB Front Squat @16+16/20+20/24+20/24+20",
+                  "KB Thruster @16+16/20+20/24+20/24+20",
+                  "KB Dead Clean @16+16/20+20/24+20/24+20",
+                  "KB Reverse Lunge @16+16/20+20/24+20/24+20"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
+              },
+              {
+                "header": "3B60s",
+                "exercises": [
+                  "KB Swing 15@24",
+                  "KB Snatch 6'@16",
+                  "Ring Pull-up 3@BW",
+                  "Ring L-Sit Hold :25@BW"
+                ],
+                "note": "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your EMOM engine and lockout. Pull-ups are an easy second exposure: neutral grip, well short of failure. Skip them if Pull day broke the pain rule this week."
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "Feet-Up Ring Push-up 12@BW",
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 10@BW"
+                ],
+                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 60@110lbs",
+                  "KB Farmer Walk 60@24+20",
+                  "Rest :60",
+                  "SB Shoulder Carry 40@110lbs",
+                  "KB Farmer Walk 40@24+20"
+                ],
+                "note": "Carry medley with the lighter bag. Smooth distance, not max load."
+              }
+            ]
+          }
+        ]
+      },
+      "7": {
+        "phase": "WAVE 2 / BUILD",
+        "goal": "Hardest week of wave 2.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push + 350",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW",
+                  "Scapula Pull 8@BW"
+                ]
+              },
+              {
+                "header": "4A90s",
+                "exercises": [
+                  "Ring Dip 10@+25lbs",
+                  "Ring Face Pull 15@BW"
+                ],
+                "note": "Shoulders stop just below elbows at the bottom; turn the rings out at the top. If the front of the shoulder complains, cut depth first. Drop to +20lbs if it keeps talking. If dips hurt at any load, do KB Floor Press 10@24+20 instead."
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "KB Clean + Press 4@24+20",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Clean every rep. Mixed pair: switch which hand holds the 24 every set (even set counts keep the sides equal). If you buy a second 24, use 24+24."
+              },
+              {
+                "header": "4C60s",
+                "exercises": [
+                  "KB Pullover 10@16",
+                  "KB Crush Curl 12@16",
+                  "KB Halo 5'@16",
+                  "KB Around-the-World 5'@16",
+                  "DB Lateral Raise 12@20lbs",
+                  "KB Woodchop 8'@16"
+                ],
+                "note": "The 350 (TREE FITTY): about 70 reps a round, building to 5 rounds (350 reps) in wave 3. Loads stay at 16 all block; progress with a 3s lowering, not weight. Pullover: lie on the floor, knees bent, bell by the horns, ribs down, lower behind your head on a 3-count, pull back with the lats. Lateral raise replaces the upright row. If an elbow goes above 3/10, swap the crush curl for KB Bottoms-Up Hold :20'@16."
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Sandbag Lower",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "SB Bear Hug Hold :20@100lbs"
+                ]
+              },
+              {
+                "header": "3A75s",
+                "exercises": [
+                  "SB Shouldering 2'@140lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+              },
+              {
+                "header": "4B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 3@130lbs/130lbs/140lbs/140lbs",
+                  "Ring Push-up 8@BW"
+                ],
+                "note": "140lbs shows up in the last sets of each block this wave. Same bar speed as the 130s, or stay at 130 and try again next week. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+              },
+              {
+                "header": "4C120s",
+                "exercises": [
+                  "SB Zercher Squat 8@120lbs",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+              },
+              {
+                "header": "3D120s",
+                "exercises": [
+                  "SB Shoulder Carry 40@140lbs",
+                  "SB Bear Hug Carry 40@140lbs"
+                ],
+                "note": "Switch shoulders each round. 130lbs builds distance first; 140lbs starts short and builds again."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "KB Farmer Walk 60@24+20"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull 10@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "5A120s",
+                "exercises": [
+                  "Tempo Ring Pull-up 5@BW",
+                  "Hollow Body Hold :20@BW"
+                ],
+                "note": "Neutral grip, rings free to rotate. 3 seconds down on every rep. Add the next rep only if last session stayed at 3/10 or less and the next morning was fine. Pain rule: up to 3/10 in the elbow or shoulder is OK if it is no worse the next morning. Above that: finish the sets as band-assisted pull-ups (@-20lbs); if those hurt too, do KB Pullover 12@16 instead."
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "KB Supported Row 8'@24",
+                  "KB Floor Press 8@24+20"
+                ],
+                "note": "Supported row: one hand braced on a box or bench so the lower back rests before leg day. Pause 1s at the top. Floor press keeps chest volume up. 24+20: switch hands each set."
+              },
+              {
+                "header": "3C75s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "Feet-Up Ring Row 10@BW"
+                ],
+                "note": "Capped at these reps all block to keep elbow load in check. Squeeze 1s at the top."
+              },
+              {
+                "header": "3D60s",
+                "exercises": [
+                  "Ring Face Pull 15@BW",
+                  "DB Lateral Raise 15@20lbs",
+                  "DB Overhead Extension 12@20lbs"
+                ],
+                "note": "Rear delts, side delts, triceps: the shoulder caps and arm size."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Hold :50@130lbs"
+                ],
+                "note": "Hug it high and tight, upper back working hard."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "KB Legs + Carries",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "10/8/6/4A90s",
+                "exercises": [
+                  "KB Box Squat @20+20/20+20/24+20/24+20",
+                  "KB Front Squat @20+20/20+20/24+20/24+20",
+                  "KB Thruster @20+20/20+20/24+20/24+20",
+                  "KB Dead Clean @20+20/20+20/24+20/24+20",
+                  "KB Reverse Lunge @20+20/20+20/24+20/24+20"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
+              },
+              {
+                "header": "3B60s",
+                "exercises": [
+                  "KB Swing 15@24",
+                  "KB Snatch 6'@16",
+                  "Ring Pull-up 3@BW",
+                  "Ring L-Sit Hold :25@BW"
+                ],
+                "note": "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your EMOM engine and lockout. Pull-ups are an easy second exposure: neutral grip, well short of failure. Skip them if Pull day broke the pain rule this week."
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "Feet-Up Ring Push-up 12@BW",
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 10@BW"
+                ],
+                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 60@110lbs",
+                  "KB Farmer Walk 60@24+20",
+                  "Rest :60",
+                  "SB Shoulder Carry 40@110lbs",
+                  "KB Farmer Walk 40@24+20"
+                ],
+                "note": "Carry medley with the lighter bag. Smooth distance, not max load."
+              }
+            ]
+          }
+        ]
+      },
+      "8": {
+        "phase": "DELOAD + RETEST",
+        "goal": "Lighter week with a strict pull-up max test on Pull day.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push + 350",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW",
+                  "Scapula Pull 8@BW"
+                ]
+              },
+              {
+                "header": "3A120s",
+                "exercises": [
+                  "Ring Dip 6@+15lbs",
+                  "Ring Face Pull 12@BW"
+                ],
+                "note": "Lighter week. Smooth reps, full lockout, rings turned out at the top."
+              },
+              {
+                "header": "3B90s",
+                "exercises": [
+                  "KB Clean + Press 3@20+20",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Lighter week. Crisp reps."
+              },
+              {
+                "header": "2C60s",
+                "exercises": [
+                  "KB Pullover 10@16",
+                  "KB Crush Curl 12@16",
+                  "KB Halo 5'@16",
+                  "KB Around-the-World 5'@16",
+                  "DB Lateral Raise 12@20lbs",
+                  "KB Woodchop 8'@16"
+                ],
+                "note": "The 350 (TREE FITTY): about 70 reps a round, building to 5 rounds (350 reps) in wave 3. Loads stay at 16 all block; progress with a 3s lowering, not weight. Pullover: lie on the floor, knees bent, bell by the horns, ribs down, lower behind your head on a 3-count, pull back with the lats. Lateral raise replaces the upright row. If an elbow goes above 3/10, swap the crush curl for KB Bottoms-Up Hold :20'@16."
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Sandbag Lower",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "SB Bear Hug Hold :20@100lbs"
+                ]
+              },
+              {
+                "header": "3A75s",
+                "exercises": [
+                  "SB Shouldering 2'@130lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+              },
+              {
+                "header": "3B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 3@130lbs",
+                  "Ring Push-up 8@BW"
+                ],
+                "note": "Lighter week. Fast, clean reps. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+              },
+              {
+                "header": "2C120s",
+                "exercises": [
+                  "SB Zercher Squat 6@110lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+              },
+              {
+                "header": "3D90s",
+                "exercises": [
+                  "SB Shoulder Carry 40@130lbs",
+                  "SB Bear Hug Carry 40@130lbs"
+                ],
+                "note": "Switch shoulders each round. 130lbs builds distance first; 140lbs starts short and builds again."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "KB Farmer Walk 60@20+20"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull 10@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "1A180s",
+                "exercises": [
+                  "Ring Pull-up 8@BW"
+                ],
+                "note": "TEST: one strict max set, dead hang to chin over rings, 2s down, no kip. Log your real number, even if it's more or less than 8. 10+ reps pain-free means weighted pull-ups can come back next block."
+              },
+              {
+                "header": "3B90s",
+                "exercises": [
+                  "KB Pullover 12@16",
+                  "Hollow Body Hold :20@BW"
+                ],
+                "note": "Lats without bending the elbows. No more pull-ups today."
+              },
+              {
+                "header": "3C90s",
+                "exercises": [
+                  "KB Supported Row 8'@20",
+                  "KB Floor Press 8@20+20"
+                ]
+              },
+              {
+                "header": "2D60s",
+                "exercises": [
+                  "Ring Face Pull 12@BW",
+                  "DB Lateral Raise 12@20lbs",
+                  "DB Overhead Extension 10@20lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "Band Pull-Apart 20@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "KB Legs + Carries",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "10/8/6/4A120s",
+                "exercises": [
+                  "KB Box Squat @16+16/16+16/20+20/20+20",
+                  "KB Front Squat @16+16/16+16/20+20/20+20",
+                  "KB Thruster @16+16/16+16/20+20/20+20",
+                  "KB Dead Clean @16+16/16+16/20+20/20+20",
+                  "KB Reverse Lunge @16+16/16+16/20+20/20+20"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
+              },
+              {
+                "header": "2B60s",
+                "exercises": [
+                  "KB Swing 10@24",
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :15@BW"
+                ],
+                "note": "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your EMOM engine and lockout. "
+              },
+              {
+                "header": "2C60s",
+                "exercises": [
+                  "Ring Push-up 10@BW",
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 6@BW"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 40@100lbs",
+                  "KB Farmer Walk 40@20+20"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "9": {
+        "phase": "WAVE 3 / PEAK",
+        "goal": "Heaviest wave. Sandbag works at 140lbs. The 350 goes to 5 full rounds.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push + 350",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW",
+                  "Scapula Pull 8@BW"
+                ]
+              },
+              {
+                "header": "4A90s",
+                "exercises": [
+                  "Ring Dip 8@+30lbs",
+                  "Ring Face Pull 15@BW"
+                ],
+                "note": "Shoulders stop just below elbows at the bottom; turn the rings out at the top. If the front of the shoulder complains, cut depth first. Drop to +25lbs if it keeps talking. If dips hurt at any load, do KB Floor Press 10@24+20 instead."
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "KB Clean + Press 4@24+20",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Clean every rep. Mixed pair: switch which hand holds the 24 every set (even set counts keep the sides equal). If you buy a second 24, use 24+24."
+              },
+              {
+                "header": "5C60s",
+                "exercises": [
+                  "KB Pullover 10@16",
+                  "KB Crush Curl 12@16",
+                  "KB Halo 5'@16",
+                  "KB Around-the-World 5'@16",
+                  "DB Lateral Raise 12@20lbs",
+                  "KB Woodchop 8'@16"
+                ],
+                "note": "The 350 (TREE FITTY): about 70 reps a round, building to 5 rounds (350 reps) in wave 3. Loads stay at 16 all block; progress with a 3s lowering, not weight. Pullover: lie on the floor, knees bent, bell by the horns, ribs down, lower behind your head on a 3-count, pull back with the lats. Lateral raise replaces the upright row. If an elbow goes above 3/10, swap the crush curl for KB Bottoms-Up Hold :20'@16."
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Sandbag Lower",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "SB Bear Hug Hold :20@100lbs"
+                ]
+              },
+              {
+                "header": "3A75s",
+                "exercises": [
+                  "SB Shouldering 2'@140lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+              },
+              {
+                "header": "4B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 3@140lbs",
+                  "Ring Push-up 8@BW"
+                ],
+                "note": "Everything at 140lbs now. If a set gets slow, finish the day at 130. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+              },
+              {
+                "header": "3C120s",
+                "exercises": [
+                  "SB Zercher Squat 8@120lbs",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+              },
+              {
+                "header": "3D120s",
+                "exercises": [
+                  "SB Shoulder Carry 40@140lbs",
+                  "SB Bear Hug Carry 40@140lbs"
+                ],
+                "note": "Switch shoulders each round. 130lbs builds distance first; 140lbs starts short and builds again."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "KB Farmer Walk 60@24+20"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull 10@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "5A120s",
+                "exercises": [
+                  "Ring Pull-up 5@BW",
+                  "Hollow Body Hold :20@BW"
+                ],
+                "note": "Neutral grip, rings free to rotate. Add the next rep only if last session stayed at 3/10 or less and the next morning was fine. Pain rule: up to 3/10 in the elbow or shoulder is OK if it is no worse the next morning. Above that: finish the sets as band-assisted pull-ups (@-20lbs); if those hurt too, do KB Pullover 12@16 instead."
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "KB Supported Row 10'@24",
+                  "KB Floor Press 10@24+20"
+                ],
+                "note": "Supported row: one hand braced on a box or bench so the lower back rests before leg day. Pause 1s at the top. Floor press keeps chest volume up. 24+20: switch hands each set."
+              },
+              {
+                "header": "3C75s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "Feet-Up Ring Row 10@BW"
+                ],
+                "note": "Capped at these reps all block to keep elbow load in check. Squeeze 1s at the top."
+              },
+              {
+                "header": "3D60s",
+                "exercises": [
+                  "Ring Face Pull 15@BW",
+                  "DB Lateral Raise 20@20lbs",
+                  "DB Overhead Extension 12@20lbs"
+                ],
+                "note": "Rear delts, side delts, triceps: the shoulder caps and arm size."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Hold :40@140lbs"
+                ],
+                "note": "Hug it high and tight, upper back working hard."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "KB Legs + Carries",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "10/8/6/4A90s",
+                "exercises": [
+                  "KB Box Squat @20+20/20+20/24+20/24+20",
+                  "KB Front Squat @20+20/20+20/24+20/24+20",
+                  "KB Thruster @20+20/20+20/24+20/24+20",
+                  "KB Dead Clean @20+20/20+20/24+20/24+20",
+                  "KB Reverse Lunge @20+20/20+20/24+20/24+20"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
+              },
+              {
+                "header": "3B60s",
+                "exercises": [
+                  "KB Swing 15@24",
+                  "KB Snatch 5'@20",
+                  "Ring Pull-up 3@BW",
+                  "Ring L-Sit Hold :30@BW"
+                ],
+                "note": "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your EMOM engine and lockout. Pull-ups are an easy second exposure: neutral grip, well short of failure. Skip them if Pull day broke the pain rule this week."
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "Feet-Up Ring Push-up 15@BW",
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 12@BW"
+                ],
+                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 60@110lbs",
+                  "KB Farmer Walk 80@24+20",
+                  "Rest :60",
+                  "SB Shoulder Carry 40@110lbs",
+                  "KB Farmer Walk 40@24+20"
+                ],
+                "note": "Carry medley with the lighter bag. Smooth distance, not max load."
+              }
+            ]
+          }
+        ]
+      },
+      "10": {
+        "phase": "WAVE 3 / PEAK",
+        "goal": "More volume on the size work.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push + 350",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW",
+                  "Scapula Pull 8@BW"
+                ]
+              },
+              {
+                "header": "4A90s",
+                "exercises": [
+                  "Ring Dip 9@+30lbs",
+                  "Ring Face Pull 15@BW"
+                ],
+                "note": "Shoulders stop just below elbows at the bottom; turn the rings out at the top. If the front of the shoulder complains, cut depth first. Drop to +25lbs if it keeps talking. If dips hurt at any load, do KB Floor Press 10@24+20 instead."
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "KB Clean + Press 5@24+20",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Clean every rep. Mixed pair: switch which hand holds the 24 every set (even set counts keep the sides equal). If you buy a second 24, use 24+24."
+              },
+              {
+                "header": "5C60s",
+                "exercises": [
+                  "KB Pullover 10@16",
+                  "KB Crush Curl 12@16",
+                  "KB Halo 5'@16",
+                  "KB Around-the-World 5'@16",
+                  "DB Lateral Raise 12@20lbs",
+                  "KB Woodchop 8'@16"
+                ],
+                "note": "The 350 (TREE FITTY): about 70 reps a round, building to 5 rounds (350 reps) in wave 3. Loads stay at 16 all block; progress with a 3s lowering, not weight. Pullover: lie on the floor, knees bent, bell by the horns, ribs down, lower behind your head on a 3-count, pull back with the lats. Lateral raise replaces the upright row. If an elbow goes above 3/10, swap the crush curl for KB Bottoms-Up Hold :20'@16."
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Sandbag Lower",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "SB Bear Hug Hold :20@100lbs"
+                ]
+              },
+              {
+                "header": "3A75s",
+                "exercises": [
+                  "SB Shouldering 3'@140lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+              },
+              {
+                "header": "3B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 4@140lbs",
+                  "Ring Push-up 8@BW"
+                ],
+                "note": "Everything at 140lbs now. If a set gets slow, finish the day at 130. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+              },
+              {
+                "header": "3C120s",
+                "exercises": [
+                  "SB Zercher Squat 8@120lbs",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+              },
+              {
+                "header": "3D120s",
+                "exercises": [
+                  "SB Shoulder Carry 50@140lbs",
+                  "SB Bear Hug Carry 50@140lbs"
+                ],
+                "note": "Switch shoulders each round. 130lbs builds distance first; 140lbs starts short and builds again."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "KB Farmer Walk 60@24+20"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull 10@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "5A120s",
+                "exercises": [
+                  "Ring Pull-up 6@BW",
+                  "Hollow Body Hold :20@BW"
+                ],
+                "note": "Neutral grip, rings free to rotate. Add the next rep only if last session stayed at 3/10 or less and the next morning was fine. Pain rule: up to 3/10 in the elbow or shoulder is OK if it is no worse the next morning. Above that: finish the sets as band-assisted pull-ups (@-20lbs); if those hurt too, do KB Pullover 12@16 instead."
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "KB Supported Row 10'@24",
+                  "KB Floor Press 10@24+20"
+                ],
+                "note": "Supported row: one hand braced on a box or bench so the lower back rests before leg day. Pause 1s at the top. Floor press keeps chest volume up. 24+20: switch hands each set."
+              },
+              {
+                "header": "3C75s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "Feet-Up Ring Row 10@BW"
+                ],
+                "note": "Capped at these reps all block to keep elbow load in check. Squeeze 1s at the top."
+              },
+              {
+                "header": "3D60s",
+                "exercises": [
+                  "Ring Face Pull 15@BW",
+                  "DB Lateral Raise 20@20lbs",
+                  "DB Overhead Extension 12@20lbs"
+                ],
+                "note": "Rear delts, side delts, triceps: the shoulder caps and arm size."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Hold :50@140lbs"
+                ],
+                "note": "Hug it high and tight, upper back working hard."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "KB Legs + Carries",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "10/8/6/4A75s",
+                "exercises": [
+                  "KB Box Squat @20+20/20+20/24+20/24+20",
+                  "KB Front Squat @20+20/20+20/24+20/24+20",
+                  "KB Thruster @20+20/20+20/24+20/24+20",
+                  "KB Dead Clean @20+20/20+20/24+20/24+20",
+                  "KB Reverse Lunge @20+20/20+20/24+20/24+20"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
+              },
+              {
+                "header": "3B60s",
+                "exercises": [
+                  "KB Swing 15@24",
+                  "KB Snatch 5'@20",
+                  "Ring Pull-up 3@BW",
+                  "Ring L-Sit Hold :30@BW"
+                ],
+                "note": "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your EMOM engine and lockout. Pull-ups are an easy second exposure: neutral grip, well short of failure. Skip them if Pull day broke the pain rule this week."
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "Feet-Up Ring Push-up 15@BW",
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 12@BW"
+                ],
+                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 60@110lbs",
+                  "KB Farmer Walk 80@24+20",
+                  "Rest :60",
+                  "SB Shoulder Carry 40@110lbs",
+                  "KB Farmer Walk 40@24+20"
+                ],
+                "note": "Carry medley with the lighter bag. Smooth distance, not max load."
+              }
+            ]
+          }
+        ]
+      },
+      "11": {
+        "phase": "WAVE 3 / PEAK",
+        "goal": "Last hard week. Test week follows, so sleep and eat.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push + 350",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW",
+                  "Scapula Pull 8@BW"
+                ]
+              },
+              {
+                "header": "4A90s",
+                "exercises": [
+                  "Ring Dip 10@+30lbs",
+                  "Ring Face Pull 15@BW"
+                ],
+                "note": "Shoulders stop just below elbows at the bottom; turn the rings out at the top. If the front of the shoulder complains, cut depth first. Drop to +25lbs if it keeps talking. If dips hurt at any load, do KB Floor Press 10@24+20 instead."
+              },
+              {
+                "header": "5B90s",
+                "exercises": [
+                  "KB Clean + Press 5@24+20",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Clean every rep. Mixed pair: switch which hand holds the 24 every set (even set counts keep the sides equal). If you buy a second 24, use 24+24."
+              },
+              {
+                "header": "5C60s",
+                "exercises": [
+                  "KB Pullover 10@16",
+                  "KB Crush Curl 12@16",
+                  "KB Halo 5'@16",
+                  "KB Around-the-World 5'@16",
+                  "DB Lateral Raise 12@20lbs",
+                  "KB Woodchop 8'@16"
+                ],
+                "note": "The 350 (TREE FITTY): about 70 reps a round, building to 5 rounds (350 reps) in wave 3. Loads stay at 16 all block; progress with a 3s lowering, not weight. Pullover: lie on the floor, knees bent, bell by the horns, ribs down, lower behind your head on a 3-count, pull back with the lats. Lateral raise replaces the upright row. If an elbow goes above 3/10, swap the crush curl for KB Bottoms-Up Hold :20'@16."
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Sandbag Lower",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "SB Bear Hug Hold :20@100lbs"
+                ]
+              },
+              {
+                "header": "3A75s",
+                "exercises": [
+                  "SB Shouldering 3'@140lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+              },
+              {
+                "header": "5B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 3@140lbs",
+                  "Ring Push-up 8@BW"
+                ],
+                "note": "Everything at 140lbs now. If a set gets slow, finish the day at 130. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+              },
+              {
+                "header": "4C120s",
+                "exercises": [
+                  "SB Zercher Squat 8@120lbs",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+              },
+              {
+                "header": "3D120s",
+                "exercises": [
+                  "SB Shoulder Carry 60@140lbs",
+                  "SB Bear Hug Carry 60@140lbs"
+                ],
+                "note": "Switch shoulders each round. 130lbs builds distance first; 140lbs starts short and builds again."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "KB Farmer Walk 60@24+20"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull 10@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "6A120s",
+                "exercises": [
+                  "Ring Pull-up 5@BW",
+                  "Hollow Body Hold :20@BW"
+                ],
+                "note": "Neutral grip, rings free to rotate. Add the next rep only if last session stayed at 3/10 or less and the next morning was fine. Pain rule: up to 3/10 in the elbow or shoulder is OK if it is no worse the next morning. Above that: finish the sets as band-assisted pull-ups (@-20lbs); if those hurt too, do KB Pullover 12@16 instead."
+              },
+              {
+                "header": "4B90s",
+                "exercises": [
+                  "KB Supported Row 10'@24",
+                  "KB Floor Press 10@24+20"
+                ],
+                "note": "Supported row: one hand braced on a box or bench so the lower back rests before leg day. Pause 1s at the top. Floor press keeps chest volume up. 24+20: switch hands each set."
+              },
+              {
+                "header": "3C75s",
+                "exercises": [
+                  "KB Gorilla Row 8'@24",
+                  "Feet-Up Ring Row 10@BW"
+                ],
+                "note": "Capped at these reps all block to keep elbow load in check. Squeeze 1s at the top."
+              },
+              {
+                "header": "3D60s",
+                "exercises": [
+                  "Ring Face Pull 15@BW",
+                  "DB Lateral Raise 20@20lbs",
+                  "DB Overhead Extension 12@20lbs"
+                ],
+                "note": "Rear delts, side delts, triceps: the shoulder caps and arm size."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Hold :60@140lbs"
+                ],
+                "note": "Hug it high and tight, upper back working hard."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "KB Legs + Carries",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "10/8/6/4A60s",
+                "exercises": [
+                  "KB Box Squat @20+20/20+20/24+20/24+20",
+                  "KB Front Squat @20+20/20+20/24+20/24+20",
+                  "KB Thruster @20+20/20+20/24+20/24+20",
+                  "KB Dead Clean @20+20/20+20/24+20/24+20",
+                  "KB Reverse Lunge @20+20/20+20/24+20/24+20"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
+              },
+              {
+                "header": "3B60s",
+                "exercises": [
+                  "KB Swing 15@24",
+                  "KB Snatch 5'@20",
+                  "Ring Pull-up 3@BW",
+                  "Ring L-Sit Hold :30@BW"
+                ],
+                "note": "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your EMOM engine and lockout. Pull-ups are an easy second exposure: neutral grip, well short of failure. Skip them if Pull day broke the pain rule this week."
+              },
+              {
+                "header": "3C60s",
+                "exercises": [
+                  "Feet-Up Ring Push-up 15@BW",
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 12@BW"
+                ],
+                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 60@110lbs",
+                  "KB Farmer Walk 80@24+20",
+                  "Rest :60",
+                  "SB Shoulder Carry 40@110lbs",
+                  "KB Farmer Walk 40@24+20"
+                ],
+                "note": "Carry medley with the lighter bag. Smooth distance, not max load."
+              }
+            ]
+          }
+        ]
+      },
+      "12": {
+        "phase": "TEST WEEK",
+        "goal": "Test the numbers: ring dip top set, pull-up max, clean + press max reps. Sandbag: 140lbs cleans, shouldering and carries, smooth and confident. Everything else is light. Log everything.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push + 350",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW",
+                  "Scapula Pull 8@BW"
+                ]
+              },
+              {
+                "header": "1A180s",
+                "exercises": [
+                  "Ring Dip 10@+30lbs",
+                  "Ring Face Pull 15@BW"
+                ],
+                "note": "TEST: one set of max reps at +30lbs, stopping at the last clean rep. Your cut-block number was 6 reps at +30. Log the real number."
+              },
+              {
+                "header": "2B120s",
+                "exercises": [
+                  "Ring Dip 8@+20lbs",
+                  "Ring Face Pull 15@BW"
+                ],
+                "note": "Back-off sets."
+              },
+              {
+                "header": "2C180s",
+                "exercises": [
+                  "KB Clean + Press 8@24+20",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "TEST: max reps, one set with the 24 in each hand; stop at the last clean rep. Week 11 was 5x5. Mixed pair: switch which hand holds the 24 every set (even set counts keep the sides equal). If you buy a second 24, use 24+24."
+              },
+              {
+                "header": "3D60s",
+                "exercises": [
+                  "KB Pullover 10@16",
+                  "KB Crush Curl 12@16",
+                  "KB Halo 5'@16",
+                  "KB Around-the-World 5'@16",
+                  "DB Lateral Raise 12@20lbs",
+                  "KB Woodchop 8'@16"
+                ],
+                "note": "The 350 (TREE FITTY): about 70 reps a round, building to 5 rounds (350 reps) in wave 3. Loads stay at 16 all block; progress with a 3s lowering, not weight. Pullover: lie on the floor, knees bent, bell by the horns, ribs down, lower behind your head on a 3-count, pull back with the lats. Lateral raise replaces the upright row. If an elbow goes above 3/10, swap the crush curl for KB Bottoms-Up Hold :20'@16."
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Sandbag Lower",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "SB Bear Hug Hold :20@100lbs"
+                ]
+              },
+              {
+                "header": "3A75s",
+                "exercises": [
+                  "SB Shouldering 2'@140lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+              },
+              {
+                "header": "3B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 3@140lbs",
+                  "Ring Push-up 8@BW"
+                ],
+                "note": "TEST: 140lbs for crisp triples. Confident, not maxed. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+              },
+              {
+                "header": "2C120s",
+                "exercises": [
+                  "SB Zercher Squat 6@110lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+              },
+              {
+                "header": "3D120s",
+                "exercises": [
+                  "SB Shoulder Carry 40@140lbs",
+                  "SB Bear Hug Carry 40@140lbs"
+                ],
+                "note": "Switch shoulders each round. 130lbs builds distance first; 140lbs starts short and builds again."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "KB Farmer Walk 60@20+20"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull 10@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "1A180s",
+                "exercises": [
+                  "Ring Pull-up 8@BW"
+                ],
+                "note": "TEST: one strict max set, dead hang to chin over rings, 2s down, no kip. Log your real number, even if it's more or less than 8. 10+ reps pain-free means weighted pull-ups can come back next block."
+              },
+              {
+                "header": "3B90s",
+                "exercises": [
+                  "KB Pullover 12@16",
+                  "Hollow Body Hold :20@BW"
+                ],
+                "note": "Lats without bending the elbows. No more pull-ups today."
+              },
+              {
+                "header": "3C90s",
+                "exercises": [
+                  "KB Supported Row 10'@24",
+                  "KB Floor Press 10@24+20"
+                ],
+                "note": "Supported row: one hand braced on a box or bench so the lower back rests before leg day. Pause 1s at the top. Floor press keeps chest volume up. 24+20: switch hands each set."
+              },
+              {
+                "header": "2D60s",
+                "exercises": [
+                  "Ring Face Pull 15@BW",
+                  "DB Lateral Raise 12@20lbs",
+                  "DB Overhead Extension 12@20lbs"
+                ],
+                "note": "Rear delts, side delts, triceps: the shoulder caps and arm size."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Hold :60@140lbs"
+                ],
+                "note": "Hug it high and tight, upper back working hard."
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "KB Legs + Carries",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "10/8/6/4A120s",
+                "exercises": [
+                  "KB Box Squat @16+16/16+16/20+20/20+20",
+                  "KB Front Squat @16+16/16+16/20+20/20+20",
+                  "KB Thruster @16+16/16+16/20+20/20+20",
+                  "KB Dead Clean @16+16/16+16/20+20/20+20",
+                  "KB Reverse Lunge @16+16/16+16/20+20/20+20"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
+              },
+              {
+                "header": "2B60s",
+                "exercises": [
+                  "KB Swing 10@24",
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :15@BW"
+                ],
+                "note": "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your EMOM engine and lockout. "
+              },
+              {
+                "header": "2C60s",
+                "exercises": [
+                  "Ring Push-up 10@BW",
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 6@BW"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 40@100lbs",
+                  "KB Farmer Walk 40@20+20"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "13": {
+        "phase": "DELOAD / TRANSITION",
+        "goal": "Easy week. Recover, then the next block is built from your week 12 numbers.",
+        "days": [
+          {
+            "day": 1,
+            "name": "Push + 350",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Arm Circles :45@BW",
+                  "Band Pull-Apart :45@BW",
+                  "Scapula Pull 8@BW"
+                ]
+              },
+              {
+                "header": "3A120s",
+                "exercises": [
+                  "Ring Dip 6@+15lbs",
+                  "Ring Face Pull 12@BW"
+                ],
+                "note": "Lighter week. Smooth reps, full lockout, rings turned out at the top."
+              },
+              {
+                "header": "3B90s",
+                "exercises": [
+                  "KB Clean + Press 3@20+20",
+                  "Band Pull-Apart 20@BW"
+                ],
+                "note": "Lighter week. Crisp reps."
+              },
+              {
+                "header": "2C60s",
+                "exercises": [
+                  "KB Pullover 10@16",
+                  "KB Crush Curl 12@16",
+                  "KB Halo 5'@16",
+                  "KB Around-the-World 5'@16",
+                  "DB Lateral Raise 12@20lbs",
+                  "KB Woodchop 8'@16"
+                ],
+                "note": "The 350 (TREE FITTY): about 70 reps a round, building to 5 rounds (350 reps) in wave 3. Loads stay at 16 all block; progress with a 3s lowering, not weight. Pullover: lie on the floor, knees bent, bell by the horns, ribs down, lower behind your head on a 3-count, pull back with the lats. Lateral raise replaces the upright row. If an elbow goes above 3/10, swap the crush curl for KB Bottoms-Up Hold :20'@16."
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "name": "Sandbag Lower",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "Hindu Squat 15@BW",
+                  "Hip Circles :45@BW",
+                  "SB Bear Hug Hold :20@100lbs"
+                ]
+              },
+              {
+                "header": "3A75s",
+                "exercises": [
+                  "SB Shouldering 2'@130lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+              },
+              {
+                "header": "3B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 3@120lbs",
+                  "Ring Push-up 8@BW"
+                ],
+                "note": "Lighter week. Fast, clean reps. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+              },
+              {
+                "header": "2C120s",
+                "exercises": [
+                  "SB Zercher Squat 6@110lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+              },
+              {
+                "header": "3D90s",
+                "exercises": [
+                  "SB Shoulder Carry 40@120lbs",
+                  "SB Bear Hug Carry 40@120lbs"
+                ],
+                "note": "Switch shoulders each round. 130lbs builds distance first; 140lbs starts short and builds again."
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "KB Farmer Walk 60@20+20"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "name": "Pull",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "Dead Hang :30@BW",
+                  "Scapula Pull 10@BW",
+                  "Band Pull-Apart :45@BW",
+                  "RopeFlow :90@BW"
+                ]
+              },
+              {
+                "header": "3A120s",
+                "exercises": [
+                  "Ring Pull-up 3@BW",
+                  "Hollow Body Hold :20@BW"
+                ],
+                "note": "Lighter week. Neutral grip, rings free to rotate. Add the next rep only if last session stayed at 3/10 or less and the next morning was fine. Pain rule: up to 3/10 in the elbow or shoulder is OK if it is no worse the next morning. Above that: finish the sets as band-assisted pull-ups (@-20lbs); if those hurt too, do KB Pullover 12@16 instead."
+              },
+              {
+                "header": "3B90s",
+                "exercises": [
+                  "KB Supported Row 8'@20",
+                  "KB Floor Press 8@20+20"
+                ]
+              },
+              {
+                "header": "2C60s",
+                "exercises": [
+                  "Ring Face Pull 12@BW",
+                  "DB Lateral Raise 12@20lbs",
+                  "DB Overhead Extension 10@20lbs"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "Band Pull-Apart 20@BW"
+                ]
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "name": "KB Legs + Carries",
+            "blocks": [
+              {
+                "header": "WU",
+                "exercises": [
+                  "RopeFlow :120@BW",
+                  "KB Halo 6'@16",
+                  "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
+                  "Leg Swings :45@BW"
+                ]
+              },
+              {
+                "header": "10/8/6/4A120s",
+                "exercises": [
+                  "KB Box Squat @16+16/16+16/16+16/16+16",
+                  "KB Front Squat @16+16/16+16/16+16/16+16",
+                  "KB Thruster @16+16/16+16/16+16/16+16",
+                  "KB Dead Clean @16+16/16+16/16+16/16+16",
+                  "KB Reverse Lunge @16+16/16+16/16+16/16+16"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
+              },
+              {
+                "header": "2B60s",
+                "exercises": [
+                  "KB Swing 10@24",
+                  "KB Snatch 5'@16",
+                  "Ring L-Sit Hold :15@BW"
+                ],
+                "note": "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your EMOM engine and lockout. "
+              },
+              {
+                "header": "2C60s",
+                "exercises": [
+                  "Ring Push-up 10@BW",
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 6@BW"
+                ]
+              },
+              {
+                "header": "FIN",
+                "exercises": [
+                  "SB Bear Hug Carry 40@100lbs",
+                  "KB Farmer Walk 40@20+20"
                 ]
               }
             ]

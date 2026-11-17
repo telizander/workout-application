@@ -142,6 +142,23 @@ Use indentation for clarity:
 
 ---
 
+## 8a. Ladders
+
+Put the rep ladder in the block header in place of the round count. Separate the rungs with `/`.
+Each rung is one round; rest is taken between rungs. Exercises inside drop their reps and do the rung's reps.
+
+```
+10/8/6/4A90s:
+  - KB Box Squat @16+16/20+20/20+20/24+20
+  - KB Thruster @16+16/20+20/20+20/24+20
+  - KB Reverse Lunge @16+16/20+20/20+20/24+20
+```
+
+Rung 1 is 10 reps @16+16, rung 2 is 8 @20+20, and so on. Separate loads with `/` to change them per rung; a single load (`@20+20`) holds for every rung.
+An exercise that keeps its own reps (`Ring L-Sit Hold :20@BW`) does those every rung.
+
+---
+
 ## 9. Complete Example
 
 ```
@@ -188,6 +205,8 @@ FIN:
 | `@+10` | Weighted (+10kg) |
 | `@-10` | Assisted (-10kg) |
 | `5A90s:` | 5 rounds, block A, 90s rest |
+| `10/8/6/4A90s:` | Ladder block: rungs of 10, 8, 6, 4 reps, 90s rest |
+| `@16/20/20/24` | Load per rung (inside a ladder block) |
 
 ---
 
