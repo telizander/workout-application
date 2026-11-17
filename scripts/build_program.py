@@ -75,14 +75,15 @@ def day1(w):
     d = Day(1, "Push + 350")
     d.wu(["RopeFlow :120@BW", "Arm Circles :45@BW", "Band Pull-Apart :45@BW", "Scapula Pull 8@BW"])
 
-    # Dips: +10 -> +15 -> +20 across waves, building reps 8 -> 10 inside each wave.
-    dip_load = {1: 10, 2: 15, 3: 20}[wave]
+    # Dips: the cut block ended at 5x6@+30lbs. 4x8@+20 is the same effort in more reps, so wave 1 starts there,
+    # then +25 and +30, building 8 -> 10 reps inside each wave. Wave 3 is 4x10@+30: past the cut block.
+    dip_load = {1: 20, 2: 25, 3: 30}[wave]
     if w == TEST:
-        d.work(1, 180, ["Ring Dip 5@+30lbs", "Ring Face Pull 15@BW"],
-               "TEST: one top set, only if shoulders have been pain-free this wave; otherwise 5@+20lbs. Drop to +20lbs if the front of the shoulder talks.")
-        d.work(2, 120, ["Ring Dip 8@+15lbs", "Ring Face Pull 15@BW"], "Back-off sets.")
+        d.work(1, 180, ["Ring Dip 10@+30lbs", "Ring Face Pull 15@BW"],
+               "TEST: one set of max reps at +30lbs, stopping at the last clean rep. Your cut-block number was 6 reps at +30. Log the real number.")
+        d.work(2, 120, ["Ring Dip 8@+20lbs", "Ring Face Pull 15@BW"], "Back-off sets.")
     elif light:
-        d.work(3, 120, ["Ring Dip 6@BW", "Ring Face Pull 12@BW"], "Lighter week. Smooth reps, full lockout, rings turned out at the top.")
+        d.work(3, 120, ["Ring Dip 6@+15lbs", "Ring Face Pull 12@BW"], "Lighter week. Smooth reps, full lockout, rings turned out at the top.")
     else:
         reps = 8 + s
         d.work(4, 90, [f"Ring Dip {reps}@+{dip_load}lbs", "Ring Face Pull 15@BW"],
@@ -92,14 +93,15 @@ def day1(w):
     # KB Clean + Press with band pull-aparts (no extra elbow flexion).
     mixed = "Mixed pair: switch which hand holds the 24 every set (even set counts keep the sides equal). If you buy a second 24, use 24+24."
     if w == TEST:
-        d.work(2, 180, ["KB Clean + Press 5@24+20", "Band Pull-Apart 20@BW"], "TEST: one set of 5 with the 24 in each hand. " + mixed)
+        d.work(2, 180, ["KB Clean + Press 8@24+20", "Band Pull-Apart 20@BW"],
+               "TEST: max reps, one set with the 24 in each hand; stop at the last clean rep. Week 11 was 5x5. " + mixed)
     elif light:
         d.work(3, 90, ["KB Clean + Press 3@20+20", "Band Pull-Apart 20@BW"], "Lighter week. Crisp reps.")
     else:
         rounds, reps, load = {
             1: (4, 5, "20+20"), 2: (5, 5, "20+20"), 3: (5, 6, "20+20"),
             5: (4, 3, "24+20"), 6: (6, 3, "24+20"), 7: (4, 4, "24+20"),
-            9: (4, 4, "24+20"), 10: (4, 5, "24+20"), 11: (4, 5, "24+20"),
+            9: (4, 4, "24+20"), 10: (4, 5, "24+20"), 11: (5, 5, "24+20"),
         }[w]
         d.work(rounds, 90, [f"KB Clean + Press {reps}@{load}", "Band Pull-Apart 20@BW"],
                "Clean every rep. " + (mixed if load == "24+20" else ""))
@@ -111,7 +113,7 @@ def day1(w):
         "KB Crush Curl 12@16",
         "KB Halo 5'@16",
         "KB Around-the-World 5'@16",
-        "DB Lateral Raise 12@16lbs",
+        "DB Lateral Raise 12@20lbs",
         "KB Woodchop 8'@16",
     ], "The 350 (TREE FITTY): about 70 reps a round, building to 5 rounds (350 reps) in wave 3. Loads stay at 16 all block; progress with a 3s lowering, not weight. "
        "Pullover: lie on the floor, knees bent, bell by the horns, ribs down, lower behind your head on a 3-count, pull back with the lats. "
@@ -172,7 +174,7 @@ def day2(w):
 PULL = {  # week: (rounds, reps, tempo)
     1: (5, 3, True), 2: (5, 3, True), 3: (5, 4, True), 4: (3, 3, True),
     5: (5, 4, True), 6: (5, 5, True), 7: (5, 5, True),
-    9: (5, 5, False), 10: (5, 5, False), 11: (5, 5, False),
+    9: (5, 5, False), 10: (5, 6, False), 11: (6, 5, False),
     13: (3, 3, False),
 }
 
@@ -199,7 +201,7 @@ def day3(w):
 
     if light:
         d.work(3, 90, ["KB Supported Row 8'@20", "KB Floor Press 8@20+20"])
-        d.work(2, 60, ["Ring Face Pull 12@BW", "DB Lateral Raise 12@16lbs", "DB Overhead Extension 10@20lbs"])
+        d.work(2, 60, ["Ring Face Pull 12@BW", "DB Lateral Raise 12@20lbs", "DB Overhead Extension 10@20lbs"])
         d.fin(["Band Pull-Apart 20@BW"])
         return d.to_json()
 
@@ -212,8 +214,9 @@ def day3(w):
     if w != TEST:
         d.work(3, 75, ["KB Gorilla Row 8'@24", "Feet-Up Ring Row 10@BW"],
                "Capped at these reps all block to keep elbow load in check. Squeeze 1s at the top.")
-    lat = "16lbs" if wave < 3 else "20lbs"
-    d.work(2 if w == TEST else 3, 60, ["Ring Face Pull 15@BW", f"DB Lateral Raise 15@{lat}", "DB Overhead Extension 12@20lbs"],
+    # Laterals: 20lbs is what you already use, so the load holds and reps build 12 -> 15 -> 20 across waves.
+    lat = 12 if w == TEST else {1: 12, 2: 15, 3: 20}[wave]
+    d.work(2 if w == TEST else 3, 60, ["Ring Face Pull 15@BW", f"DB Lateral Raise {lat}@20lbs", "DB Overhead Extension 12@20lbs"],
            "Rear delts, side delts, triceps: the shoulder caps and arm size.")
     hold = {1: ":40", 2: ":50", 3: ":60"}[wave]
     d.fin([f"SB Bear Hug Hold {hold}@130lbs"],
@@ -262,13 +265,16 @@ def day4(w):
            "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. "
            "The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung.")
 
-    swings = 10 if light else {1: 10, 2: 12, 3: 15}[wave]
-    second = "KB Halo 5'@16" if wave == 1 or light else "Ring Pull-up 3@BW"
+    # Ballistics: the cut block ran 5x12 swings and a 12-minute snatch EMOM every week. Keep both patterns alive
+    # and still building; the snatch stays the pace-setter it was, now with a heavier bell in wave 3.
+    swings = 10 if light else {1: 12, 2: 15, 3: 15}[wave]
+    snatch = "5'@16" if light else {1: "5'@16", 2: "6'@16", 3: "5'@20"}[wave]
+    pullups = not light and wave > 1
     lsit = ":15" if light else {1: ":20", 2: ":25", 3: ":30"}[wave]
-    d.work(2 if light else 3, 60, [f"KB Swing {swings}@24", second, f"Ring L-Sit Hold {lsit}@BW"],
-           "The hinge to balance all that squatting: hard, snappy swings for hamstrings and glutes. "
-           + ("" if second.startswith("KB") else
-              "Pull-ups are an easy second exposure: neutral grip, well short of failure. Skip them if Pull day broke the pain rule this week."))
+    moves = [f"KB Swing {swings}@24", f"KB Snatch {snatch}"] + (["Ring Pull-up 3@BW"] if pullups else []) + [f"Ring L-Sit Hold {lsit}@BW"]
+    d.work(2 if light else 3, 60, moves,
+           "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your EMOM engine and lockout. "
+           + ("Pull-ups are an easy second exposure: neutral grip, well short of failure. Skip them if Pull day broke the pain rule this week." if pullups else ""))
 
     if light:
         d.work(2, 60, ["Ring Push-up 10@BW", "DB Overhead Extension 12@20lbs", "Ring Fallout 6@BW"])
@@ -302,7 +308,7 @@ PHASES = {
     8: ("DELOAD + RETEST", "Lighter week with a strict pull-up max test on Pull day."),
     9: ("WAVE 3 / PEAK", "Heaviest wave. The 350 goes to 5 full rounds."),
     10: ("WAVE 3 / PEAK", "More volume on the size work."),
-    11: ("WAVE 3 / PEAK", "Last hard week, slightly trimmed so you arrive at test week fresh."),
+    11: ("WAVE 3 / PEAK", "Last hard week. Test week follows, so sleep and eat."),
     12: ("TEST WEEK", "Test the numbers: ring dip top set, pull-up max, KB press 5@24+20. Sandbag day is an easy maintenance session. Everything else is light. Log everything."),
     13: ("DELOAD / TRANSITION", "Easy week. Recover, then the next block is built from your week 12 numbers."),
 }
