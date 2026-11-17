@@ -169,57 +169,36 @@
                   "RopeFlow :120@BW",
                   "KB Halo 6'@16",
                   "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
                   "Leg Swings :45@BW"
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "10/8/6/4A120s",
+                "exercises": [
+                  "KB Box Squat @16+16/16+16/20+20/20+20",
+                  "KB Front Squat @16+16/16+16/20+20/20+20",
+                  "KB Thruster @16+16/16+16/20+20/20+20",
+                  "KB Dead Clean @16+16/16+16/20+20/20+20",
+                  "KB Reverse Lunge @16+16/16+16/20+20/20+20"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
+              },
+              {
+                "header": "3B60s",
                 "exercises": [
                   "KB Swing 10@24",
-                  "KB Halo 5'@16"
+                  "KB Halo 5'@16",
+                  "Ring L-Sit Hold :20@BW"
                 ],
-                "note": "Explosive. Primes the hips; not a conditioning set."
+                "note": "The hinge to balance all that squatting: hard, snappy swings for hamstrings and glutes. "
               },
               {
-                "header": "1B180s",
-                "exercises": [
-                  "KB Dead Clean 10@16+16",
-                  "KB Front Squat 10@16+16",
-                  "KB Box Squat 10@16+16",
-                  "KB Thruster 10@16+16",
-                  "KB Reverse Lunge 5'@16+16",
-                  "KB Dead Clean 8@16+16",
-                  "KB Front Squat 8@16+16",
-                  "KB Box Squat 8@16+16",
-                  "KB Thruster 8@16+16",
-                  "KB Reverse Lunge 4'@16+16",
-                  "KB Dead Clean 6@20+20",
-                  "KB Front Squat 6@20+20",
-                  "KB Box Squat 6@20+20",
-                  "KB Thruster 6@20+20",
-                  "KB Reverse Lunge 3'@20+20",
-                  "KB Dead Clean 4@20+20",
-                  "KB Front Squat 4@20+20",
-                  "KB Box Squat 4@20+20",
-                  "KB Thruster 4@20+20",
-                  "KB Reverse Lunge 2'@20+20"
-                ],
-                "note": "Leg complex ladder: one pass of 10-8-6-4. Each rung: dead clean, front squat, box squat (sit fully, pause 1s, stand), thruster, reverse lunge from the rack (half the reps each leg). Bells touch the floor only before the dead cleans. Line up 16+16, 20+20 and 24+20 before you start and swap pairs in up to 60s between rungs. If thrusters break down, park the bells for 15s and finish. 24+20: switch hands each rung."
-              },
-              {
-                "header": "3C90s",
-                "exercises": [
-                  "KB Rear-Foot Elevated Split Squat 8'@16+16",
-                  "Ring L-Sit Hold :20@BW",
-                  "Ring Fallout 8@BW"
-                ],
-                "note": "Split squats are the quad size work; core rides in the rest."
-              },
-              {
-                "header": "3D60s",
+                "header": "3C60s",
                 "exercises": [
                   "RTO Ring Push-up 12@BW",
-                  "DB Overhead Extension 12@20lbs"
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 8@BW"
                 ],
                 "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
@@ -403,57 +382,36 @@
                   "RopeFlow :120@BW",
                   "KB Halo 6'@16",
                   "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
                   "Leg Swings :45@BW"
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "10/8/6/4A120s",
+                "exercises": [
+                  "KB Box Squat @16+16/20+20/20+20/20+20",
+                  "KB Front Squat @16+16/20+20/20+20/20+20",
+                  "KB Thruster @16+16/20+20/20+20/20+20",
+                  "KB Dead Clean @16+16/20+20/20+20/20+20",
+                  "KB Reverse Lunge @16+16/20+20/20+20/20+20"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
+              },
+              {
+                "header": "3B60s",
                 "exercises": [
                   "KB Swing 10@24",
-                  "KB Halo 5'@16"
+                  "KB Halo 5'@16",
+                  "Ring L-Sit Hold :20@BW"
                 ],
-                "note": "Explosive. Primes the hips; not a conditioning set."
+                "note": "The hinge to balance all that squatting: hard, snappy swings for hamstrings and glutes. "
               },
               {
-                "header": "1B180s",
-                "exercises": [
-                  "KB Dead Clean 10@16+16",
-                  "KB Front Squat 10@16+16",
-                  "KB Box Squat 10@16+16",
-                  "KB Thruster 10@16+16",
-                  "KB Reverse Lunge 5'@16+16",
-                  "KB Dead Clean 8@16+16",
-                  "KB Front Squat 8@16+16",
-                  "KB Box Squat 8@16+16",
-                  "KB Thruster 8@16+16",
-                  "KB Reverse Lunge 4'@16+16",
-                  "KB Dead Clean 6@20+20",
-                  "KB Front Squat 6@20+20",
-                  "KB Box Squat 6@20+20",
-                  "KB Thruster 6@20+20",
-                  "KB Reverse Lunge 3'@20+20",
-                  "KB Dead Clean 4@20+20",
-                  "KB Front Squat 4@20+20",
-                  "KB Box Squat 4@20+20",
-                  "KB Thruster 4@20+20",
-                  "KB Reverse Lunge 2'@20+20"
-                ],
-                "note": "Leg complex ladder: one pass of 10-8-6-4. Each rung: dead clean, front squat, box squat (sit fully, pause 1s, stand), thruster, reverse lunge from the rack (half the reps each leg). Bells touch the floor only before the dead cleans. Line up 16+16, 20+20 and 24+20 before you start and swap pairs in up to 60s between rungs. If thrusters break down, park the bells for 15s and finish. 24+20: switch hands each rung."
-              },
-              {
-                "header": "3C90s",
-                "exercises": [
-                  "KB Rear-Foot Elevated Split Squat 8'@16+16",
-                  "Ring L-Sit Hold :20@BW",
-                  "Ring Fallout 8@BW"
-                ],
-                "note": "Split squats are the quad size work; core rides in the rest."
-              },
-              {
-                "header": "3D60s",
+                "header": "3C60s",
                 "exercises": [
                   "RTO Ring Push-up 12@BW",
-                  "DB Overhead Extension 12@20lbs"
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 8@BW"
                 ],
                 "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
@@ -637,57 +595,36 @@
                   "RopeFlow :120@BW",
                   "KB Halo 6'@16",
                   "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
                   "Leg Swings :45@BW"
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "10/8/6/4A120s",
+                "exercises": [
+                  "KB Box Squat @16+16/20+20/20+20/24+20",
+                  "KB Front Squat @16+16/20+20/20+20/24+20",
+                  "KB Thruster @16+16/20+20/20+20/24+20",
+                  "KB Dead Clean @16+16/20+20/20+20/24+20",
+                  "KB Reverse Lunge @16+16/20+20/20+20/24+20"
+                ],
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
+              },
+              {
+                "header": "3B60s",
                 "exercises": [
                   "KB Swing 10@24",
-                  "KB Halo 5'@16"
+                  "KB Halo 5'@16",
+                  "Ring L-Sit Hold :20@BW"
                 ],
-                "note": "Explosive. Primes the hips; not a conditioning set."
+                "note": "The hinge to balance all that squatting: hard, snappy swings for hamstrings and glutes. "
               },
               {
-                "header": "1B180s",
-                "exercises": [
-                  "KB Dead Clean 10@16+16",
-                  "KB Front Squat 10@16+16",
-                  "KB Box Squat 10@16+16",
-                  "KB Thruster 10@16+16",
-                  "KB Reverse Lunge 5'@16+16",
-                  "KB Dead Clean 8@16+16",
-                  "KB Front Squat 8@16+16",
-                  "KB Box Squat 8@16+16",
-                  "KB Thruster 8@16+16",
-                  "KB Reverse Lunge 4'@16+16",
-                  "KB Dead Clean 6@20+20",
-                  "KB Front Squat 6@20+20",
-                  "KB Box Squat 6@20+20",
-                  "KB Thruster 6@20+20",
-                  "KB Reverse Lunge 3'@20+20",
-                  "KB Dead Clean 4@20+20",
-                  "KB Front Squat 4@20+20",
-                  "KB Box Squat 4@20+20",
-                  "KB Thruster 4@20+20",
-                  "KB Reverse Lunge 2'@20+20"
-                ],
-                "note": "Leg complex ladder: one pass of 10-8-6-4. Each rung: dead clean, front squat, box squat (sit fully, pause 1s, stand), thruster, reverse lunge from the rack (half the reps each leg). Bells touch the floor only before the dead cleans. Line up 16+16, 20+20 and 24+20 before you start and swap pairs in up to 60s between rungs. If thrusters break down, park the bells for 15s and finish. 24+20: switch hands each rung."
-              },
-              {
-                "header": "3C90s",
-                "exercises": [
-                  "KB Rear-Foot Elevated Split Squat 8'@16+16",
-                  "Ring L-Sit Hold :20@BW",
-                  "Ring Fallout 8@BW"
-                ],
-                "note": "Split squats are the quad size work; core rides in the rest."
-              },
-              {
-                "header": "3D60s",
+                "header": "3C60s",
                 "exercises": [
                   "RTO Ring Push-up 12@BW",
-                  "DB Overhead Extension 12@20lbs"
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 8@BW"
                 ],
                 "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
@@ -859,56 +796,36 @@
                   "RopeFlow :120@BW",
                   "KB Halo 6'@16",
                   "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
                   "Leg Swings :45@BW"
                 ]
               },
               {
-                "header": "2A60s",
+                "header": "10/8/6/4A120s",
                 "exercises": [
-                  "KB Swing 10@24",
-                  "KB Halo 5'@16"
+                  "KB Box Squat @16+16/16+16/16+16/16+16",
+                  "KB Front Squat @16+16/16+16/16+16/16+16",
+                  "KB Thruster @16+16/16+16/16+16/16+16",
+                  "KB Dead Clean @16+16/16+16/16+16/16+16",
+                  "KB Reverse Lunge @16+16/16+16/16+16/16+16"
                 ],
-                "note": "Explosive. Primes the hips; not a conditioning set."
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
               },
               {
-                "header": "1B180s",
+                "header": "2B60s",
                 "exercises": [
-                  "KB Dead Clean 10@16+16",
-                  "KB Front Squat 10@16+16",
-                  "KB Box Squat 10@16+16",
-                  "KB Thruster 10@16+16",
-                  "KB Reverse Lunge 5'@16+16",
-                  "KB Dead Clean 8@16+16",
-                  "KB Front Squat 8@16+16",
-                  "KB Box Squat 8@16+16",
-                  "KB Thruster 8@16+16",
-                  "KB Reverse Lunge 4'@16+16",
-                  "KB Dead Clean 6@16+16",
-                  "KB Front Squat 6@16+16",
-                  "KB Box Squat 6@16+16",
-                  "KB Thruster 6@16+16",
-                  "KB Reverse Lunge 3'@16+16",
-                  "KB Dead Clean 4@16+16",
-                  "KB Front Squat 4@16+16",
-                  "KB Box Squat 4@16+16",
-                  "KB Thruster 4@16+16",
-                  "KB Reverse Lunge 2'@16+16"
+                  "KB Swing 10@24",
+                  "KB Halo 5'@16",
+                  "Ring L-Sit Hold :15@BW"
                 ],
-                "note": "Leg complex ladder: one pass of 10-8-6-4. Each rung: dead clean, front squat, box squat (sit fully, pause 1s, stand), thruster, reverse lunge from the rack (half the reps each leg). Bells touch the floor only before the dead cleans. Line up 16+16, 20+20 and 24+20 before you start and swap pairs in up to 60s between rungs. If thrusters break down, park the bells for 15s and finish. 24+20: switch hands each rung."
+                "note": "The hinge to balance all that squatting: hard, snappy swings for hamstrings and glutes. "
               },
               {
                 "header": "2C60s",
                 "exercises": [
-                  "KB Rear-Foot Elevated Split Squat 6'@16+16",
-                  "Ring L-Sit Hold :15@BW",
-                  "Ring Fallout 6@BW"
-                ]
-              },
-              {
-                "header": "2D60s",
-                "exercises": [
                   "Ring Push-up 10@BW",
-                  "DB Overhead Extension 12@20lbs"
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 6@BW"
                 ]
               },
               {
@@ -1087,57 +1004,36 @@
                   "RopeFlow :120@BW",
                   "KB Halo 6'@16",
                   "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
                   "Leg Swings :45@BW"
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "10/8/6/4A90s",
                 "exercises": [
-                  "KB Swing 10@24",
-                  "Ring Pull-up 3@BW"
+                  "KB Box Squat @16+16/20+20/20+20/24+20",
+                  "KB Front Squat @16+16/20+20/20+20/24+20",
+                  "KB Thruster @16+16/20+20/20+20/24+20",
+                  "KB Dead Clean @16+16/20+20/20+20/24+20",
+                  "KB Reverse Lunge @16+16/20+20/20+20/24+20"
                 ],
-                "note": "Second, easy pull-up exposure while fresh: neutral grip, well short of failure. Skip the pull-ups if Pull day broke the pain rule this week."
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
               },
               {
-                "header": "1B180s",
+                "header": "3B60s",
                 "exercises": [
-                  "KB Dead Clean 10@16+16",
-                  "KB Front Squat 10@16+16",
-                  "KB Box Squat 10@16+16",
-                  "KB Thruster 10@16+16",
-                  "KB Reverse Lunge 5'@16+16",
-                  "KB Dead Clean 8@20+20",
-                  "KB Front Squat 8@20+20",
-                  "KB Box Squat 8@20+20",
-                  "KB Thruster 8@20+20",
-                  "KB Reverse Lunge 4'@20+20",
-                  "KB Dead Clean 6@20+20",
-                  "KB Front Squat 6@20+20",
-                  "KB Box Squat 6@20+20",
-                  "KB Thruster 6@20+20",
-                  "KB Reverse Lunge 3'@20+20",
-                  "KB Dead Clean 4@24+20",
-                  "KB Front Squat 4@24+20",
-                  "KB Box Squat 4@24+20",
-                  "KB Thruster 4@24+20",
-                  "KB Reverse Lunge 2'@24+20"
+                  "KB Swing 12@24",
+                  "Ring Pull-up 3@BW",
+                  "Ring L-Sit Hold :25@BW"
                 ],
-                "note": "Leg complex ladder: one pass of 10-8-6-4. Each rung: dead clean, front squat, box squat (sit fully, pause 1s, stand), thruster, reverse lunge from the rack (half the reps each leg). Bells touch the floor only before the dead cleans. Line up 16+16, 20+20 and 24+20 before you start and swap pairs in up to 60s between rungs. If thrusters break down, park the bells for 15s and finish. 24+20: switch hands each rung."
+                "note": "The hinge to balance all that squatting: hard, snappy swings for hamstrings and glutes. Pull-ups are an easy second exposure: neutral grip, well short of failure. Skip them if Pull day broke the pain rule this week."
               },
               {
-                "header": "3C90s",
-                "exercises": [
-                  "KB Rear-Foot Elevated Split Squat 8'@20+20",
-                  "Ring L-Sit Hold :25@BW",
-                  "Ring Fallout 10@BW"
-                ],
-                "note": "Split squats are the quad size work; core rides in the rest."
-              },
-              {
-                "header": "3D60s",
+                "header": "3C60s",
                 "exercises": [
                   "Feet-Up Ring Push-up 12@BW",
-                  "DB Overhead Extension 12@20lbs"
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 10@BW"
                 ],
                 "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
@@ -1321,57 +1217,36 @@
                   "RopeFlow :120@BW",
                   "KB Halo 6'@16",
                   "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
                   "Leg Swings :45@BW"
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "10/8/6/4A90s",
                 "exercises": [
-                  "KB Swing 10@24",
-                  "Ring Pull-up 3@BW"
+                  "KB Box Squat @16+16/20+20/24+20/24+20",
+                  "KB Front Squat @16+16/20+20/24+20/24+20",
+                  "KB Thruster @16+16/20+20/24+20/24+20",
+                  "KB Dead Clean @16+16/20+20/24+20/24+20",
+                  "KB Reverse Lunge @16+16/20+20/24+20/24+20"
                 ],
-                "note": "Second, easy pull-up exposure while fresh: neutral grip, well short of failure. Skip the pull-ups if Pull day broke the pain rule this week."
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
               },
               {
-                "header": "1B180s",
+                "header": "3B60s",
                 "exercises": [
-                  "KB Dead Clean 10@16+16",
-                  "KB Front Squat 10@16+16",
-                  "KB Box Squat 10@16+16",
-                  "KB Thruster 10@16+16",
-                  "KB Reverse Lunge 5'@16+16",
-                  "KB Dead Clean 8@20+20",
-                  "KB Front Squat 8@20+20",
-                  "KB Box Squat 8@20+20",
-                  "KB Thruster 8@20+20",
-                  "KB Reverse Lunge 4'@20+20",
-                  "KB Dead Clean 6@20+20",
-                  "KB Front Squat 6@20+20",
-                  "KB Box Squat 6@20+20",
-                  "KB Thruster 6@20+20",
-                  "KB Reverse Lunge 3'@20+20",
-                  "KB Dead Clean 4@24+20",
-                  "KB Front Squat 4@24+20",
-                  "KB Box Squat 4@24+20",
-                  "KB Thruster 4@24+20",
-                  "KB Reverse Lunge 2'@24+20"
+                  "KB Swing 12@24",
+                  "Ring Pull-up 3@BW",
+                  "Ring L-Sit Hold :25@BW"
                 ],
-                "note": "Leg complex ladder: one pass of 10-8-6-4. Each rung: dead clean, front squat, box squat (sit fully, pause 1s, stand), thruster, reverse lunge from the rack (half the reps each leg). Bells touch the floor only before the dead cleans. Line up 16+16, 20+20 and 24+20 before you start and swap pairs in up to 60s between rungs. If thrusters break down, park the bells for 15s and finish. 24+20: switch hands each rung."
+                "note": "The hinge to balance all that squatting: hard, snappy swings for hamstrings and glutes. Pull-ups are an easy second exposure: neutral grip, well short of failure. Skip them if Pull day broke the pain rule this week."
               },
               {
-                "header": "3C90s",
-                "exercises": [
-                  "KB Rear-Foot Elevated Split Squat 8'@20+20",
-                  "Ring L-Sit Hold :25@BW",
-                  "Ring Fallout 10@BW"
-                ],
-                "note": "Split squats are the quad size work; core rides in the rest."
-              },
-              {
-                "header": "3D60s",
+                "header": "3C60s",
                 "exercises": [
                   "Feet-Up Ring Push-up 12@BW",
-                  "DB Overhead Extension 12@20lbs"
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 10@BW"
                 ],
                 "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
@@ -1555,57 +1430,36 @@
                   "RopeFlow :120@BW",
                   "KB Halo 6'@16",
                   "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
                   "Leg Swings :45@BW"
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "10/8/6/4A90s",
                 "exercises": [
-                  "KB Swing 10@24",
-                  "Ring Pull-up 3@BW"
+                  "KB Box Squat @20+20/20+20/24+20/24+20",
+                  "KB Front Squat @20+20/20+20/24+20/24+20",
+                  "KB Thruster @20+20/20+20/24+20/24+20",
+                  "KB Dead Clean @20+20/20+20/24+20/24+20",
+                  "KB Reverse Lunge @20+20/20+20/24+20/24+20"
                 ],
-                "note": "Second, easy pull-up exposure while fresh: neutral grip, well short of failure. Skip the pull-ups if Pull day broke the pain rule this week."
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
               },
               {
-                "header": "1B180s",
+                "header": "3B60s",
                 "exercises": [
-                  "KB Dead Clean 10@16+16",
-                  "KB Front Squat 10@16+16",
-                  "KB Box Squat 10@16+16",
-                  "KB Thruster 10@16+16",
-                  "KB Reverse Lunge 5'@16+16",
-                  "KB Dead Clean 8@20+20",
-                  "KB Front Squat 8@20+20",
-                  "KB Box Squat 8@20+20",
-                  "KB Thruster 8@20+20",
-                  "KB Reverse Lunge 4'@20+20",
-                  "KB Dead Clean 6@20+20",
-                  "KB Front Squat 6@20+20",
-                  "KB Box Squat 6@20+20",
-                  "KB Thruster 6@20+20",
-                  "KB Reverse Lunge 3'@20+20",
-                  "KB Dead Clean 4@24+20",
-                  "KB Front Squat 4@24+20",
-                  "KB Box Squat 4@24+20",
-                  "KB Thruster 4@24+20",
-                  "KB Reverse Lunge 2'@24+20"
+                  "KB Swing 12@24",
+                  "Ring Pull-up 3@BW",
+                  "Ring L-Sit Hold :25@BW"
                 ],
-                "note": "Leg complex ladder: one pass of 10-8-6-4. Each rung: dead clean, front squat, box squat (sit fully, pause 1s, stand), thruster, reverse lunge from the rack (half the reps each leg). Bells touch the floor only before the dead cleans. Line up 16+16, 20+20 and 24+20 before you start and swap pairs in up to 60s between rungs. If thrusters break down, park the bells for 15s and finish. 24+20: switch hands each rung."
+                "note": "The hinge to balance all that squatting: hard, snappy swings for hamstrings and glutes. Pull-ups are an easy second exposure: neutral grip, well short of failure. Skip them if Pull day broke the pain rule this week."
               },
               {
-                "header": "3C90s",
-                "exercises": [
-                  "KB Rear-Foot Elevated Split Squat 8'@20+20",
-                  "Ring L-Sit Hold :25@BW",
-                  "Ring Fallout 10@BW"
-                ],
-                "note": "Split squats are the quad size work; core rides in the rest."
-              },
-              {
-                "header": "3D60s",
+                "header": "3C60s",
                 "exercises": [
                   "Feet-Up Ring Push-up 12@BW",
-                  "DB Overhead Extension 12@20lbs"
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 10@BW"
                 ],
                 "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
@@ -1784,56 +1638,36 @@
                   "RopeFlow :120@BW",
                   "KB Halo 6'@16",
                   "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
                   "Leg Swings :45@BW"
                 ]
               },
               {
-                "header": "2A60s",
+                "header": "10/8/6/4A120s",
                 "exercises": [
-                  "KB Swing 10@24",
-                  "KB Halo 5'@16"
+                  "KB Box Squat @16+16/16+16/20+20/20+20",
+                  "KB Front Squat @16+16/16+16/20+20/20+20",
+                  "KB Thruster @16+16/16+16/20+20/20+20",
+                  "KB Dead Clean @16+16/16+16/20+20/20+20",
+                  "KB Reverse Lunge @16+16/16+16/20+20/20+20"
                 ],
-                "note": "Explosive. Primes the hips; not a conditioning set."
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
               },
               {
-                "header": "1B180s",
+                "header": "2B60s",
                 "exercises": [
-                  "KB Dead Clean 10@16+16",
-                  "KB Front Squat 10@16+16",
-                  "KB Box Squat 10@16+16",
-                  "KB Thruster 10@16+16",
-                  "KB Reverse Lunge 5'@16+16",
-                  "KB Dead Clean 8@16+16",
-                  "KB Front Squat 8@16+16",
-                  "KB Box Squat 8@16+16",
-                  "KB Thruster 8@16+16",
-                  "KB Reverse Lunge 4'@16+16",
-                  "KB Dead Clean 6@16+16",
-                  "KB Front Squat 6@16+16",
-                  "KB Box Squat 6@16+16",
-                  "KB Thruster 6@16+16",
-                  "KB Reverse Lunge 3'@16+16",
-                  "KB Dead Clean 4@16+16",
-                  "KB Front Squat 4@16+16",
-                  "KB Box Squat 4@16+16",
-                  "KB Thruster 4@16+16",
-                  "KB Reverse Lunge 2'@16+16"
+                  "KB Swing 10@24",
+                  "KB Halo 5'@16",
+                  "Ring L-Sit Hold :15@BW"
                 ],
-                "note": "Leg complex ladder: one pass of 10-8-6-4. Each rung: dead clean, front squat, box squat (sit fully, pause 1s, stand), thruster, reverse lunge from the rack (half the reps each leg). Bells touch the floor only before the dead cleans. Line up 16+16, 20+20 and 24+20 before you start and swap pairs in up to 60s between rungs. If thrusters break down, park the bells for 15s and finish. 24+20: switch hands each rung."
+                "note": "The hinge to balance all that squatting: hard, snappy swings for hamstrings and glutes. "
               },
               {
                 "header": "2C60s",
                 "exercises": [
-                  "KB Rear-Foot Elevated Split Squat 6'@16+16",
-                  "Ring L-Sit Hold :15@BW",
-                  "Ring Fallout 6@BW"
-                ]
-              },
-              {
-                "header": "2D60s",
-                "exercises": [
                   "Ring Push-up 10@BW",
-                  "DB Overhead Extension 12@20lbs"
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 6@BW"
                 ]
               },
               {
@@ -2012,57 +1846,36 @@
                   "RopeFlow :120@BW",
                   "KB Halo 6'@16",
                   "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
                   "Leg Swings :45@BW"
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "10/8/6/4A90s",
                 "exercises": [
-                  "KB Swing 10@24",
-                  "Ring Pull-up 3@BW"
+                  "KB Box Squat @20+20/20+20/24+20/24+20",
+                  "KB Front Squat @20+20/20+20/24+20/24+20",
+                  "KB Thruster @20+20/20+20/24+20/24+20",
+                  "KB Dead Clean @20+20/20+20/24+20/24+20",
+                  "KB Reverse Lunge @20+20/20+20/24+20/24+20"
                 ],
-                "note": "Second, easy pull-up exposure while fresh: neutral grip, well short of failure. Skip the pull-ups if Pull day broke the pain rule this week."
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
               },
               {
-                "header": "1B180s",
+                "header": "3B60s",
                 "exercises": [
-                  "KB Dead Clean 10@16+16",
-                  "KB Front Squat 10@16+16",
-                  "KB Box Squat 10@16+16",
-                  "KB Thruster 10@16+16",
-                  "KB Reverse Lunge 5'@16+16",
-                  "KB Dead Clean 8@20+20",
-                  "KB Front Squat 8@20+20",
-                  "KB Box Squat 8@20+20",
-                  "KB Thruster 8@20+20",
-                  "KB Reverse Lunge 4'@20+20",
-                  "KB Dead Clean 6@24+20",
-                  "KB Front Squat 6@24+20",
-                  "KB Box Squat 6@24+20",
-                  "KB Thruster 6@24+20",
-                  "KB Reverse Lunge 3'@24+20",
-                  "KB Dead Clean 4@24+20",
-                  "KB Front Squat 4@24+20",
-                  "KB Box Squat 4@24+20",
-                  "KB Thruster 4@24+20",
-                  "KB Reverse Lunge 2'@24+20"
+                  "KB Swing 15@24",
+                  "Ring Pull-up 3@BW",
+                  "Ring L-Sit Hold :30@BW"
                 ],
-                "note": "Leg complex ladder: one pass of 10-8-6-4. Each rung: dead clean, front squat, box squat (sit fully, pause 1s, stand), thruster, reverse lunge from the rack (half the reps each leg). Bells touch the floor only before the dead cleans. Line up 16+16, 20+20 and 24+20 before you start and swap pairs in up to 60s between rungs. If thrusters break down, park the bells for 15s and finish. 24+20: switch hands each rung."
+                "note": "The hinge to balance all that squatting: hard, snappy swings for hamstrings and glutes. Pull-ups are an easy second exposure: neutral grip, well short of failure. Skip them if Pull day broke the pain rule this week."
               },
               {
-                "header": "3C90s",
-                "exercises": [
-                  "KB Rear-Foot Elevated Split Squat 10'@20+20",
-                  "Ring L-Sit Hold :30@BW",
-                  "Ring Fallout 12@BW"
-                ],
-                "note": "Split squats are the quad size work; core rides in the rest."
-              },
-              {
-                "header": "3D60s",
+                "header": "3C60s",
                 "exercises": [
                   "Feet-Up Ring Push-up 15@BW",
-                  "DB Overhead Extension 12@20lbs"
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 12@BW"
                 ],
                 "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
@@ -2246,57 +2059,36 @@
                   "RopeFlow :120@BW",
                   "KB Halo 6'@16",
                   "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
                   "Leg Swings :45@BW"
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "10/8/6/4A75s",
                 "exercises": [
-                  "KB Swing 10@24",
-                  "Ring Pull-up 3@BW"
+                  "KB Box Squat @20+20/20+20/24+20/24+20",
+                  "KB Front Squat @20+20/20+20/24+20/24+20",
+                  "KB Thruster @20+20/20+20/24+20/24+20",
+                  "KB Dead Clean @20+20/20+20/24+20/24+20",
+                  "KB Reverse Lunge @20+20/20+20/24+20/24+20"
                 ],
-                "note": "Second, easy pull-up exposure while fresh: neutral grip, well short of failure. Skip the pull-ups if Pull day broke the pain rule this week."
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
               },
               {
-                "header": "1B180s",
+                "header": "3B60s",
                 "exercises": [
-                  "KB Dead Clean 10@16+16",
-                  "KB Front Squat 10@16+16",
-                  "KB Box Squat 10@16+16",
-                  "KB Thruster 10@16+16",
-                  "KB Reverse Lunge 5'@16+16",
-                  "KB Dead Clean 8@20+20",
-                  "KB Front Squat 8@20+20",
-                  "KB Box Squat 8@20+20",
-                  "KB Thruster 8@20+20",
-                  "KB Reverse Lunge 4'@20+20",
-                  "KB Dead Clean 6@24+20",
-                  "KB Front Squat 6@24+20",
-                  "KB Box Squat 6@24+20",
-                  "KB Thruster 6@24+20",
-                  "KB Reverse Lunge 3'@24+20",
-                  "KB Dead Clean 4@24+20",
-                  "KB Front Squat 4@24+20",
-                  "KB Box Squat 4@24+20",
-                  "KB Thruster 4@24+20",
-                  "KB Reverse Lunge 2'@24+20"
+                  "KB Swing 15@24",
+                  "Ring Pull-up 3@BW",
+                  "Ring L-Sit Hold :30@BW"
                 ],
-                "note": "Leg complex ladder: one pass of 10-8-6-4. Each rung: dead clean, front squat, box squat (sit fully, pause 1s, stand), thruster, reverse lunge from the rack (half the reps each leg). Bells touch the floor only before the dead cleans. Line up 16+16, 20+20 and 24+20 before you start and swap pairs in up to 60s between rungs. If thrusters break down, park the bells for 15s and finish. 24+20: switch hands each rung."
+                "note": "The hinge to balance all that squatting: hard, snappy swings for hamstrings and glutes. Pull-ups are an easy second exposure: neutral grip, well short of failure. Skip them if Pull day broke the pain rule this week."
               },
               {
-                "header": "3C90s",
-                "exercises": [
-                  "KB Rear-Foot Elevated Split Squat 10'@20+20",
-                  "Ring L-Sit Hold :30@BW",
-                  "Ring Fallout 12@BW"
-                ],
-                "note": "Split squats are the quad size work; core rides in the rest."
-              },
-              {
-                "header": "3D60s",
+                "header": "3C60s",
                 "exercises": [
                   "Feet-Up Ring Push-up 15@BW",
-                  "DB Overhead Extension 12@20lbs"
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 12@BW"
                 ],
                 "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
@@ -2480,57 +2272,36 @@
                   "RopeFlow :120@BW",
                   "KB Halo 6'@16",
                   "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
                   "Leg Swings :45@BW"
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "10/8/6/4A60s",
                 "exercises": [
-                  "KB Swing 10@24",
-                  "Ring Pull-up 3@BW"
+                  "KB Box Squat @20+20/20+20/24+20/24+20",
+                  "KB Front Squat @20+20/20+20/24+20/24+20",
+                  "KB Thruster @20+20/20+20/24+20/24+20",
+                  "KB Dead Clean @20+20/20+20/24+20/24+20",
+                  "KB Reverse Lunge @20+20/20+20/24+20/24+20"
                 ],
-                "note": "Second, easy pull-up exposure while fresh: neutral grip, well short of failure. Skip the pull-ups if Pull day broke the pain rule this week."
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
               },
               {
-                "header": "1B180s",
+                "header": "3B60s",
                 "exercises": [
-                  "KB Dead Clean 10@16+16",
-                  "KB Front Squat 10@16+16",
-                  "KB Box Squat 10@16+16",
-                  "KB Thruster 10@16+16",
-                  "KB Reverse Lunge 5'@16+16",
-                  "KB Dead Clean 8@20+20",
-                  "KB Front Squat 8@20+20",
-                  "KB Box Squat 8@20+20",
-                  "KB Thruster 8@20+20",
-                  "KB Reverse Lunge 4'@20+20",
-                  "KB Dead Clean 6@24+20",
-                  "KB Front Squat 6@24+20",
-                  "KB Box Squat 6@24+20",
-                  "KB Thruster 6@24+20",
-                  "KB Reverse Lunge 3'@24+20",
-                  "KB Dead Clean 4@24+20",
-                  "KB Front Squat 4@24+20",
-                  "KB Box Squat 4@24+20",
-                  "KB Thruster 4@24+20",
-                  "KB Reverse Lunge 2'@24+20"
+                  "KB Swing 15@24",
+                  "Ring Pull-up 3@BW",
+                  "Ring L-Sit Hold :30@BW"
                 ],
-                "note": "Leg complex ladder: one pass of 10-8-6-4. Each rung: dead clean, front squat, box squat (sit fully, pause 1s, stand), thruster, reverse lunge from the rack (half the reps each leg). Bells touch the floor only before the dead cleans. Line up 16+16, 20+20 and 24+20 before you start and swap pairs in up to 60s between rungs. If thrusters break down, park the bells for 15s and finish. 24+20: switch hands each rung."
+                "note": "The hinge to balance all that squatting: hard, snappy swings for hamstrings and glutes. Pull-ups are an easy second exposure: neutral grip, well short of failure. Skip them if Pull day broke the pain rule this week."
               },
               {
-                "header": "3C90s",
-                "exercises": [
-                  "KB Rear-Foot Elevated Split Squat 10'@20+20",
-                  "Ring L-Sit Hold :30@BW",
-                  "Ring Fallout 12@BW"
-                ],
-                "note": "Split squats are the quad size work; core rides in the rest."
-              },
-              {
-                "header": "3D60s",
+                "header": "3C60s",
                 "exercises": [
                   "Feet-Up Ring Push-up 15@BW",
-                  "DB Overhead Extension 12@20lbs"
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 12@BW"
                 ],
                 "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
@@ -2720,56 +2491,36 @@
                   "RopeFlow :120@BW",
                   "KB Halo 6'@16",
                   "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
                   "Leg Swings :45@BW"
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "10/8/6/4A120s",
                 "exercises": [
-                  "KB Swing 10@24",
-                  "KB Halo 5'@16"
+                  "KB Box Squat @16+16/16+16/20+20/20+20",
+                  "KB Front Squat @16+16/16+16/20+20/20+20",
+                  "KB Thruster @16+16/16+16/20+20/20+20",
+                  "KB Dead Clean @16+16/16+16/20+20/20+20",
+                  "KB Reverse Lunge @16+16/16+16/20+20/20+20"
                 ],
-                "note": "Explosive. Primes the hips; not a conditioning set."
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
               },
               {
-                "header": "1B180s",
+                "header": "2B60s",
                 "exercises": [
-                  "KB Dead Clean 10@16+16",
-                  "KB Front Squat 10@16+16",
-                  "KB Box Squat 10@16+16",
-                  "KB Thruster 10@16+16",
-                  "KB Reverse Lunge 5'@16+16",
-                  "KB Dead Clean 8@16+16",
-                  "KB Front Squat 8@16+16",
-                  "KB Box Squat 8@16+16",
-                  "KB Thruster 8@16+16",
-                  "KB Reverse Lunge 4'@16+16",
-                  "KB Dead Clean 6@16+16",
-                  "KB Front Squat 6@16+16",
-                  "KB Box Squat 6@16+16",
-                  "KB Thruster 6@16+16",
-                  "KB Reverse Lunge 3'@16+16",
-                  "KB Dead Clean 4@16+16",
-                  "KB Front Squat 4@16+16",
-                  "KB Box Squat 4@16+16",
-                  "KB Thruster 4@16+16",
-                  "KB Reverse Lunge 2'@16+16"
+                  "KB Swing 10@24",
+                  "KB Halo 5'@16",
+                  "Ring L-Sit Hold :15@BW"
                 ],
-                "note": "Leg complex ladder: one pass of 10-8-6-4. Each rung: dead clean, front squat, box squat (sit fully, pause 1s, stand), thruster, reverse lunge from the rack (half the reps each leg). Bells touch the floor only before the dead cleans. Line up 16+16, 20+20 and 24+20 before you start and swap pairs in up to 60s between rungs. If thrusters break down, park the bells for 15s and finish. 24+20: switch hands each rung."
+                "note": "The hinge to balance all that squatting: hard, snappy swings for hamstrings and glutes. "
               },
               {
                 "header": "2C60s",
                 "exercises": [
-                  "KB Rear-Foot Elevated Split Squat 6'@16+16",
-                  "Ring L-Sit Hold :15@BW",
-                  "Ring Fallout 6@BW"
-                ]
-              },
-              {
-                "header": "2D60s",
-                "exercises": [
                   "Ring Push-up 10@BW",
-                  "DB Overhead Extension 12@20lbs"
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 6@BW"
                 ]
               },
               {
@@ -2936,56 +2687,36 @@
                   "RopeFlow :120@BW",
                   "KB Halo 6'@16",
                   "Hindu Squat 10@BW",
+                  "KB Goblet Squat 8@16",
                   "Leg Swings :45@BW"
                 ]
               },
               {
-                "header": "2A60s",
+                "header": "10/8/6/4A120s",
                 "exercises": [
-                  "KB Swing 10@24",
-                  "KB Halo 5'@16"
+                  "KB Box Squat @16+16/16+16/16+16/16+16",
+                  "KB Front Squat @16+16/16+16/16+16/16+16",
+                  "KB Thruster @16+16/16+16/16+16/16+16",
+                  "KB Dead Clean @16+16/16+16/16+16/16+16",
+                  "KB Reverse Lunge @16+16/16+16/16+16/16+16"
                 ],
-                "note": "Explosive. Primes the hips; not a conditioning set."
+                "note": "Clean to the rack once, then run each rung straight through. Box squat: sit, pause 1s. The last dead clean stays racked for the lunges (alternate legs). Swap bells in the rest; 24+20: switch hands each heavy rung."
               },
               {
-                "header": "1B180s",
+                "header": "2B60s",
                 "exercises": [
-                  "KB Dead Clean 10@16+16",
-                  "KB Front Squat 10@16+16",
-                  "KB Box Squat 10@16+16",
-                  "KB Thruster 10@16+16",
-                  "KB Reverse Lunge 5'@16+16",
-                  "KB Dead Clean 8@16+16",
-                  "KB Front Squat 8@16+16",
-                  "KB Box Squat 8@16+16",
-                  "KB Thruster 8@16+16",
-                  "KB Reverse Lunge 4'@16+16",
-                  "KB Dead Clean 6@16+16",
-                  "KB Front Squat 6@16+16",
-                  "KB Box Squat 6@16+16",
-                  "KB Thruster 6@16+16",
-                  "KB Reverse Lunge 3'@16+16",
-                  "KB Dead Clean 4@16+16",
-                  "KB Front Squat 4@16+16",
-                  "KB Box Squat 4@16+16",
-                  "KB Thruster 4@16+16",
-                  "KB Reverse Lunge 2'@16+16"
+                  "KB Swing 10@24",
+                  "KB Halo 5'@16",
+                  "Ring L-Sit Hold :15@BW"
                 ],
-                "note": "Leg complex ladder: one pass of 10-8-6-4. Each rung: dead clean, front squat, box squat (sit fully, pause 1s, stand), thruster, reverse lunge from the rack (half the reps each leg). Bells touch the floor only before the dead cleans. Line up 16+16, 20+20 and 24+20 before you start and swap pairs in up to 60s between rungs. If thrusters break down, park the bells for 15s and finish. 24+20: switch hands each rung."
+                "note": "The hinge to balance all that squatting: hard, snappy swings for hamstrings and glutes. "
               },
               {
                 "header": "2C60s",
                 "exercises": [
-                  "KB Rear-Foot Elevated Split Squat 6'@16+16",
-                  "Ring L-Sit Hold :15@BW",
-                  "Ring Fallout 6@BW"
-                ]
-              },
-              {
-                "header": "2D60s",
-                "exercises": [
                   "Ring Push-up 10@BW",
-                  "DB Overhead Extension 12@20lbs"
+                  "DB Overhead Extension 12@20lbs",
+                  "Ring Fallout 6@BW"
                 ]
               },
               {

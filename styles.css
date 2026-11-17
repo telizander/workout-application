@@ -289,6 +289,38 @@ body.in-session #tabbar { display: none; }
 .pips i.pop { animation: stamp .45s var(--snap); }
 @keyframes stamp { 0% { transform: scaleY(2.6); } 100% { transform: none; } }
 
+/* ladder: the rungs, the bells, the moves */
+.rungs { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px; margin-top: 16px; }
+.rung { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px 2px 9px; background: var(--plate-2); color: var(--mute); position: relative; }
+.rung b { font: 900 34px/.8 var(--f-num); font-variant-numeric: tabular-nums; }
+.rung span { font: 600 10.5px/1 var(--f-mono); letter-spacing: .02em; white-space: nowrap; }
+.rung span.swap::before { content: "▲ "; color: var(--ember); }
+.rung.now { background: var(--plate-3); color: var(--text); box-shadow: inset 0 0 0 2px var(--doom); }
+.rung.now b { color: var(--doom); }
+.rung.done { background: var(--doom-deep); color: var(--doom); }
+.rung.done span { color: var(--steel); }
+.rung.grind { background: var(--ember-deep); color: var(--ember); }
+.rung.pop { animation: stamp-rung .45s var(--snap); }
+@keyframes stamp-rung { 0% { transform: scale(1.12); } 100% { transform: none; } }
+
+.rung-bells { display: flex; align-items: center; gap: 6px; margin-top: 8px; padding: 6px 6px 6px 12px; background: var(--plate-2); }
+.rung-bells .label { margin-right: auto; }
+.rung-bells b { font: 700 15px/1 var(--f-mono); margin-right: 6px; }
+.rung-bells.changed b { color: var(--ember); }
+.rung-bells button { height: 36px; padding: 0 10px; background: var(--plate-3); font: 700 12px/1 var(--f-mono); color: var(--dim); }
+.rung-bells button.reset { color: var(--doom); }
+
+.exs-ladder { margin-top: 4px; }
+.ex-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 0; }
+.ex-row + .ex-row { border-top: 1px solid var(--line); }
+.ex-row .ex-name { font-size: 16px; }
+
+.next-rung { display: flex; align-items: baseline; gap: 10px; }
+.next-rung b { font: 900 56px/.85 var(--f-num); color: var(--doom); }
+.next-rung span { font: 600 14px/1.2 var(--f-mono); color: var(--text); }
+.swap-call { margin-top: 10px; padding: 8px 10px; background: var(--ember-deep); color: var(--ember); font: 700 13px/1.2 var(--f-mono); }
+.next-moves { margin-top: 10px; color: var(--dim); font-size: 13.5px; line-height: 1.5; }
+
 .block-note {
   display: block; margin-top: 14px; padding: 10px 12px; background: var(--plate-2);
   color: var(--dim); font-size: 13.5px; line-height: 1.45; text-align: left; width: 100%;

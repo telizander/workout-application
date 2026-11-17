@@ -52,28 +52,44 @@ const store = {
    "5A120s"            -> 5 rounds of block A, 120s rest
    "KB Press 8'@16"    -> 8 reps each side at 16kg
    "RopeFlow :120@BW"  -> 120 seconds, bodyweight
+   "10/8/6/4A120s"     -> ladder block: 4 rounds (rungs) of 10, 8, 6, 4 reps
+   "KB Thruster @16+16/20+20/20+20/24+20"
+                       -> inside a ladder: reps come from the rung, load per rung
    ========================================================= */
 
 function parseHeader(h) {
   if (h === 'WU') return { kind: 'wu', letter: 'WU', label: 'Warm-up', rounds: 1, rest: 0 };
   if (h === 'FIN') return { kind: 'fin', letter: 'FIN', label: 'Finisher', rounds: 1, rest: 0 };
-  const m = /^(\d+)([A-Z])(\d+)s?$/.exec(h);
-  if (m) return { kind: 'work', letter: m[2], label: 'Block ' + m[2], rounds: +m[1], rest: +m[3] };
+  const m = /^(\d+(?:\/\d+)*)([A-Z])(\d+)s?$/.exec(h);
+  if (m) {
+    const n = m[1].split('/').map(Number);
+    const rungs = n.length > 1 ? n : null;
+    return { kind: 'work', letter: m[2], label: 'Block ' + m[2], rounds: rungs ? rungs.length : n[0], rest: +m[3], rungs };
+  }
   return { kind: 'work', letter: h, label: h, rounds: 1, rest: 0 };
 }
 
-function parseExercise(line) {
+// A ladder ("10/8/6/4", "16/20/24") steps one rung per round; extra rounds stay on the last rung.
+// In a ladder block (rungs from the header) an exercise without reps does the rung's reps.
+const rung = (list, round) => list[Math.min(round, list.length - 1)];
+
+function parseExercise(line, round = 0, rungs = null) {
   const at = line.lastIndexOf('@');
   const body = (at > -1 ? line.slice(0, at) : line).trim();
-  const load = at > -1 ? line.slice(at + 1).trim() : null;
-  const m = /^(.*?)\s+(:?)(\d+)(?:-(\d+))?(')?$/.exec(body);
-  if (!m) return { raw: line, name: body, load, value: null };
+  const loads = at > -1 ? line.slice(at + 1).trim().split('/') : null;
+  const load = loads ? rung(loads, round) : null;
+  const m = /^(.*?)\s+(:?)(\d+(?:\/\d+)*)(?:-(\d+))?(')?$/.exec(body);
+  if (!m && rungs) return { raw: line, name: body, load, ladder: true, rungs, value: rung(rungs, round), hi: null, each: false, time: false, isRest: false, isCarry: false };
+  if (!m) return { raw: line, name: body, load, value: null, ladder: loads && loads.length > 1 };
+  const reps = m[3].split('/').map(Number);
   return {
     raw: line,
     name: m[1],
     load,
+    ladder: reps.length > 1 || loads != null && loads.length > 1,
+    rungs: reps,
     time: m[2] === ':',
-    value: +m[3],
+    value: rung(reps, round),
     hi: m[4] ? +m[4] : null,
     each: !!m[5],
     isRest: /^rest$/i.test(m[1]),
@@ -180,11 +196,13 @@ function heldStatus(entry, day) {
   if (bi < 0 || !entry.blocks[bi]) return 'none';
   const blk = day.blocks[bi];
   const m = parseHeader(blk.header);
-  const ex = parseExercise(blk.exercises[0]);
   const rounds = entry.blocks[bi].rounds || [];
   if (!rounds.length) return 'short';
   const ok = rounds.length >= m.rounds &&
-    rounds.every(r => (r.reps[0] || 0) >= (ex.value || 0) && r.loads[0] === ex.load);
+    rounds.every((r, ri) => {
+      const ex = parseExercise(blk.exercises[0], ri, m.rungs);
+      return (r.reps[0] || 0) >= (ex.value || 0) && r.loads[0] === ex.load;
+    });
   return ok ? 'held' : 'short';
 }
 
@@ -245,7 +263,8 @@ function newSession(week, day) {
     startedAt: null, acc: 0, runSince: null,
     blockIndex: 0,
     blocks: d.blocks.map(b => {
-      const exs = b.exercises.map(parseExercise);
+      const rungs = b.header && parseHeader(b.header).rungs;
+      const exs = b.exercises.map(line => parseExercise(line, 0, rungs));
       return {
         rounds: [], extra: 0,
         checks: exs.map(() => 0),
@@ -263,7 +282,20 @@ function newSession(week, day) {
 
 const sDay = () => getDay(S.week, S.day);
 const sBlock = i => sDay().blocks[i];
-const sExs = i => sBlock(i).exercises.map(parseExercise);
+// Exercises as prescribed for round r (default: the round about to be done).
+const sRungs = i => parseHeader(sBlock(i).header).rungs;
+const sExs = (i, r = S.blocks[i].rounds.length) => sBlock(i).exercises.map(line => parseExercise(line, r, sRungs(i)));
+const isLadder = i => !!sRungs(i) || sExs(i).some(e => e.ladder);
+
+// After a ladder round is logged or undone, reset reps and loads to the new rung.
+function syncRung(i) {
+  const st = S.blocks[i];
+  sExs(i).forEach((ex, j) => {
+    if (!ex.ladder) return;
+    st.draft[j] = ex.value;
+    st.loads[j] = ex.load;
+  });
+}
 const targetRounds = i => parseHeader(sBlock(i).header).rounds + S.blocks[i].extra;
 
 function elapsed() {
@@ -358,7 +390,8 @@ function keyLift(day) {
   const bi = firstWorkIndex(day);
   if (bi < 0) return null;
   const m = parseHeader(day.blocks[bi].header);
-  const ex = parseExercise(day.blocks[bi].exercises[0]);
+  const ex = parseExercise(day.blocks[bi].exercises[0], 0, m.rungs);
+  if (ex.ladder) return { name: ex.name, spec: 'Ladder ' + ex.rungs.join('-') };
   return { name: ex.name, spec: m.rounds + '×' + doseText(ex) + (ex.load ? ' · ' + loadText(ex.load) : '') };
 }
 
@@ -577,9 +610,14 @@ function renderBlock() {
     if (emom) {
       h += '<div class="block-spec">EMOM<span>·</span>' + m.rounds + ' rounds</div>';
       h += '<div class="block-sub">' + (alternatingEmom(blk.note) ? 'Odd minutes work · even rest' : 'Every minute on the minute') + '</div>';
+    } else if (m.rungs) {
+      const n = Math.min(st.rounds.length + 1, tr);
+      h += '<div class="block-spec">' + (st.tEnd != null ? 'Ladder done' : 'Rung ' + n + '<span>/</span>' + tr) + (m.rest ? '<span>·</span>' + m.rest + 's rest' : '') + '</div>';
+      h += '<div class="block-sub">' + exs.length + ' moves · no rest inside a rung</div>';
     } else {
-      h += '<div class="block-spec">' + tr + ' rounds' + (m.rest ? '<span>·</span>' + m.rest + 's rest' : '') + '</div>';
-      h += '<div class="block-sub">' + exs.length + (exs.length > 1 ? ' movements · superset' : ' movement') + '</div>';
+      const ladder = isLadder(i);
+      h += '<div class="block-spec">' + tr + (ladder ? ' rungs' : ' rounds') + (m.rest ? '<span>·</span>' + m.rest + 's rest' : '') + '</div>';
+      h += '<div class="block-sub">' + exs.length + (exs.length > 1 ? ' movements · ' + (ladder ? 'ladder ' + (sRungs(i) || exs[0].rungs).join('-') : 'superset') : ' movement') + '</div>';
     }
   } else {
     const done = exs.filter((e, j) => st.checks[j] >= passesNeeded(e)).length;
@@ -590,7 +628,8 @@ function renderBlock() {
 
   if (st.tEnd != null && m.kind === 'work') h += '<span class="cleared">CLEARED</span>';
 
-  if (m.kind === 'work') {
+  if (m.rungs) h += ladderStrip(i);
+  else if (m.kind === 'work') {
     const tr = targetRounds(i);
     h += '<div class="pips" aria-label="' + st.rounds.length + ' of ' + tr + ' rounds">';
     for (let r = 0; r < Math.max(tr, st.rounds.length); r++) {
@@ -609,13 +648,15 @@ function renderBlock() {
 
   if (emom) h += emomPanel(i);
 
-  if (m.kind === 'work') h += workList(i, exs);
+  if (m.rungs) h += ladderList(i, exs);
+  else if (m.kind === 'work') h += workList(i, exs);
   else h += checkList(i, exs);
 
   if (m.kind === 'work' && st.rounds.length) {
     h += '<ol class="rlog">';
     st.rounds.forEach((r, ri) => {
-      const parts = exs.map((ex, j) => {
+      if (m.rungs) { h += ladderLogRow(i, r, ri); return; }
+      const parts = sExs(i, ri).map((ex, j) => {
         const v = r.reps[j] == null ? '–' : (ex.time ? r.reps[j] + 's' : r.reps[j]);
         const changed = r.loads[j] !== ex.load;
         return changed ? v + '<em>@' + esc(loadText(r.loads[j])) + '</em>' : v;
@@ -635,6 +676,73 @@ function renderBlock() {
   ui.newRound = null;
   renderDock();
   tickTimers();
+}
+
+/* ---------- ladder blocks ---------- */
+
+// The whole ladder at a glance: reps big, bells under, done / now / to come.
+function ladderStrip(i) {
+  const st = S.blocks[i];
+  const m = parseHeader(sBlock(i).header);
+  const tr = targetRounds(i);
+  const now = st.rounds.length;
+  let prev = null;
+  let h = '<ol class="rungs" aria-label="Rung ' + Math.min(now + 1, tr) + ' of ' + tr + '">';
+  for (let r = 0; r < Math.max(tr, now); r++) {
+    const rd = st.rounds[r];
+    const load = rd ? rd.loads[0] : r === now ? st.loads[0] : sExs(i, r)[0].load;
+    const state = rd ? (rd.effort === 'grind' ? 'done grind' : 'done') : r === now && st.tEnd == null ? 'now' : '';
+    const swap = prev != null && load !== prev;
+    h += '<li class="rung ' + state + (ui.popPip === r ? ' pop' : '') + '">' +
+      '<b>' + rung(m.rungs, r) + '</b>' +
+      '<span class="' + (swap ? 'swap' : '') + '">' + esc(loadText(load)) + '</span></li>';
+    prev = load;
+  }
+  h += '</ol>';
+  if (st.tEnd == null && st.loads[0]) h += rungBells(i);
+  return h;
+}
+
+// One load control for the rung: every move uses the same bells.
+function rungBells(i) {
+  const st = S.blocks[i];
+  const planned = sExs(i)[0].load;
+  const p = parseLoad(st.loads[0]);
+  const adjustable = p && !p.bw && !p.raw;
+  const changed = st.loads[0] !== planned;
+  const step = p && p.unit === 'lb' ? '5lb' : '4kg';
+  return '<div class="rung-bells' + (changed ? ' changed' : '') + '"><span class="label">Bells</span>' +
+    '<b>' + esc(loadText(st.loads[0])) + '</b>' +
+    (adjustable ? '<button type="button" class="press" data-act="rung-load" data-d="-1" aria-label="Lighter">−' + step + '</button>' +
+      (changed ? '<button type="button" class="press reset" data-act="rung-load-reset">' + esc(loadText(planned)) + '</button>' : '') +
+      '<button type="button" class="press" data-act="rung-load" data-d="1" aria-label="Heavier">+' + step + '</button>' : '') +
+    '</div>';
+}
+
+// Moves in a rung: name and a rep counter, nothing repeated.
+function ladderList(i, exs) {
+  const st = S.blocks[i];
+  let h = '<ul class="exs exs-ladder">';
+  exs.forEach((ex, j) => {
+    h += '<li class="ex-row"><span class="ex-name">' + esc(ex.name) + '</span>';
+    if (ex.time) h += runButton(i, j, ex);
+    else if (ex.value != null) {
+      const v = st.draft[j];
+      h += '<div class="stepper"><button type="button" data-act="dec" data-ex="' + j + '" aria-label="One less">−</button>' +
+        '<output id="out-' + j + '" class="' + (v < ex.value ? 'off' : '') + '"><span>' + v + '</span>' + (ex.each ? '<small>EA</small>' : '') + '</output>' +
+        '<button type="button" data-act="inc" data-ex="' + j + '" aria-label="One more">+</button></div>';
+    }
+    h += '</li>';
+  });
+  return h + '</ul>';
+}
+
+function ladderLogRow(i, r, ri) {
+  const exs = sExs(i, ri);
+  const missed = exs.map((ex, j) => (!ex.time && r.reps[j] != null && r.reps[j] < ex.value ? ex.name.replace(/^KB /, '') + ' ' + r.reps[j] : null)).filter(Boolean);
+  return '<li class="' + (ui.newRound === ri ? 'new' : '') + '"><span class="r-n">' + exs[0].value + '</span>' +
+    '<span class="r-v">@ ' + esc(loadText(r.loads[0])) + (missed.length ? ' · <em>' + esc(missed.join(', ')) + '</em>' : ' · all reps') + '</span>' +
+    '<button type="button" class="eff-btn" data-act="effort-cycle" data-r="' + ri + '" data-v="' + (r.effort || '') + '">' + (r.effort || 'rate') + '</button></li>';
 }
 
 function workList(i, exs) {
@@ -742,7 +850,9 @@ function renderDock() {
     const tr = targetRounds(i);
     const n = st.rounds.length;
     if (n < tr) {
-      html = '<button type="button" class="act' + (ui.swapAct ? ' swap' : '') + '" data-act="log-round"><span class="act-l">Log round <b>' + (n + 1) + '</b></span><span class="act-r">' + (n + 1) + '/' + tr + '</span></button>';
+      const rungs = sRungs(i);
+      const label = rungs ? 'Log rung · <b>' + rung(rungs, n) + '</b> reps' : 'Log round <b>' + (n + 1) + '</b>';
+      html = '<button type="button" class="act' + (ui.swapAct ? ' swap' : '') + '" data-act="log-round"><span class="act-l">' + label + '</span><span class="act-r">' + (n + 1) + '/' + tr + '</span></button>';
     } else {
       html = nextBtn(true);
     }
@@ -821,6 +931,7 @@ function tickEmom(bi) {
   let changed = false;
   while (st.rounds.length < workDone) {
     st.rounds.push({ reps: st.draft.slice(), loads: st.loads.slice(), effort: null, at: elapsed() });
+    syncRung(bi);
     ui.popPip = st.rounds.length - 1;
     changed = true;
   }
@@ -920,12 +1031,13 @@ function renderRest() {
   const round = st.rounds[r];
   const tr = targetRounds(b);
   const drop = dropTarget(blk.note);
-  let h = '<div class="rest-top"><span class="label">Rest</span><span class="label">' + esc(parseHeader(blk.header).label) + ' · round ' + (r + 1) + ' of ' + tr + '</span></div>';
+  const unit = isLadder(b) ? 'rung' : 'round';
+  let h = '<div class="rest-top"><span class="label">Rest</span><span class="label">' + esc(parseHeader(blk.header).label) + ' · ' + unit + ' ' + (r + 1) + ' of ' + tr + '</span></div>';
   h += '<div class="rest-digits" id="rest-digits">' + countdown(S.rest.endsAt - now()) + '</div>';
   h += '<div class="rest-bar"><i id="rest-fill"></i></div>';
   h += '<div class="rest-adj"><button type="button" class="btn press" data-act="rest-adj" data-d="-15">−15s</button><button type="button" class="btn press" data-act="rest-adj" data-d="15">+15s</button></div>';
 
-  h += '<div class="effort"><span class="label">How did round ' + (r + 1) + ' move?</span><div class="effort-row">' +
+  h += '<div class="effort"><span class="label">How did ' + unit + ' ' + (r + 1) + ' move?</span><div class="effort-row">' +
     ['easy', 'solid', 'grind'].map(v => '<button type="button" data-act="rest-effort" data-v="' + v + '" aria-pressed="' + (round && round.effort === v) + '">' + v + '</button>').join('') +
     '</div>';
   if (round && round.effort === 'grind') {
@@ -942,8 +1054,15 @@ function renderRest() {
   }
   h += '</div>';
 
-  if (r + 1 < tr) {
-    h += '<div class="up-next"><span class="label">Up next · round ' + (r + 2) + '</span><ul>' +
+  const rungs = parseHeader(blk.header).rungs;
+  if (rungs && r + 1 < tr) {
+    const swap = round && st.loads[0] !== round.loads[0];
+    h += '<div class="up-next up-rung"><span class="label">Up next · rung ' + (r + 2) + ' of ' + tr + '</span>' +
+      '<div class="next-rung"><b>' + rung(rungs, r + 1) + '</b><span>reps @ ' + esc(loadText(st.loads[0])) + '</span></div>' +
+      (swap ? '<p class="swap-call">Swap bells: ' + esc(loadText(round.loads[0])) + ' → ' + esc(loadText(st.loads[0])) + '</p>' : '') +
+      '<p class="next-moves">' + exs.map(ex => esc(ex.name.replace(/^KB /, ''))).join(' → ') + '</p></div>';
+  } else if (r + 1 < tr) {
+    h += '<div class="up-next"><span class="label">Up next · ' + unit + ' ' + (r + 2) + '</span><ul>' +
       exs.map((ex, j) => '<li><span>' + esc(ex.name) + '</span><span>' +
         (ex.time ? secsText(ex.value) + 's' : st.draft[j] + (ex.each ? ' ea' : '')) +
         (st.loads[j] ? ' @ ' + esc(loadText(st.loads[j])) : '') + '</span></li>').join('') +
@@ -1003,6 +1122,7 @@ function logRound() {
   const st = S.blocks[i];
   ensureRunning();
   st.rounds.push({ reps: st.draft.slice(), loads: st.loads.slice(), effort: null, at: elapsed() });
+  syncRung(i);
   const n = st.rounds.length;
   const tr = targetRounds(i);
   ui.popPip = n - 1;
@@ -1070,19 +1190,22 @@ function buildNotation(d, dur) {
   d.blocks.forEach((blk, i) => {
     const m = parseHeader(blk.header);
     const st = S.blocks[i];
-    const exs = blk.exercises.map(parseExercise);
+    const exs = blk.exercises.map(line => parseExercise(line, 0, m.rungs));
     if (m.kind !== 'work') {
       out.push(blk.header + ':');
       exs.forEach((ex, j) => out.push('  - ' + blk.exercises[j] + (st.checks[j] >= passesNeeded(ex) ? '' : '  # skipped')));
     } else {
       const n = st.rounds.length;
-      out.push(n + m.letter + m.rest + 's:' + (n !== m.rounds ? '  # planned ' + m.rounds : ''));
+      const done = m.rungs ? st.rounds.map((r, ri) => rung(m.rungs, ri)).join('/') : n;
+      out.push(done + m.letter + m.rest + 's:' + (n !== m.rounds ? '  # planned ' + (m.rungs ? m.rungs.join('/') : m.rounds) : ''));
       exs.forEach((ex, j) => {
         if (!n || ex.value == null) { out.push('  - ' + blk.exercises[j] + (n ? '' : '  # skipped')); return; }
         const vals = st.rounds.map(r => r.reps[j]);
         const reps = vals.every(v => v === vals[0]) ? String(vals[0]) : vals.join('/');
         const loads = st.rounds.map(r => r.loads[j]);
         const load = loads.every(l => l === loads[0]) ? loads[0] : loads.join('/');
+        const onRung = m.rungs && !ex.time && vals.every((v, ri) => v === rung(m.rungs, ri));
+        if (onRung) { out.push('  - ' + ex.name + ' @' + load); return; }
         out.push('  - ' + ex.name + ' ' + (ex.time ? ':' : '') + reps + (ex.each ? "'" : '') + (load ? '@' + load : ''));
       });
       const eff = st.rounds.map(r => (r.effort ? r.effort[0].toUpperCase() : '-')).join('');
@@ -1099,7 +1222,7 @@ function buildNotation(d, dur) {
 function renderSummary(entry, prev, d, done) {
   let reps = 0, rounds = 0, grinds = 0;
   done.blocks.forEach((b, i) => {
-    const exs = d.blocks[i].exercises.map(parseExercise);
+    const exs = d.blocks[i].exercises.map(line => parseExercise(line, 0, parseHeader(d.blocks[i].header).rungs));
     b.rounds.forEach(r => {
       rounds++;
       if (r.effort === 'grind') grinds++;
@@ -1254,6 +1377,15 @@ const ACTIONS = {
     st.loads[j] = stepLoad(st.loads[j], +t.dataset.d);
     save(); renderBlock();
   },
+  'rung-load'(t) {
+    const st = S.blocks[S.blockIndex];
+    st.loads = st.loads.map(l => stepLoad(l, +t.dataset.d));
+    save(); renderBlock();
+  },
+  'rung-load-reset'() {
+    S.blocks[S.blockIndex].loads = sExs(S.blockIndex).map(ex => ex.load);
+    save(); renderBlock();
+  },
   'load-reset'(t) {
     const j = +t.dataset.ex;
     S.blocks[S.blockIndex].loads[j] = sExs(S.blockIndex)[j].load;
@@ -1285,6 +1417,7 @@ const ACTIONS = {
     const st = S.blocks[S.blockIndex];
     if (st.emom && !st.emom.done) { toast('EMOM is logging rounds'); return; }
     st.rounds.pop();
+    syncRung(S.blockIndex);
     st.tEnd = null;
     if (S.rest && S.rest.b === S.blockIndex) closeRest();
     save(); renderBlock(); renderStrip();
