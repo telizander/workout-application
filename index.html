@@ -43,7 +43,16 @@
 
 <div id="toast" role="status" aria-live="polite"></div>
 
+<!-- Tunes: a YouTube queue that plays in the app. The player frame is never re-rendered. -->
+<aside id="tunes" class="tunes" aria-label="Tunes" hidden>
+  <div class="tunes-top" id="tunes-top"></div>
+  <div class="tunes-bar" id="tunes-bar"></div>
+  <div class="tunes-frame"><div id="yt-player"></div></div>
+  <div class="tunes-body" id="tunes-body"></div>
+</aside>
+
 <script src="sound.js"></script>
 <script src="app.js"></script>
+<script src="tunes.js"></script>
 </body>
 </html>

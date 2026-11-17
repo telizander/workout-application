@@ -33,6 +33,7 @@ const ICON = {
   stop: '<svg viewBox="0 0 12 12"><path d="M2 2h8v8H2z"/></svg>',
   plus: '<svg viewBox="0 0 24 24"><path d="M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z"/></svg>',
   soundOn: '<svg viewBox="0 0 24 24"><path d="M3 9h4l5-4v14l-5-4H3zM15 8.5a5 5 0 0 1 0 7l-1.4-1.4a3 3 0 0 0 0-4.2zM17.8 5.7a9 9 0 0 1 0 12.6l-1.4-1.4a7 7 0 0 0 0-9.8z"/></svg>',
+  tunes: '<svg viewBox="0 0 24 24"><path d="M9 4l11-2v13.5a3.5 3.5 0 1 1-2-3.2V6.4l-7 1.3v9.8A3.5 3.5 0 1 1 9 14.3z"/></svg>',
   soundOff: '<svg viewBox="0 0 24 24"><path d="M3 9h4l5-4v14l-5-4H3zM15.3 9.7l1.4-1.4L19 10.6l2.3-2.3 1.4 1.4-2.3 2.3 2.3 2.3-1.4 1.4-2.3-2.3-2.3 2.3-1.4-1.4 2.3-2.3z"/></svg>'
 };
 
@@ -246,7 +247,12 @@ function wakeAudio() {
   Sfx.setOn(soundOn);
 }
 
-const cue = name => arg => { if (soundOn && window.Sfx) Sfx[name](arg); };
+// Cues dip any playing video for a moment so both are heard (tunes.js).
+const cue = name => arg => {
+  if (!soundOn || !window.Sfx) return;
+  if (name !== 'tap' && window.Tunes) Tunes.duck();
+  Sfx[name](arg);
+};
 const sfx = {
   tap: cue('tap'),         // every press: a low relay
   count: cue('count'),     // 3 · 2 · 1 (pass the second)
@@ -492,8 +498,9 @@ function renderHome() {
 
   h += '<header class="home-top">' +
     '<span class="brand">IRON<span>/</span>LOG</span>' +
+    '<span class="home-btns"><button class="icon-btn press" type="button" data-act="tunes" aria-label="Tunes">' + ICON.tunes + '</button>' +
     '<button class="icon-btn press" type="button" data-act="sound" aria-pressed="' + soundOn + '" aria-label="Sound">' +
-    (soundOn ? ICON.soundOn : ICON.soundOff) + '</button></header>';
+    (soundOn ? ICON.soundOn : ICON.soundOff) + '</button></span></header>';
   h += '<h1 class="prog-title">' + esc(program.title) + '</h1>';
   if (program.subtitle) h += '<p class="prog-sub">' + esc(program.subtitle) + '</p>';
 
@@ -693,6 +700,7 @@ function renderMenu() {
     '<div class="s-menu plate">' +
     '<button type="button" class="btn press" data-act="leave">Back to Today<small>Keeps your place</small></button>' +
     '<button type="button" class="btn btn-ghost hold-btn" data-hold="finish" style="--hold:1s"><span>Hold to end and save</span></button>' +
+    '<button type="button" class="btn press s-menu-wide" data-act="tunes">Tunes<small>YouTube queue</small></button>' +
     '</div>';
 }
 
@@ -1511,6 +1519,7 @@ const ACTIONS = {
   resume() { const s = loadSaved(); if (s) openSession(s.week, s.day, s); },
   close() { ui.menu = !ui.menu; renderMenu(); },
   leave() { leaveSession(); },
+  tunes() { ui.menu = false; if (S) renderMenu(); if (window.Tunes) Tunes.open(); },
   clock() {
     if (!S.startedAt) { ensureRunning(); }
     else if (S.runSince) { pauseClock(); toast('Clock paused'); }

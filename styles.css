@@ -654,3 +654,111 @@ body.in-session #tabbar { display: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001s !important; animation-delay: 0s !important; transition-duration: .001s !important; }
 }
+
+/* ---------- TUNES (YouTube queue) ---------- */
+
+.home-btns { display: flex; gap: 6px; }
+.s-menu .s-menu-wide { grid-column: 1 / -1; }
+
+/* The player docks on top of whatever holds the bottom edge (tab bar, session
+   dock, rest sheet button); tunes.js measures that into --tunes-lift and the
+   room it takes into --tunes-room, so the page scrolls clear of it. It sits
+   above the shutter: YouTube's terms say nothing may cover a playing player. */
+.tunes {
+  position: fixed; z-index: 65; left: 0; right: 0; max-width: 480px; margin: 0 auto;
+  bottom: max(var(--tunes-lift, 0px), var(--safe-b));
+  transition: bottom .25s var(--firm);
+}
+.tunes.t-enter { animation: t-rise .28s var(--firm); }
+@keyframes t-rise { from { transform: translateY(14px); } }
+
+body.tunes-docked #app { padding-bottom: calc(var(--bar-h) + var(--safe-b) + 24px + var(--tunes-room)); }
+body.tunes-docked .sheet-foot { padding-top: calc(16px + var(--tunes-room)); }
+body.tunes-docked #toast { bottom: calc(max(var(--tunes-lift, 0px), var(--safe-b)) + var(--tunes-room) + 12px); }
+
+/* the player: exactly YouTube's 200x200 minimum */
+.tunes-frame { width: 200px; height: 200px; background: #000; }
+.tunes-frame iframe { display: block; width: 200px; height: 200px; border: 0; }
+
+.t-btn { width: 44px; height: 44px; flex: none; display: grid; place-items: center; background: var(--plate-3); color: var(--text); transition: transform .09s ease-out, background-color .15s; }
+.t-btn svg { width: 20px; height: 20px; fill: currentColor; }
+.t-btn:active, .t-resume:active { transform: scale(.96); }
+.t-btn.t-main { background: var(--doom); color: var(--doom-ink); }
+.t-btn.t-main svg { width: 24px; height: 24px; }
+.tunes[data-state="paused"] .t-btn.t-main { background: var(--plate-3); color: var(--doom); }
+
+/* strip (playing): player left, controls right, one row above the dock */
+.tunes[data-mode="strip"], .tunes[data-mode="deck"] { display: grid; grid-template-columns: 200px minmax(0, 1fr); }
+.tunes[data-mode="strip"] { background: var(--plate); box-shadow: 0 -1px 0 var(--line), 0 -14px 28px rgba(0, 0, 0, .5); }
+.tunes[data-mode="strip"] .tunes-frame, .tunes[data-mode="deck"] .tunes-frame { grid-column: 1; grid-row: 3; }
+.tunes[data-mode="strip"] .tunes-bar, .tunes[data-mode="deck"] .tunes-bar {
+  grid-column: 2; grid-row: 3; min-width: 0; height: 200px;
+  display: flex; flex-direction: column; padding: 2px 8px 8px 10px;
+}
+.t-meta { display: flex; align-items: center; height: 44px; margin-right: -6px; }
+.t-meta .label { flex: 1; min-width: 0; color: var(--doom); }
+.tunes[data-state="paused"] .t-meta .label { color: var(--mute); }
+.t-meta .t-btn { background: none; color: var(--dim); }
+.t-title { font: 600 14px/1.25 var(--f-text); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+.t-prog { height: 3px; margin-top: auto; background: var(--plate-3); overflow: hidden; }
+.t-prog i { display: block; height: 100%; background: var(--doom); transform-origin: left; transition: transform 1s linear; }
+.tunes[data-state="paused"] .t-prog i { background: var(--steel); }
+.t-status { display: block; margin-top: 6px; font: 500 11px/1 var(--f-mono); color: var(--dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.t-ctrls { display: grid; grid-template-columns: 1fr 48px; gap: 4px; margin-top: 8px; }
+.t-ctrls .t-btn { width: auto; height: 52px; }
+.t-upnext { display: block; margin-top: 7px; font: 500 10.5px/1.1 var(--f-mono); color: var(--mute); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* bar (paused): one slim row; the player is tucked away and nothing plays */
+.tunes[data-mode="bar"] { background: var(--plate); box-shadow: 0 -1px 0 var(--line), 0 -10px 24px rgba(0, 0, 0, .45); }
+.tunes[data-mode="bar"] .tunes-bar { display: flex; align-items: center; gap: 4px; padding: 6px 8px 6px 6px; }
+.tunes[data-mode="bar"] .tunes-frame { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
+.tunes[data-mode="bar"] .t-btn { background: none; color: var(--dim); }
+.t-resume { flex: 1; min-width: 0; min-height: 48px; display: flex; align-items: center; gap: 10px; text-align: left; transition: transform .09s ease-out; }
+.t-resume img { width: 64px; height: 36px; object-fit: cover; flex: none; filter: saturate(.6); }
+.t-resume-text { flex: 1; min-width: 0; }
+.t-resume-text b { display: block; font: 600 13px/1.2 var(--f-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.t-resume-text small { display: block; margin-top: 4px; font: 500 10.5px/1 var(--f-mono); color: var(--dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.t-resume-go { width: 44px; height: 44px; flex: none; display: grid; place-items: center; background: var(--doom); color: var(--doom-ink); }
+.t-resume-go svg { width: 20px; height: 20px; fill: currentColor; }
+
+/* deck: the queue panel; the strip stays put along its bottom edge */
+.tunes[data-mode="deck"] {
+  top: var(--safe-t); grid-template-rows: auto minmax(0, 1fr) auto;
+  background: var(--bg); box-shadow: inset 0 2px 0 var(--doom);
+}
+.tunes[data-mode="deck"] .tunes-bar { background: var(--plate); box-shadow: 0 -1px 0 var(--line); }
+.tunes[data-mode="deck"] .tunes-frame { box-shadow: 0 -1px 0 var(--line); }
+.tunes-top { grid-column: 1 / -1; grid-row: 1; padding: 6px var(--gutter) 0; }
+.tunes-body { grid-column: 1 / -1; grid-row: 2; overflow-y: auto; overscroll-behavior: contain; padding: 14px var(--gutter) 16px; }
+.tunes:not([data-mode="deck"]) .tunes-top, .tunes:not([data-mode="deck"]) .tunes-body { display: none; }
+.t-head { display: flex; justify-content: space-between; align-items: center; height: 52px; margin-right: -10px; }
+.t-head .label { margin: 0; color: var(--doom); font-weight: 500; }
+.t-head .t-btn { background: none; color: var(--dim); }
+.t-paste { width: 100%; min-height: 56px; }
+.t-add { display: grid; grid-template-columns: 1fr auto; gap: 6px; margin-top: 8px; }
+.t-add input {
+  min-width: 0; height: 48px; padding: 0 12px; border: 0; border-radius: 0;
+  background: var(--plate-2); color: var(--text); font: 500 14px/1 var(--f-mono);
+  box-shadow: inset 0 -2px 0 var(--line);
+}
+.t-add input::placeholder { color: var(--mute); }
+.t-add input:focus { outline: none; box-shadow: inset 0 -2px 0 var(--doom); }
+.t-add .btn { min-height: 48px; padding: 0 18px; }
+.t-add.quiet input, .t-add.quiet .btn { height: 44px; min-height: 44px; }
+.t-label { display: flex; justify-content: space-between; align-items: center; }
+.t-clear { min-height: 44px; padding: 0 2px 0 12px; font: 500 11px/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--mute); }
+.t-queue { display: grid; gap: 4px; margin-top: 2px; }
+.t-queue li { display: grid; grid-template-columns: 64px minmax(0, 1fr) 44px 44px; gap: 8px; align-items: center; padding: 6px; background: var(--plate); }
+.t-queue li.now { box-shadow: inset 3px 0 0 var(--doom); background: var(--plate-2); }
+.t-queue img { width: 64px; height: 36px; object-fit: cover; }
+.t-queue span { font: 500 13px/1.3 var(--f-text); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+.t-queue small { display: block; font: 500 10px/1.3 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--mute); }
+.t-queue li.now small { color: var(--doom); }
+.t-queue .t-btn { background: none; color: var(--dim); }
+.t-how { display: grid; gap: 10px; padding: 14px; background: var(--plate); }
+.t-how li { display: grid; grid-template-columns: 26px 1fr; gap: 8px; align-items: baseline; font-size: 14px; color: var(--dim); }
+.t-how b { font: 800 22px/1 var(--f-num); color: var(--doom); }
+.t-how em { font-style: normal; font-weight: 600; color: var(--text); }
+.t-fine { margin-top: 14px; font: 500 11px/1.45 var(--f-mono); color: var(--mute); }
+/* nothing queued: no player, no controls, just the add panel */
+.tunes[data-state="empty"] > .tunes-frame, .tunes[data-state="empty"] > .tunes-bar { display: none; }
