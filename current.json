@@ -2,7 +2,7 @@
   "program": {
     "title": "CARL WEATHERS BUILD",
     "subtitle": "13-Week Strength + Size — Sandbag, KB, Rings",
-    "notes": "Eating to grow: bodyweight should trend up slowly. Three waves of 3 build weeks plus a lighter week, then test (week 12) and deload (week 13). Schedule: keep a rest day between Sandbag Lower and Pull (e.g. Mon Push, Tue Sandbag, Thu Pull, Sat Legs). Sandbag: own 130lbs in wave 1, touch 140 in wave 2, work at 140 in wave 3, so 140 feels routine by the end. Pull-ups restart at bodyweight with a neutral grip on free-rotating rings, and reps only go up when the elbows and shoulders allow. Pain rule: up to 3/10 that is gone by the next morning is OK. Anything more: band-assisted pull-ups, or KB pullovers if those hurt too. Elbow or shoulder pain that lasts more than 2 weeks is worth a physio visit. 24+20 means a mixed pair: switch which hand holds the 24 each set. If you buy a second 24, use 24+24. If top sets stall two weeks in a row, cut accessory sets first.",
+    "notes": "Winter 2026-27 / Build (2026-11-16 to 2027-02-14). Eating: Maintenance to +200 kcal a day: build muscle without adding fat, because the spring cut starts Feb 15. Weigh in and measure your waist every week, same morning: weight steady or creeping up, waist not growing. Waist up 1 inch: drop back to maintenance. Three waves of 3 build weeks plus a lighter week, then test (week 12) and deload (week 13). Schedule: keep a rest day between Sandbag Lower and Pull (e.g. Mon Push, Tue Sandbag, Thu Pull, Sat Legs). Sandbag: own 130lbs in wave 1, touch 140 in wave 2, work at 140 in wave 3, so 140 feels routine by the end. Aging well is in every week: Turkish get-ups (Push and Pull warm-ups), single-leg deadlifts (Sandbag day), and Achilles stage 1 calf work (Sandbag and Legs days). No jumping: week 12 tests 25 slow single-leg calf raises each side. Pull-ups restart at bodyweight with a neutral grip on free-rotating rings, and reps only go up when the elbows and shoulders allow. Pain rule: up to 3/10 that is gone by the next morning is OK. Anything more: band-assisted pull-ups, or KB pullovers if those hurt too. Elbow or shoulder pain that lasts more than 2 weeks is worth a physio visit. 24+20 means a mixed pair: switch which hand holds the 24 each set. If you buy a second 24, use 24+24. If top sets stall two weeks in a row, cut accessory sets first.",
     "weeks": {
       "1": {
         "phase": "WAVE 1 / BUILD",
@@ -18,8 +18,10 @@
                   "RopeFlow :120@BW",
                   "Arm Circles :45@BW",
                   "Band Pull-Apart :45@BW",
-                  "Scapula Pull 8@BW"
-                ]
+                  "Scapula Pull 8@BW",
+                  "KB Turkish Get-up 2'@16"
+                ],
+                "note": "Get-up: slow, eyes on the bell, every position owned. Floor to standing and back is the point."
               },
               {
                 "header": "4A90s",
@@ -65,12 +67,12 @@
                 ]
               },
               {
-                "header": "3A75s",
+                "header": "3A60s",
                 "exercises": [
                   "SB Shouldering 2'@130lbs",
-                  "Band Pull-Apart 15@BW"
+                  "Slow Calf Raise 12@BW"
                 ],
-                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. Shouldering: alternate shoulders every rep. Fast and crisp, never a grind. "
               },
               {
                 "header": "4B150s",
@@ -84,9 +86,9 @@
                 "header": "3C120s",
                 "exercises": [
                   "SB Zercher Squat 8@110lbs",
-                  "Band Pull-Apart 20@BW"
+                  "KB Single-Leg Deadlift 6'@16"
                 ],
-                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead. Single-leg deadlift: bell in the hand opposite the standing leg, hips square, slow. Balance is the point; touch a wall if you need to."
               },
               {
                 "header": "3D120s",
@@ -114,7 +116,8 @@
                   "Dead Hang :30@BW",
                   "Scapula Pull 10@BW",
                   "Band Pull-Apart :45@BW",
-                  "RopeFlow :90@BW"
+                  "RopeFlow :90@BW",
+                  "KB Turkish Get-up 2'@16"
                 ]
               },
               {
@@ -198,9 +201,9 @@
                 "exercises": [
                   "RTO Ring Push-up 12@BW",
                   "DB Overhead Extension 12@20lbs",
-                  "Ring Fallout 8@BW"
+                  "Calf Raise Hold :30@20+20"
                 ],
-                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
               {
                 "header": "FIN",
@@ -219,7 +222,7 @@
       },
       "2": {
         "phase": "WAVE 1 / BUILD",
-        "goal": "Add reps where the plan says. Eat to grow: bodyweight should trend up.",
+        "goal": "Add reps where the plan says. Weigh in and measure your waist: weight steady or creeping up, waist not growing.",
         "days": [
           {
             "day": 1,
@@ -231,8 +234,10 @@
                   "RopeFlow :120@BW",
                   "Arm Circles :45@BW",
                   "Band Pull-Apart :45@BW",
-                  "Scapula Pull 8@BW"
-                ]
+                  "Scapula Pull 8@BW",
+                  "KB Turkish Get-up 2'@16"
+                ],
+                "note": "Get-up: slow, eyes on the bell, every position owned. Floor to standing and back is the point."
               },
               {
                 "header": "4A90s",
@@ -278,12 +283,12 @@
                 ]
               },
               {
-                "header": "3A75s",
+                "header": "3A60s",
                 "exercises": [
                   "SB Shouldering 2'@130lbs",
-                  "Band Pull-Apart 15@BW"
+                  "Slow Calf Raise 12@BW"
                 ],
-                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. Shouldering: alternate shoulders every rep. Fast and crisp, never a grind. "
               },
               {
                 "header": "3B150s",
@@ -297,9 +302,9 @@
                 "header": "3C120s",
                 "exercises": [
                   "SB Zercher Squat 8@110lbs",
-                  "Band Pull-Apart 20@BW"
+                  "KB Single-Leg Deadlift 6'@16"
                 ],
-                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead. Single-leg deadlift: bell in the hand opposite the standing leg, hips square, slow. Balance is the point; touch a wall if you need to."
               },
               {
                 "header": "3D120s",
@@ -327,7 +332,8 @@
                   "Dead Hang :30@BW",
                   "Scapula Pull 10@BW",
                   "Band Pull-Apart :45@BW",
-                  "RopeFlow :90@BW"
+                  "RopeFlow :90@BW",
+                  "KB Turkish Get-up 2'@16"
                 ]
               },
               {
@@ -411,9 +417,9 @@
                 "exercises": [
                   "RTO Ring Push-up 12@BW",
                   "DB Overhead Extension 12@20lbs",
-                  "Ring Fallout 8@BW"
+                  "Calf Raise Hold :30@20+20"
                 ],
-                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
               {
                 "header": "FIN",
@@ -444,8 +450,10 @@
                   "RopeFlow :120@BW",
                   "Arm Circles :45@BW",
                   "Band Pull-Apart :45@BW",
-                  "Scapula Pull 8@BW"
-                ]
+                  "Scapula Pull 8@BW",
+                  "KB Turkish Get-up 2'@16"
+                ],
+                "note": "Get-up: slow, eyes on the bell, every position owned. Floor to standing and back is the point."
               },
               {
                 "header": "4A90s",
@@ -491,12 +499,12 @@
                 ]
               },
               {
-                "header": "3A75s",
+                "header": "3A60s",
                 "exercises": [
                   "SB Shouldering 2'@130lbs",
-                  "Band Pull-Apart 15@BW"
+                  "Slow Calf Raise 12@BW"
                 ],
-                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. Shouldering: alternate shoulders every rep. Fast and crisp, never a grind. "
               },
               {
                 "header": "4B150s",
@@ -510,9 +518,9 @@
                 "header": "4C120s",
                 "exercises": [
                   "SB Zercher Squat 8@110lbs",
-                  "Band Pull-Apart 20@BW"
+                  "KB Single-Leg Deadlift 6'@16"
                 ],
-                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead. Single-leg deadlift: bell in the hand opposite the standing leg, hips square, slow. Balance is the point; touch a wall if you need to."
               },
               {
                 "header": "3D120s",
@@ -540,7 +548,8 @@
                   "Dead Hang :30@BW",
                   "Scapula Pull 10@BW",
                   "Band Pull-Apart :45@BW",
-                  "RopeFlow :90@BW"
+                  "RopeFlow :90@BW",
+                  "KB Turkish Get-up 2'@16"
                 ]
               },
               {
@@ -624,9 +633,9 @@
                 "exercises": [
                   "RTO Ring Push-up 12@BW",
                   "DB Overhead Extension 12@20lbs",
-                  "Ring Fallout 8@BW"
+                  "Calf Raise Hold :30@20+20"
                 ],
-                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
               {
                 "header": "FIN",
@@ -657,8 +666,10 @@
                   "RopeFlow :120@BW",
                   "Arm Circles :45@BW",
                   "Band Pull-Apart :45@BW",
-                  "Scapula Pull 8@BW"
-                ]
+                  "Scapula Pull 8@BW",
+                  "KB Turkish Get-up 2'@16"
+                ],
+                "note": "Get-up: slow, eyes on the bell, every position owned. Floor to standing and back is the point."
               },
               {
                 "header": "3A120s",
@@ -704,12 +715,12 @@
                 ]
               },
               {
-                "header": "3A75s",
+                "header": "3A60s",
                 "exercises": [
                   "SB Shouldering 2'@130lbs",
-                  "Band Pull-Apart 15@BW"
+                  "Slow Calf Raise 12@BW"
                 ],
-                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. Shouldering: alternate shoulders every rep. Fast and crisp, never a grind. "
               },
               {
                 "header": "3B150s",
@@ -723,9 +734,9 @@
                 "header": "2C120s",
                 "exercises": [
                   "SB Zercher Squat 6@100lbs",
-                  "Band Pull-Apart 15@BW"
+                  "KB Single-Leg Deadlift 6'@16"
                 ],
-                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead. Single-leg deadlift: bell in the hand opposite the standing leg, hips square, slow. Balance is the point; touch a wall if you need to."
               },
               {
                 "header": "3D90s",
@@ -753,7 +764,8 @@
                   "Dead Hang :30@BW",
                   "Scapula Pull 10@BW",
                   "Band Pull-Apart :45@BW",
-                  "RopeFlow :90@BW"
+                  "RopeFlow :90@BW",
+                  "KB Turkish Get-up 2'@16"
                 ]
               },
               {
@@ -826,8 +838,9 @@
                 "exercises": [
                   "Ring Push-up 10@BW",
                   "DB Overhead Extension 12@20lbs",
-                  "Ring Fallout 6@BW"
-                ]
+                  "Calf Raise Hold :30@20+20"
+                ],
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs."
               },
               {
                 "header": "FIN",
@@ -854,8 +867,10 @@
                   "RopeFlow :120@BW",
                   "Arm Circles :45@BW",
                   "Band Pull-Apart :45@BW",
-                  "Scapula Pull 8@BW"
-                ]
+                  "Scapula Pull 8@BW",
+                  "KB Turkish Get-up 2'@16"
+                ],
+                "note": "Get-up: slow, eyes on the bell, every position owned. Floor to standing and back is the point."
               },
               {
                 "header": "4A90s",
@@ -901,12 +916,12 @@
                 ]
               },
               {
-                "header": "3A75s",
+                "header": "3A60s",
                 "exercises": [
                   "SB Shouldering 3/3/2'@130lbs/130lbs/140lbs",
-                  "Band Pull-Apart 15@BW"
+                  "Single-Leg Slow Calf Raise 8'@BW"
                 ],
-                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. Last set(s) at 140lbs: same speed as the 130s, or stay at 130 and try again next week."
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. Shouldering: alternate shoulders every rep. Fast and crisp, never a grind. Last set(s) at 140lbs: same speed as the 130s, or stay at 130 and try again next week."
               },
               {
                 "header": "4B150s",
@@ -920,9 +935,9 @@
                 "header": "3C120s",
                 "exercises": [
                   "SB Zercher Squat 8@120lbs",
-                  "Band Pull-Apart 20@BW"
+                  "KB Single-Leg Deadlift 6'@20"
                 ],
-                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead. Single-leg deadlift: bell in the hand opposite the standing leg, hips square, slow. Balance is the point; touch a wall if you need to."
               },
               {
                 "header": "3D120s",
@@ -950,7 +965,8 @@
                   "Dead Hang :30@BW",
                   "Scapula Pull 10@BW",
                   "Band Pull-Apart :45@BW",
-                  "RopeFlow :90@BW"
+                  "RopeFlow :90@BW",
+                  "KB Turkish Get-up 2'@16"
                 ]
               },
               {
@@ -1035,9 +1051,9 @@
                 "exercises": [
                   "Feet-Up Ring Push-up 12@BW",
                   "DB Overhead Extension 12@20lbs",
-                  "Ring Fallout 10@BW"
+                  "Single-Leg Calf Raise Hold :30'@20"
                 ],
-                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
               {
                 "header": "FIN",
@@ -1068,8 +1084,10 @@
                   "RopeFlow :120@BW",
                   "Arm Circles :45@BW",
                   "Band Pull-Apart :45@BW",
-                  "Scapula Pull 8@BW"
-                ]
+                  "Scapula Pull 8@BW",
+                  "KB Turkish Get-up 2'@16"
+                ],
+                "note": "Get-up: slow, eyes on the bell, every position owned. Floor to standing and back is the point."
               },
               {
                 "header": "4A90s",
@@ -1115,12 +1133,12 @@
                 ]
               },
               {
-                "header": "3A75s",
+                "header": "3A60s",
                 "exercises": [
                   "SB Shouldering 3/2/2'@130lbs/140lbs/140lbs",
-                  "Band Pull-Apart 15@BW"
+                  "Single-Leg Slow Calf Raise 8'@BW"
                 ],
-                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. Last set(s) at 140lbs: same speed as the 130s, or stay at 130 and try again next week."
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. Shouldering: alternate shoulders every rep. Fast and crisp, never a grind. Last set(s) at 140lbs: same speed as the 130s, or stay at 130 and try again next week."
               },
               {
                 "header": "4B150s",
@@ -1134,9 +1152,9 @@
                 "header": "3C120s",
                 "exercises": [
                   "SB Zercher Squat 8@120lbs",
-                  "Band Pull-Apart 20@BW"
+                  "KB Single-Leg Deadlift 6'@20"
                 ],
-                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead. Single-leg deadlift: bell in the hand opposite the standing leg, hips square, slow. Balance is the point; touch a wall if you need to."
               },
               {
                 "header": "3D120s",
@@ -1164,7 +1182,8 @@
                   "Dead Hang :30@BW",
                   "Scapula Pull 10@BW",
                   "Band Pull-Apart :45@BW",
-                  "RopeFlow :90@BW"
+                  "RopeFlow :90@BW",
+                  "KB Turkish Get-up 2'@16"
                 ]
               },
               {
@@ -1249,9 +1268,9 @@
                 "exercises": [
                   "Feet-Up Ring Push-up 12@BW",
                   "DB Overhead Extension 12@20lbs",
-                  "Ring Fallout 10@BW"
+                  "Single-Leg Calf Raise Hold :30'@20"
                 ],
-                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
               {
                 "header": "FIN",
@@ -1282,8 +1301,10 @@
                   "RopeFlow :120@BW",
                   "Arm Circles :45@BW",
                   "Band Pull-Apart :45@BW",
-                  "Scapula Pull 8@BW"
-                ]
+                  "Scapula Pull 8@BW",
+                  "KB Turkish Get-up 2'@16"
+                ],
+                "note": "Get-up: slow, eyes on the bell, every position owned. Floor to standing and back is the point."
               },
               {
                 "header": "4A90s",
@@ -1329,12 +1350,12 @@
                 ]
               },
               {
-                "header": "3A75s",
+                "header": "3A60s",
                 "exercises": [
                   "SB Shouldering 2'@140lbs",
-                  "Band Pull-Apart 15@BW"
+                  "Single-Leg Slow Calf Raise 8'@BW"
                 ],
-                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. Shouldering: alternate shoulders every rep. Fast and crisp, never a grind. "
               },
               {
                 "header": "4B150s",
@@ -1348,9 +1369,9 @@
                 "header": "4C120s",
                 "exercises": [
                   "SB Zercher Squat 8@120lbs",
-                  "Band Pull-Apart 20@BW"
+                  "KB Single-Leg Deadlift 6'@20"
                 ],
-                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead. Single-leg deadlift: bell in the hand opposite the standing leg, hips square, slow. Balance is the point; touch a wall if you need to."
               },
               {
                 "header": "3D120s",
@@ -1378,7 +1399,8 @@
                   "Dead Hang :30@BW",
                   "Scapula Pull 10@BW",
                   "Band Pull-Apart :45@BW",
-                  "RopeFlow :90@BW"
+                  "RopeFlow :90@BW",
+                  "KB Turkish Get-up 2'@16"
                 ]
               },
               {
@@ -1463,9 +1485,9 @@
                 "exercises": [
                   "Feet-Up Ring Push-up 12@BW",
                   "DB Overhead Extension 12@20lbs",
-                  "Ring Fallout 10@BW"
+                  "Single-Leg Calf Raise Hold :30'@20"
                 ],
-                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
               {
                 "header": "FIN",
@@ -1496,8 +1518,10 @@
                   "RopeFlow :120@BW",
                   "Arm Circles :45@BW",
                   "Band Pull-Apart :45@BW",
-                  "Scapula Pull 8@BW"
-                ]
+                  "Scapula Pull 8@BW",
+                  "KB Turkish Get-up 2'@16"
+                ],
+                "note": "Get-up: slow, eyes on the bell, every position owned. Floor to standing and back is the point."
               },
               {
                 "header": "3A120s",
@@ -1543,12 +1567,12 @@
                 ]
               },
               {
-                "header": "3A75s",
+                "header": "3A60s",
                 "exercises": [
                   "SB Shouldering 2'@130lbs",
-                  "Band Pull-Apart 15@BW"
+                  "Slow Calf Raise 12@BW"
                 ],
-                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. Shouldering: alternate shoulders every rep. Fast and crisp, never a grind. "
               },
               {
                 "header": "3B150s",
@@ -1562,9 +1586,9 @@
                 "header": "2C120s",
                 "exercises": [
                   "SB Zercher Squat 6@110lbs",
-                  "Band Pull-Apart 15@BW"
+                  "KB Single-Leg Deadlift 6'@16"
                 ],
-                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead. Single-leg deadlift: bell in the hand opposite the standing leg, hips square, slow. Balance is the point; touch a wall if you need to."
               },
               {
                 "header": "3D90s",
@@ -1592,7 +1616,8 @@
                   "Dead Hang :30@BW",
                   "Scapula Pull 10@BW",
                   "Band Pull-Apart :45@BW",
-                  "RopeFlow :90@BW"
+                  "RopeFlow :90@BW",
+                  "KB Turkish Get-up 2'@16"
                 ]
               },
               {
@@ -1672,8 +1697,9 @@
                 "exercises": [
                   "Ring Push-up 10@BW",
                   "DB Overhead Extension 12@20lbs",
-                  "Ring Fallout 6@BW"
-                ]
+                  "Calf Raise Hold :30@20+20"
+                ],
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs."
               },
               {
                 "header": "FIN",
@@ -1700,8 +1726,10 @@
                   "RopeFlow :120@BW",
                   "Arm Circles :45@BW",
                   "Band Pull-Apart :45@BW",
-                  "Scapula Pull 8@BW"
-                ]
+                  "Scapula Pull 8@BW",
+                  "KB Turkish Get-up 2'@20"
+                ],
+                "note": "Get-up: slow, eyes on the bell, every position owned. Floor to standing and back is the point."
               },
               {
                 "header": "4A90s",
@@ -1747,12 +1775,12 @@
                 ]
               },
               {
-                "header": "3A75s",
+                "header": "3A60s",
                 "exercises": [
                   "SB Shouldering 2'@140lbs",
-                  "Band Pull-Apart 15@BW"
+                  "Single-Leg Slow Calf Raise 10'@BW"
                 ],
-                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. Shouldering: alternate shoulders every rep. Fast and crisp, never a grind. "
               },
               {
                 "header": "4B150s",
@@ -1766,9 +1794,9 @@
                 "header": "3C120s",
                 "exercises": [
                   "SB Zercher Squat 8@120lbs",
-                  "Band Pull-Apart 20@BW"
+                  "KB Single-Leg Deadlift 8'@20"
                 ],
-                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead. Single-leg deadlift: bell in the hand opposite the standing leg, hips square, slow. Balance is the point; touch a wall if you need to."
               },
               {
                 "header": "3D120s",
@@ -1796,7 +1824,8 @@
                   "Dead Hang :30@BW",
                   "Scapula Pull 10@BW",
                   "Band Pull-Apart :45@BW",
-                  "RopeFlow :90@BW"
+                  "RopeFlow :90@BW",
+                  "KB Turkish Get-up 2'@20"
                 ]
               },
               {
@@ -1881,9 +1910,9 @@
                 "exercises": [
                   "Feet-Up Ring Push-up 15@BW",
                   "DB Overhead Extension 12@20lbs",
-                  "Ring Fallout 12@BW"
+                  "Single-Leg Calf Raise Hold :45'@20"
                 ],
-                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
               {
                 "header": "FIN",
@@ -1914,8 +1943,10 @@
                   "RopeFlow :120@BW",
                   "Arm Circles :45@BW",
                   "Band Pull-Apart :45@BW",
-                  "Scapula Pull 8@BW"
-                ]
+                  "Scapula Pull 8@BW",
+                  "KB Turkish Get-up 2'@20"
+                ],
+                "note": "Get-up: slow, eyes on the bell, every position owned. Floor to standing and back is the point."
               },
               {
                 "header": "4A90s",
@@ -1961,12 +1992,12 @@
                 ]
               },
               {
-                "header": "3A75s",
+                "header": "3A60s",
                 "exercises": [
                   "SB Shouldering 3'@140lbs",
-                  "Band Pull-Apart 15@BW"
+                  "Single-Leg Slow Calf Raise 10'@BW"
                 ],
-                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. Shouldering: alternate shoulders every rep. Fast and crisp, never a grind. "
               },
               {
                 "header": "3B150s",
@@ -1980,9 +2011,9 @@
                 "header": "3C120s",
                 "exercises": [
                   "SB Zercher Squat 8@120lbs",
-                  "Band Pull-Apart 20@BW"
+                  "KB Single-Leg Deadlift 8'@20"
                 ],
-                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead. Single-leg deadlift: bell in the hand opposite the standing leg, hips square, slow. Balance is the point; touch a wall if you need to."
               },
               {
                 "header": "3D120s",
@@ -2010,7 +2041,8 @@
                   "Dead Hang :30@BW",
                   "Scapula Pull 10@BW",
                   "Band Pull-Apart :45@BW",
-                  "RopeFlow :90@BW"
+                  "RopeFlow :90@BW",
+                  "KB Turkish Get-up 2'@20"
                 ]
               },
               {
@@ -2095,9 +2127,9 @@
                 "exercises": [
                   "Feet-Up Ring Push-up 15@BW",
                   "DB Overhead Extension 12@20lbs",
-                  "Ring Fallout 12@BW"
+                  "Single-Leg Calf Raise Hold :45'@20"
                 ],
-                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
               {
                 "header": "FIN",
@@ -2128,8 +2160,10 @@
                   "RopeFlow :120@BW",
                   "Arm Circles :45@BW",
                   "Band Pull-Apart :45@BW",
-                  "Scapula Pull 8@BW"
-                ]
+                  "Scapula Pull 8@BW",
+                  "KB Turkish Get-up 2'@20"
+                ],
+                "note": "Get-up: slow, eyes on the bell, every position owned. Floor to standing and back is the point."
               },
               {
                 "header": "4A90s",
@@ -2175,12 +2209,12 @@
                 ]
               },
               {
-                "header": "3A75s",
+                "header": "3A60s",
                 "exercises": [
                   "SB Shouldering 3'@140lbs",
-                  "Band Pull-Apart 15@BW"
+                  "Single-Leg Slow Calf Raise 10'@BW"
                 ],
-                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. Shouldering: alternate shoulders every rep. Fast and crisp, never a grind. "
               },
               {
                 "header": "5B150s",
@@ -2194,9 +2228,9 @@
                 "header": "4C120s",
                 "exercises": [
                   "SB Zercher Squat 8@120lbs",
-                  "Band Pull-Apart 20@BW"
+                  "KB Single-Leg Deadlift 8'@20"
                 ],
-                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead. Single-leg deadlift: bell in the hand opposite the standing leg, hips square, slow. Balance is the point; touch a wall if you need to."
               },
               {
                 "header": "3D120s",
@@ -2224,7 +2258,8 @@
                   "Dead Hang :30@BW",
                   "Scapula Pull 10@BW",
                   "Band Pull-Apart :45@BW",
-                  "RopeFlow :90@BW"
+                  "RopeFlow :90@BW",
+                  "KB Turkish Get-up 2'@20"
                 ]
               },
               {
@@ -2309,9 +2344,9 @@
                 "exercises": [
                   "Feet-Up Ring Push-up 15@BW",
                   "DB Overhead Extension 12@20lbs",
-                  "Ring Fallout 12@BW"
+                  "Single-Leg Calf Raise Hold :45'@20"
                 ],
-                "note": "RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. RTO = rings turned out at lockout. Chest and arm size work: 1-2 reps short of failure. Overhead extension: elbows in, slow down."
               },
               {
                 "header": "FIN",
@@ -2330,7 +2365,7 @@
       },
       "12": {
         "phase": "TEST WEEK",
-        "goal": "Test the numbers: ring dip top set, pull-up max, clean + press max reps. Sandbag: 140lbs cleans, shouldering and carries, smooth and confident. Everything else is light. Log everything.",
+        "goal": "Test the numbers: 25 slow single-leg calf raises each side, ring dip top set, pull-up max, clean + press max reps. Sandbag: 140lbs cleans, shouldering and carries, smooth and confident. Everything else is light. Log everything.",
         "days": [
           {
             "day": 1,
@@ -2342,8 +2377,10 @@
                   "RopeFlow :120@BW",
                   "Arm Circles :45@BW",
                   "Band Pull-Apart :45@BW",
-                  "Scapula Pull 8@BW"
-                ]
+                  "Scapula Pull 8@BW",
+                  "KB Turkish Get-up 2'@16"
+                ],
+                "note": "Get-up: slow, eyes on the bell, every position owned. Floor to standing and back is the point."
               },
               {
                 "header": "1A180s",
@@ -2397,12 +2434,12 @@
                 ]
               },
               {
-                "header": "3A75s",
+                "header": "3A60s",
                 "exercises": [
                   "SB Shouldering 2'@140lbs",
-                  "Band Pull-Apart 15@BW"
+                  "Single-Leg Slow Calf Raise 25/8/8'@BW"
                 ],
-                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. Shouldering: alternate shoulders every rep. Fast and crisp, never a grind. "
               },
               {
                 "header": "3B150s",
@@ -2416,9 +2453,9 @@
                 "header": "2C120s",
                 "exercises": [
                   "SB Zercher Squat 6@110lbs",
-                  "Band Pull-Apart 15@BW"
+                  "KB Single-Leg Deadlift 6'@16"
                 ],
-                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead. Single-leg deadlift: bell in the hand opposite the standing leg, hips square, slow. Balance is the point; touch a wall if you need to."
               },
               {
                 "header": "3D120s",
@@ -2446,7 +2483,8 @@
                   "Dead Hang :30@BW",
                   "Scapula Pull 10@BW",
                   "Band Pull-Apart :45@BW",
-                  "RopeFlow :90@BW"
+                  "RopeFlow :90@BW",
+                  "KB Turkish Get-up 2'@16"
                 ]
               },
               {
@@ -2529,8 +2567,9 @@
                 "exercises": [
                   "Ring Push-up 10@BW",
                   "DB Overhead Extension 12@20lbs",
-                  "Ring Fallout 6@BW"
-                ]
+                  "Calf Raise Hold :30@20+20"
+                ],
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs."
               },
               {
                 "header": "FIN",
@@ -2557,8 +2596,10 @@
                   "RopeFlow :120@BW",
                   "Arm Circles :45@BW",
                   "Band Pull-Apart :45@BW",
-                  "Scapula Pull 8@BW"
-                ]
+                  "Scapula Pull 8@BW",
+                  "KB Turkish Get-up 2'@16"
+                ],
+                "note": "Get-up: slow, eyes on the bell, every position owned. Floor to standing and back is the point."
               },
               {
                 "header": "3A120s",
@@ -2604,12 +2645,12 @@
                 ]
               },
               {
-                "header": "3A75s",
+                "header": "3A60s",
                 "exercises": [
                   "SB Shouldering 2'@130lbs",
-                  "Band Pull-Apart 15@BW"
+                  "Slow Calf Raise 12@BW"
                 ],
-                "note": "Alternate shoulders every rep. Fast and crisp, never a grind. "
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs. Shouldering: alternate shoulders every rep. Fast and crisp, never a grind. "
               },
               {
                 "header": "3B150s",
@@ -2623,9 +2664,9 @@
                 "header": "2C120s",
                 "exercises": [
                   "SB Zercher Squat 6@110lbs",
-                  "Band Pull-Apart 15@BW"
+                  "KB Single-Leg Deadlift 6'@16"
                 ],
-                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead. Single-leg deadlift: bell in the hand opposite the standing leg, hips square, slow. Balance is the point; touch a wall if you need to."
               },
               {
                 "header": "3D90s",
@@ -2653,7 +2694,8 @@
                   "Dead Hang :30@BW",
                   "Scapula Pull 10@BW",
                   "Band Pull-Apart :45@BW",
-                  "RopeFlow :90@BW"
+                  "RopeFlow :90@BW",
+                  "KB Turkish Get-up 2'@16"
                 ]
               },
               {
@@ -2726,8 +2768,9 @@
                 "exercises": [
                   "Ring Push-up 10@BW",
                   "DB Overhead Extension 12@20lbs",
-                  "Ring Fallout 6@BW"
-                ]
+                  "Calf Raise Hold :30@20+20"
+                ],
+                "note": "Calves: on a step, heels free. Test week: round 1 is the stage-1 test, 25 each side; not passing yet just means stage 1 continues. Slow, full range, 3s up and 3s down; holds sit halfway up. No bouncing. Achilles above 2/10 or stiff the next morning: go back to two legs."
               },
               {
                 "header": "FIN",
