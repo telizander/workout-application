@@ -402,6 +402,20 @@
     }, 0);
   });
 
+  // Shared from YouTube's Share menu (Android, with Iron Log installed): Android opens
+  // the app with the shared text in the address (manifest.webmanifest share_target).
+  function takeShared() {
+    const q = new URLSearchParams(location.search);
+    if (!q.has('text') && !q.has('url') && !q.has('title')) return;
+    const shared = ['url', 'text', 'title'].map(k => q.get(k) || '').join(' ');
+    // window.history: app.js defines its own history() for the training log.
+    window.history.replaceState(null, '', location.pathname); // a reload must not add it again
+    if (!parseLink(shared)) { say("That share didn't include a YouTube link"); return; }
+    add(shared);
+    st.mode = 'deck';
+  }
+
+  takeShared();
   // If a video is queued, get the player ready (paused) so play is instant.
   if (st.queue.length) ensurePlayer();
   render();
