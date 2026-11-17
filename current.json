@@ -2,7 +2,7 @@
   "program": {
     "title": "CARL WEATHERS BUILD",
     "subtitle": "13-Week Strength + Size — Sandbag, KB, Rings",
-    "notes": "Eating to grow: bodyweight should trend up slowly. Three waves of 3 build weeks plus a lighter week, then test (week 12) and deload (week 13). Schedule: keep a rest day between Sandbag Lower and Pull (e.g. Mon Push, Tue Sandbag, Thu Pull, Sat Legs). Sandbag: add 10lbs only when every rep is a clean pickup with no rounding; carries progress distance first, then load. Pull-ups restart at bodyweight with a neutral grip on free-rotating rings, and reps only go up when the elbows and shoulders allow. Pain rule: up to 3/10 that is gone by the next morning is OK. Anything more: band-assisted pull-ups, or KB pullovers if those hurt too. Elbow or shoulder pain that lasts more than 2 weeks is worth a physio visit. 24+20 means a mixed pair: switch which hand holds the 24 each set. If you buy a second 24, use 24+24. If top sets stall two weeks in a row, cut accessory sets first.",
+    "notes": "Eating to grow: bodyweight should trend up slowly. Three waves of 3 build weeks plus a lighter week, then test (week 12) and deload (week 13). Schedule: keep a rest day between Sandbag Lower and Pull (e.g. Mon Push, Tue Sandbag, Thu Pull, Sat Legs). Sandbag is maintenance: cleans, shouldering and carries hold at 130lbs all block. Pull-ups restart at bodyweight with a neutral grip on free-rotating rings, and reps only go up when the elbows and shoulders allow. Pain rule: up to 3/10 that is gone by the next morning is OK. Anything more: band-assisted pull-ups, or KB pullovers if those hurt too. Elbow or shoulder pain that lasts more than 2 weeks is worth a physio visit. 24+20 means a mixed pair: switch which hand holds the 24 each set. If you buy a second 24, use 24+24. If top sets stall two weeks in a row, cut accessory sets first.",
     "weeks": {
       "1": {
         "phase": "WAVE 1 / BUILD",
@@ -65,15 +65,23 @@
                 ]
               },
               {
-                "header": "5A150s",
+                "header": "3A75s",
+                "exercises": [
+                  "SB Shouldering 2'@130lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Maintenance at 130lbs. Alternate shoulders every rep. Fast and crisp, never a grind."
+              },
+              {
+                "header": "4B150s",
                 "exercises": [
                   "SB Clean + Front Squat 3@130lbs",
                   "Ring Push-up 8@BW"
                 ],
-                "note": "Main lift. Alternate weeks of triples and fives. Add 10lbs only when every rep is a clean pickup with no rounding to rescue it. Drop to 120lbs if a rep rounds. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+                "note": "Maintenance: 130lbs all block, alternating triples and fives. Every rep a clean pickup. If a day feels great you can do one extra triple at 140lbs, but nothing in this block depends on it. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
               },
               {
-                "header": "3B120s",
+                "header": "3C120s",
                 "exercises": [
                   "SB Zercher Squat 8@110lbs",
                   "Band Pull-Apart 20@BW"
@@ -81,12 +89,12 @@
                 "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
               },
               {
-                "header": "4C90s",
+                "header": "3D120s",
                 "exercises": [
                   "SB Shoulder Carry 40@130lbs",
                   "SB Bear Hug Carry 40@130lbs"
                 ],
-                "note": "Heavy carries. Distance first (40, 50, 60 steps), then the next wave resets to 40 at +10lbs. Switch shoulders each round."
+                "note": "Carries at 130lbs all block; distance goes 40, 50, 60 steps in each wave. Switch shoulders each round."
               },
               {
                 "header": "FIN",
@@ -232,7 +240,7 @@
       },
       "2": {
         "phase": "WAVE 1 / BUILD",
-        "goal": "Sandbag clean goes to fives at 130lbs. Eat to grow: bodyweight should trend up.",
+        "goal": "Add reps where the plan says. Eat to grow: bodyweight should trend up.",
         "days": [
           {
             "day": 1,
@@ -291,15 +299,23 @@
                 ]
               },
               {
-                "header": "4A150s",
+                "header": "3A75s",
+                "exercises": [
+                  "SB Shouldering 2'@130lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Maintenance at 130lbs. Alternate shoulders every rep. Fast and crisp, never a grind."
+              },
+              {
+                "header": "3B150s",
                 "exercises": [
                   "SB Clean + Front Squat 5@130lbs",
                   "Ring Push-up 8@BW"
                 ],
-                "note": "Main lift. Alternate weeks of triples and fives. Add 10lbs only when every rep is a clean pickup with no rounding to rescue it. Drop to 120lbs if a rep rounds. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+                "note": "Maintenance: 130lbs all block, alternating triples and fives. Every rep a clean pickup. If a day feels great you can do one extra triple at 140lbs, but nothing in this block depends on it. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
               },
               {
-                "header": "3B120s",
+                "header": "3C120s",
                 "exercises": [
                   "SB Zercher Squat 8@110lbs",
                   "Band Pull-Apart 20@BW"
@@ -307,12 +323,12 @@
                 "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
               },
               {
-                "header": "4C90s",
+                "header": "3D120s",
                 "exercises": [
                   "SB Shoulder Carry 50@130lbs",
                   "SB Bear Hug Carry 50@130lbs"
                 ],
-                "note": "Heavy carries. Distance first (40, 50, 60 steps), then the next wave resets to 40 at +10lbs. Switch shoulders each round."
+                "note": "Carries at 130lbs all block; distance goes 40, 50, 60 steps in each wave. Switch shoulders each round."
               },
               {
                 "header": "FIN",
@@ -458,7 +474,7 @@
       },
       "3": {
         "phase": "WAVE 1 / BUILD",
-        "goal": "Hardest week of wave 1. First triples at 140lbs on the sandbag clean, if the fives at 130 were clean.",
+        "goal": "Hardest week of wave 1.",
         "days": [
           {
             "day": 1,
@@ -517,15 +533,23 @@
                 ]
               },
               {
-                "header": "5A150s",
+                "header": "3A75s",
                 "exercises": [
-                  "SB Clean + Front Squat 3@140lbs",
-                  "Ring Push-up 8@BW"
+                  "SB Shouldering 2'@130lbs",
+                  "Band Pull-Apart 15@BW"
                 ],
-                "note": "Main lift. Alternate weeks of triples and fives. Add 10lbs only when every rep is a clean pickup with no rounding to rescue it. Drop to 130lbs if a rep rounds. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+                "note": "Maintenance at 130lbs. Alternate shoulders every rep. Fast and crisp, never a grind."
               },
               {
-                "header": "4B120s",
+                "header": "4B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 3@130lbs",
+                  "Ring Push-up 8@BW"
+                ],
+                "note": "Maintenance: 130lbs all block, alternating triples and fives. Every rep a clean pickup. If a day feels great you can do one extra triple at 140lbs, but nothing in this block depends on it. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+              },
+              {
+                "header": "4C120s",
                 "exercises": [
                   "SB Zercher Squat 8@110lbs",
                   "Band Pull-Apart 20@BW"
@@ -533,12 +557,12 @@
                 "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
               },
               {
-                "header": "4C90s",
+                "header": "3D120s",
                 "exercises": [
                   "SB Shoulder Carry 60@130lbs",
                   "SB Bear Hug Carry 60@130lbs"
                 ],
-                "note": "Heavy carries. Distance first (40, 50, 60 steps), then the next wave resets to 40 at +10lbs. Switch shoulders each round."
+                "note": "Carries at 130lbs all block; distance goes 40, 50, 60 steps in each wave. Switch shoulders each round."
               },
               {
                 "header": "FIN",
@@ -743,7 +767,15 @@
                 ]
               },
               {
-                "header": "3A150s",
+                "header": "3A75s",
+                "exercises": [
+                  "SB Shouldering 2'@130lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Maintenance at 130lbs. Alternate shoulders every rep. Fast and crisp, never a grind."
+              },
+              {
+                "header": "3B150s",
                 "exercises": [
                   "SB Clean + Front Squat 3@120lbs",
                   "Ring Push-up 8@BW"
@@ -751,7 +783,7 @@
                 "note": "Lighter week. Fast, clean reps. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
               },
               {
-                "header": "2B120s",
+                "header": "2C120s",
                 "exercises": [
                   "SB Zercher Squat 6@100lbs",
                   "Band Pull-Apart 15@BW"
@@ -759,10 +791,10 @@
                 "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
               },
               {
-                "header": "3C90s",
+                "header": "3D90s",
                 "exercises": [
-                  "SB Shoulder Carry 40@110lbs",
-                  "SB Bear Hug Carry 40@110lbs"
+                  "SB Shoulder Carry 40@120lbs",
+                  "SB Bear Hug Carry 40@120lbs"
                 ]
               },
               {
@@ -892,7 +924,7 @@
       },
       "5": {
         "phase": "WAVE 2 / BUILD",
-        "goal": "Heavier wave. Over-shoulder primer starts. Carries reset to 40 steps at 140lbs. Mixed 24+20 pair for presses.",
+        "goal": "Heavier wave. Mixed 24+20 pair for presses and floor presses. Shouldering goes to 3 each side.",
         "days": [
           {
             "day": 1,
@@ -951,20 +983,20 @@
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "3A75s",
                 "exercises": [
-                  "SB Over Shoulder 1'@120lbs",
+                  "SB Shouldering 3'@130lbs",
                   "Band Pull-Apart 15@BW"
                 ],
-                "note": "Power primer while fresh. Fast and crisp, not a grind."
+                "note": "Maintenance at 130lbs. Alternate shoulders every rep. Fast and crisp, never a grind."
               },
               {
-                "header": "5B150s",
+                "header": "4B150s",
                 "exercises": [
-                  "SB Clean + Front Squat 3@140lbs",
+                  "SB Clean + Front Squat 3@130lbs",
                   "Ring Push-up 8@BW"
                 ],
-                "note": "Main lift. Alternate weeks of triples and fives. Add 10lbs only when every rep is a clean pickup with no rounding to rescue it. Drop to 130lbs if a rep rounds. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+                "note": "Maintenance: 130lbs all block, alternating triples and fives. Every rep a clean pickup. If a day feels great you can do one extra triple at 140lbs, but nothing in this block depends on it. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
               },
               {
                 "header": "3C120s",
@@ -977,10 +1009,10 @@
               {
                 "header": "3D120s",
                 "exercises": [
-                  "SB Shoulder Carry 40@140lbs",
-                  "SB Bear Hug Carry 40@140lbs"
+                  "SB Shoulder Carry 40@130lbs",
+                  "SB Bear Hug Carry 40@130lbs"
                 ],
-                "note": "Heavy carries. Distance first (40, 50, 60 steps), then the next wave resets to 40 at +10lbs. Switch shoulders each round."
+                "note": "Carries at 130lbs all block; distance goes 40, 50, 60 steps in each wave. Switch shoulders each round."
               },
               {
                 "header": "FIN",
@@ -1126,7 +1158,7 @@
       },
       "6": {
         "phase": "WAVE 2 / BUILD",
-        "goal": "Fives at 140lbs on the clean. Keep pull-ups pain-free.",
+        "goal": "Keep pull-ups pain-free.",
         "days": [
           {
             "day": 1,
@@ -1185,20 +1217,20 @@
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "3A75s",
                 "exercises": [
-                  "SB Over Shoulder 1'@120lbs",
+                  "SB Shouldering 3'@130lbs",
                   "Band Pull-Apart 15@BW"
                 ],
-                "note": "Power primer while fresh. Fast and crisp, not a grind."
+                "note": "Maintenance at 130lbs. Alternate shoulders every rep. Fast and crisp, never a grind."
               },
               {
-                "header": "4B150s",
+                "header": "3B150s",
                 "exercises": [
-                  "SB Clean + Front Squat 5@140lbs",
+                  "SB Clean + Front Squat 5@130lbs",
                   "Ring Push-up 8@BW"
                 ],
-                "note": "Main lift. Alternate weeks of triples and fives. Add 10lbs only when every rep is a clean pickup with no rounding to rescue it. Drop to 130lbs if a rep rounds. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+                "note": "Maintenance: 130lbs all block, alternating triples and fives. Every rep a clean pickup. If a day feels great you can do one extra triple at 140lbs, but nothing in this block depends on it. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
               },
               {
                 "header": "3C120s",
@@ -1211,10 +1243,10 @@
               {
                 "header": "3D120s",
                 "exercises": [
-                  "SB Shoulder Carry 50@140lbs",
-                  "SB Bear Hug Carry 50@140lbs"
+                  "SB Shoulder Carry 50@130lbs",
+                  "SB Bear Hug Carry 50@130lbs"
                 ],
-                "note": "Heavy carries. Distance first (40, 50, 60 steps), then the next wave resets to 40 at +10lbs. Switch shoulders each round."
+                "note": "Carries at 130lbs all block; distance goes 40, 50, 60 steps in each wave. Switch shoulders each round."
               },
               {
                 "header": "FIN",
@@ -1360,7 +1392,7 @@
       },
       "7": {
         "phase": "WAVE 2 / BUILD",
-        "goal": "First 150lb triples on the clean, only if last week's fives were clean. Hardest week of wave 2.",
+        "goal": "Hardest week of wave 2.",
         "days": [
           {
             "day": 1,
@@ -1419,20 +1451,20 @@
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "3A75s",
                 "exercises": [
-                  "SB Over Shoulder 1'@120lbs",
+                  "SB Shouldering 3'@130lbs",
                   "Band Pull-Apart 15@BW"
                 ],
-                "note": "Power primer while fresh. Fast and crisp, not a grind."
+                "note": "Maintenance at 130lbs. Alternate shoulders every rep. Fast and crisp, never a grind."
               },
               {
-                "header": "5B150s",
+                "header": "4B150s",
                 "exercises": [
-                  "SB Clean + Front Squat 3@150lbs",
+                  "SB Clean + Front Squat 3@130lbs",
                   "Ring Push-up 8@BW"
                 ],
-                "note": "Main lift. Alternate weeks of triples and fives. Add 10lbs only when every rep is a clean pickup with no rounding to rescue it. Drop to 140lbs if a rep rounds. First 150lbs triples: only if last week's 5@140 had no rounding. Otherwise do 3@140lbs. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+                "note": "Maintenance: 130lbs all block, alternating triples and fives. Every rep a clean pickup. If a day feels great you can do one extra triple at 140lbs, but nothing in this block depends on it. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
               },
               {
                 "header": "4C120s",
@@ -1445,10 +1477,10 @@
               {
                 "header": "3D120s",
                 "exercises": [
-                  "SB Shoulder Carry 60@140lbs",
-                  "SB Bear Hug Carry 60@140lbs"
+                  "SB Shoulder Carry 60@130lbs",
+                  "SB Bear Hug Carry 60@130lbs"
                 ],
-                "note": "Heavy carries. Distance first (40, 50, 60 steps), then the next wave resets to 40 at +10lbs. Switch shoulders each round."
+                "note": "Carries at 130lbs all block; distance goes 40, 50, 60 steps in each wave. Switch shoulders each round."
               },
               {
                 "header": "FIN",
@@ -1653,15 +1685,23 @@
                 ]
               },
               {
-                "header": "3A150s",
+                "header": "3A75s",
                 "exercises": [
-                  "SB Clean + Front Squat 3@130lbs",
+                  "SB Shouldering 2'@130lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Maintenance at 130lbs. Alternate shoulders every rep. Fast and crisp, never a grind."
+              },
+              {
+                "header": "3B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 3@120lbs",
                   "Ring Push-up 8@BW"
                 ],
                 "note": "Lighter week. Fast, clean reps. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
               },
               {
-                "header": "2B120s",
+                "header": "2C120s",
                 "exercises": [
                   "SB Zercher Squat 6@110lbs",
                   "Band Pull-Apart 15@BW"
@@ -1669,7 +1709,7 @@
                 "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
               },
               {
-                "header": "3C90s",
+                "header": "3D90s",
                 "exercises": [
                   "SB Shoulder Carry 40@120lbs",
                   "SB Bear Hug Carry 40@120lbs"
@@ -1809,7 +1849,7 @@
       },
       "9": {
         "phase": "WAVE 3 / PEAK",
-        "goal": "Heaviest wave. Carries at 150lbs. The 350 goes to 5 full rounds.",
+        "goal": "Heaviest wave. The 350 goes to 5 full rounds.",
         "days": [
           {
             "day": 1,
@@ -1868,25 +1908,25 @@
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "3A75s",
                 "exercises": [
-                  "SB Over Shoulder 1'@120lbs",
+                  "SB Shouldering 3'@130lbs",
                   "Band Pull-Apart 15@BW"
                 ],
-                "note": "Power primer while fresh. Fast and crisp, not a grind."
+                "note": "Maintenance at 130lbs. Alternate shoulders every rep. Fast and crisp, never a grind."
               },
               {
-                "header": "5B150s",
+                "header": "4B150s",
                 "exercises": [
-                  "SB Clean + Front Squat 3@150lbs",
+                  "SB Clean + Front Squat 3@130lbs",
                   "Ring Push-up 8@BW"
                 ],
-                "note": "Main lift. Alternate weeks of triples and fives. Add 10lbs only when every rep is a clean pickup with no rounding to rescue it. Drop to 140lbs if a rep rounds. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+                "note": "Maintenance: 130lbs all block, alternating triples and fives. Every rep a clean pickup. If a day feels great you can do one extra triple at 140lbs, but nothing in this block depends on it. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
               },
               {
                 "header": "3C120s",
                 "exercises": [
-                  "SB Zercher Squat 8@130lbs",
+                  "SB Zercher Squat 8@120lbs",
                   "Band Pull-Apart 20@BW"
                 ],
                 "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
@@ -1894,10 +1934,10 @@
               {
                 "header": "3D120s",
                 "exercises": [
-                  "SB Shoulder Carry 40@150lbs",
-                  "SB Bear Hug Carry 40@150lbs"
+                  "SB Shoulder Carry 40@130lbs",
+                  "SB Bear Hug Carry 40@130lbs"
                 ],
-                "note": "Heavy carries. Distance first (40, 50, 60 steps), then the next wave resets to 40 at +10lbs. Switch shoulders each round."
+                "note": "Carries at 130lbs all block; distance goes 40, 50, 60 steps in each wave. Switch shoulders each round."
               },
               {
                 "header": "FIN",
@@ -2043,7 +2083,7 @@
       },
       "10": {
         "phase": "WAVE 3 / PEAK",
-        "goal": "Fives at 140lbs on the clean, more volume everywhere else.",
+        "goal": "More volume on the size work.",
         "days": [
           {
             "day": 1,
@@ -2102,25 +2142,25 @@
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "3A75s",
                 "exercises": [
-                  "SB Over Shoulder 1'@120lbs",
+                  "SB Shouldering 3'@130lbs",
                   "Band Pull-Apart 15@BW"
                 ],
-                "note": "Power primer while fresh. Fast and crisp, not a grind."
+                "note": "Maintenance at 130lbs. Alternate shoulders every rep. Fast and crisp, never a grind."
               },
               {
-                "header": "4B150s",
+                "header": "3B150s",
                 "exercises": [
-                  "SB Clean + Front Squat 5@140lbs",
+                  "SB Clean + Front Squat 5@130lbs",
                   "Ring Push-up 8@BW"
                 ],
-                "note": "Main lift. Alternate weeks of triples and fives. Add 10lbs only when every rep is a clean pickup with no rounding to rescue it. Drop to 130lbs if a rep rounds. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+                "note": "Maintenance: 130lbs all block, alternating triples and fives. Every rep a clean pickup. If a day feels great you can do one extra triple at 140lbs, but nothing in this block depends on it. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
               },
               {
                 "header": "3C120s",
                 "exercises": [
-                  "SB Zercher Squat 8@130lbs",
+                  "SB Zercher Squat 8@120lbs",
                   "Band Pull-Apart 20@BW"
                 ],
                 "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
@@ -2128,10 +2168,10 @@
               {
                 "header": "3D120s",
                 "exercises": [
-                  "SB Shoulder Carry 50@150lbs",
-                  "SB Bear Hug Carry 50@150lbs"
+                  "SB Shoulder Carry 50@130lbs",
+                  "SB Bear Hug Carry 50@130lbs"
                 ],
-                "note": "Heavy carries. Distance first (40, 50, 60 steps), then the next wave resets to 40 at +10lbs. Switch shoulders each round."
+                "note": "Carries at 130lbs all block; distance goes 40, 50, 60 steps in each wave. Switch shoulders each round."
               },
               {
                 "header": "FIN",
@@ -2336,25 +2376,25 @@
                 ]
               },
               {
-                "header": "3A60s",
+                "header": "3A75s",
                 "exercises": [
-                  "SB Over Shoulder 1'@120lbs",
+                  "SB Shouldering 3'@130lbs",
                   "Band Pull-Apart 15@BW"
                 ],
-                "note": "Power primer while fresh. Fast and crisp, not a grind."
+                "note": "Maintenance at 130lbs. Alternate shoulders every rep. Fast and crisp, never a grind."
               },
               {
                 "header": "4B150s",
                 "exercises": [
-                  "SB Clean + Front Squat 3@150lbs",
+                  "SB Clean + Front Squat 3@130lbs",
                   "Ring Push-up 8@BW"
                 ],
-                "note": "Main lift. Alternate weeks of triples and fives. Add 10lbs only when every rep is a clean pickup with no rounding to rescue it. Drop to 140lbs if a rep rounds. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
+                "note": "Maintenance: 130lbs all block, alternating triples and fives. Every rep a clean pickup. If a day feels great you can do one extra triple at 140lbs, but nothing in this block depends on it. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
               },
               {
                 "header": "4C120s",
                 "exercises": [
-                  "SB Zercher Squat 8@130lbs",
+                  "SB Zercher Squat 8@120lbs",
                   "Band Pull-Apart 20@BW"
                 ],
                 "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
@@ -2362,10 +2402,10 @@
               {
                 "header": "3D120s",
                 "exercises": [
-                  "SB Shoulder Carry 60@150lbs",
-                  "SB Bear Hug Carry 60@150lbs"
+                  "SB Shoulder Carry 60@130lbs",
+                  "SB Bear Hug Carry 60@130lbs"
                 ],
-                "note": "Heavy carries. Distance first (40, 50, 60 steps), then the next wave resets to 40 at +10lbs. Switch shoulders each round."
+                "note": "Carries at 130lbs all block; distance goes 40, 50, 60 steps in each wave. Switch shoulders each round."
               },
               {
                 "header": "FIN",
@@ -2511,7 +2551,7 @@
       },
       "12": {
         "phase": "TEST WEEK",
-        "goal": "Test the numbers: sandbag clean at 160lbs, 150lb carries, ring dip top set, pull-up max, KB press 5@24+20. Everything else is light. Log everything.",
+        "goal": "Test the numbers: ring dip top set, pull-up max, KB press 5@24+20. Sandbag day is an easy maintenance session. Everything else is light. Log everything.",
         "days": [
           {
             "day": 1,
@@ -2578,36 +2618,35 @@
                 ]
               },
               {
-                "header": "1A120s",
+                "header": "3A75s",
                 "exercises": [
-                  "SB Clean + Front Squat 2@130lbs",
+                  "SB Shouldering 2'@130lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Maintenance at 130lbs. Alternate shoulders every rep. Fast and crisp, never a grind."
+              },
+              {
+                "header": "3B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 3@130lbs",
                   "Ring Push-up 8@BW"
                 ],
-                "note": "Warm-up single set."
+                "note": "Maintenance: 130lbs all block, alternating triples and fives. Every rep a clean pickup. If a day feels great you can do one extra triple at 140lbs, but nothing in this block depends on it. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
               },
               {
-                "header": "1B150s",
+                "header": "2C120s",
                 "exercises": [
-                  "SB Clean + Front Squat 1@150lbs",
-                  "Ring Face Pull 12@BW"
+                  "SB Zercher Squat 6@110lbs",
+                  "Band Pull-Apart 15@BW"
                 ],
-                "note": "Opener."
+                "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
               },
               {
-                "header": "2C180s",
+                "header": "3D90s",
                 "exercises": [
-                  "SB Clean + Front Squat 3@160lbs",
-                  "Ring L-Sit Hold :20@BW"
-                ],
-                "note": "TEST: only if 150lbs moved clean all of wave 3. Otherwise do these at 150lbs. Drop to 150lbs if your back rounds on the clean."
-              },
-              {
-                "header": "2D120s",
-                "exercises": [
-                  "SB Shoulder Carry 40@150lbs",
-                  "SB Bear Hug Carry 60@150lbs"
-                ],
-                "note": "TEST: the 150lb carries the last mass block planned and missed."
+                  "SB Shoulder Carry 40@120lbs",
+                  "SB Bear Hug Carry 40@120lbs"
+                ]
               },
               {
                 "header": "FIN",
@@ -2805,26 +2844,34 @@
                 ]
               },
               {
-                "header": "3A150s",
+                "header": "3A75s",
                 "exercises": [
-                  "SB Clean + Front Squat 3@130lbs",
+                  "SB Shouldering 2'@130lbs",
+                  "Band Pull-Apart 15@BW"
+                ],
+                "note": "Maintenance at 130lbs. Alternate shoulders every rep. Fast and crisp, never a grind."
+              },
+              {
+                "header": "3B150s",
+                "exercises": [
+                  "SB Clean + Front Squat 3@120lbs",
                   "Ring Push-up 8@BW"
                 ],
                 "note": "Lighter week. Fast, clean reps. Push-ups go in the rest: easy chest volume that doesn't touch the legs or back."
               },
               {
-                "header": "2B120s",
+                "header": "2C120s",
                 "exercises": [
-                  "SB Zercher Squat 6@120lbs",
+                  "SB Zercher Squat 6@110lbs",
                   "Band Pull-Apart 15@BW"
                 ],
                 "note": "Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; if the elbows complain, do SB Bear Hug Squat 8 at the same load instead."
               },
               {
-                "header": "3C90s",
+                "header": "3D90s",
                 "exercises": [
-                  "SB Shoulder Carry 40@130lbs",
-                  "SB Bear Hug Carry 40@130lbs"
+                  "SB Shoulder Carry 40@120lbs",
+                  "SB Bear Hug Carry 40@120lbs"
                 ]
               },
               {
