@@ -285,7 +285,7 @@ const sBlock = i => sDay().blocks[i];
 // Exercises as prescribed for round r (default: the round about to be done).
 const sRungs = i => parseHeader(sBlock(i).header).rungs;
 const sExs = (i, r = S.blocks[i].rounds.length) => sBlock(i).exercises.map(line => parseExercise(line, r, sRungs(i)));
-const isLadder = i => !!sRungs(i) || sExs(i).some(e => e.ladder);
+const isLadder = i => !!sRungs(i);
 
 // After a ladder round is logged or undone, reset reps and loads to the new rung.
 function syncRung(i) {
@@ -391,7 +391,8 @@ function keyLift(day) {
   if (bi < 0) return null;
   const m = parseHeader(day.blocks[bi].header);
   const ex = parseExercise(day.blocks[bi].exercises[0], 0, m.rungs);
-  if (ex.ladder) return { name: ex.name, spec: 'Ladder ' + ex.rungs.join('-') };
+  if (m.rungs) return { name: ex.name, spec: 'Ladder ' + m.rungs.join('-') };
+  if (ex.ladder) return { name: ex.name, spec: m.rounds + ' sets · ' + (ex.rungs || []).join('/') + ' · ' + [...new Set(ex.raw.slice(ex.raw.lastIndexOf('@') + 1).split('/'))].map(loadText).join('→') };
   return { name: ex.name, spec: m.rounds + '×' + doseText(ex) + (ex.load ? ' · ' + loadText(ex.load) : '') };
 }
 

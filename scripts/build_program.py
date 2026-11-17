@@ -123,10 +123,25 @@ def day1(w):
 # ------------------------------------------------------- D2 SANDBAG LOWER
 
 
-CLEAN = {  # week: (rounds, reps) -- load holds at 130lbs: maintenance, not a push.
-    1: (4, 3), 2: (3, 5), 3: (4, 3), 4: (3, 3),
-    5: (4, 3), 6: (3, 5), 7: (4, 3), 8: (3, 3),
-    9: (4, 3), 10: (3, 5), 11: (4, 3), 12: (3, 3), 13: (3, 3),
+# Sandbag: own 130, then make 140 feel routine by the end.
+# Wave 1 everything at 130. Wave 2 adds a few sets at 140 at the end of each block.
+# Wave 3 everything works at 140. Test week: 140 for cleans, shouldering and carries, smooth not maxed.
+# Each entry is (reps per round, loads per round); the app steps through them round by round.
+B, T = "130lbs", "140lbs"
+CLEAN = {
+    1: ("3/3/3/3", B), 2: ("5/5/5", B), 3: ("3/3/3/3", B), 4: ("3/3/3", "120lbs"),
+    5: ("3/3/3/2", f"{B}/{B}/{B}/{T}"), 6: ("5/5/2/2", f"{B}/{B}/{T}/{T}"), 7: ("3/3/3/3", f"{B}/{B}/{T}/{T}"), 8: ("3/3/3", B),
+    9: ("3/3/3/3", T), 10: ("4/4/4", T), 11: ("3/3/3/3/3", T), 12: ("3/3/3", T), 13: ("3/3/3", "120lbs"),
+}
+SHOULDER = {
+    1: ("2", B), 2: ("2", B), 3: ("2", B), 4: ("2", B),
+    5: ("3/3/2", f"{B}/{B}/{T}"), 6: ("3/2/2", f"{B}/{T}/{T}"), 7: ("2", T), 8: ("2", B),
+    9: ("2", T), 10: ("3", T), 11: ("3", T), 12: ("2", T), 13: ("2", B),
+}
+CARRY = {  # (steps, load)
+    1: (40, B), 2: (50, B), 3: (60, B), 4: (40, "120lbs"),
+    5: (50, B), 6: (60, B), 7: (40, T), 8: (40, B),
+    9: (40, T), 10: (50, T), 11: (60, T), 12: (40, T), 13: (40, "120lbs"),
 }
 ZERCHER = {1: 110, 2: 120, 3: 120}
 ZERCHER_NOTE = ("Zercher: size lift for quads and upper back. Bag in the crooks of your elbows, stay tall. Wear sleeves or a towel; "
@@ -140,16 +155,23 @@ def day2(w):
     d.wu(["RopeFlow :120@BW", "Hindu Squat 15@BW", "Hip Circles :45@BW", "SB Bear Hug Hold :20@100lbs"])
 
     # Shouldering first, while fresh: the favourite, every week.
-    sh_reps = 2 if easy else {1: 2, 2: 3, 3: 3}[wave]
-    d.work(3, 75, [f"SB Shouldering {sh_reps}'@130lbs", "Band Pull-Apart 15@BW"],
-           "Maintenance at 130lbs. Alternate shoulders every rep. Fast and crisp, never a grind.")
+    reps, load = SHOULDER[w]
+    d.work(3, 75, [f"SB Shouldering {reps}'@{load}", "Band Pull-Apart 15@BW"],
+           "Alternate shoulders every rep. Fast and crisp, never a grind. "
+           + ("Last set(s) at 140lbs: same speed as the 130s, or stay at 130 and try again next week." if "/" in load else ""))
 
-    rounds, reps = CLEAN[w]
-    note = ("Maintenance: 130lbs all block, alternating triples and fives. Every rep a clean pickup. "
-            "If a day feels great you can do one extra triple at 140lbs, but nothing in this block depends on it.")
-    if light:
-        note = "Lighter week. Fast, clean reps."
-    d.work(rounds, 150, [f"SB Clean + Front Squat {reps}@{120 if light else 130}lbs", "Ring Push-up 8@BW"],
+    reps, load = CLEAN[w]
+    rounds = reps.count("/") + 1
+    if len(set(reps.split("/"))) == 1:
+        reps = reps.split("/")[0]  # same reps every round: plain sets
+    notes = {
+        1: "130lbs: own it. Every rep a clean pickup.",
+        2: "140lbs shows up in the last sets of each block this wave. Same bar speed as the 130s, or stay at 130 and try again next week.",
+        3: "Everything at 140lbs now. If a set gets slow, finish the day at 130.",
+    }
+    note = "Lighter week. Fast, clean reps." if light else (
+        "TEST: 140lbs for crisp triples. Confident, not maxed." if w == TEST else notes[wave])
+    d.work(rounds, 150, [f"SB Clean + Front Squat {reps}@{load}", "Ring Push-up 8@BW"],
            note + " Push-ups go in the rest: easy chest volume that doesn't touch the legs or back.")
 
     zl = ZERCHER[wave]
@@ -158,12 +180,9 @@ def day2(w):
     else:
         d.work(4 if s == 2 else 3, 120, [f"SB Zercher Squat 8@{zl}lbs", "Band Pull-Apart 20@BW"], ZERCHER_NOTE)
 
-    if easy:
-        d.work(3, 90, ["SB Shoulder Carry 40@120lbs", "SB Bear Hug Carry 40@120lbs"])
-    else:
-        dist = 40 + 10 * s
-        d.work(3, 120, [f"SB Shoulder Carry {dist}@130lbs", f"SB Bear Hug Carry {dist}@130lbs"],
-               "Carries at 130lbs all block; distance goes 40, 50, 60 steps in each wave. Switch shoulders each round.")
+    steps, load = CARRY[w]
+    d.work(3, 90 if light else 120, [f"SB Shoulder Carry {steps}@{load}", f"SB Bear Hug Carry {steps}@{load}"],
+           "Switch shoulders each round. 130lbs builds distance first; 140lbs starts short and builds again.")
 
     d.fin(["KB Farmer Walk 60@20+20" if wave == 1 or easy else "KB Farmer Walk 60@24+20"])
     return d.to_json()
@@ -218,9 +237,13 @@ def day3(w):
     lat = 12 if w == TEST else {1: 12, 2: 15, 3: 20}[wave]
     d.work(2 if w == TEST else 3, 60, ["Ring Face Pull 15@BW", f"DB Lateral Raise {lat}@20lbs", "DB Overhead Extension 12@20lbs"],
            "Rear delts, side delts, triceps: the shoulder caps and arm size.")
-    hold = {1: ":40", 2: ":50", 3: ":60"}[wave]
-    d.fin([f"SB Bear Hug Hold {hold}@130lbs"],
-          "Load stays at 130lbs; progress time. Hug it high and tight, upper back working hard.")
+    # 130lbs builds time in waves 1-2; wave 3 starts again at :40 with 140lbs.
+    if wave == 3 and w != 13:
+        hold, load = {9: ":40", 10: ":50", 11: ":60", 12: ":60"}[w], "140lbs"
+    else:
+        hold, load = {1: ":40", 2: ":50", 3: ":40"}[wave], "130lbs"
+    d.fin([f"SB Bear Hug Hold {hold}@{load}"],
+          "Hug it high and tight, upper back working hard.")
     return d.to_json()
 
 # ------------------------------------------------------------ D4 KB LEGS
@@ -302,14 +325,14 @@ PHASES = {
     2: ("WAVE 1 / BUILD", "Add reps where the plan says. Eat to grow: bodyweight should trend up."),
     3: ("WAVE 1 / BUILD", "Hardest week of wave 1."),
     4: ("DELOAD", "Lighter week: fewer rounds, lighter loads. Let elbows and shoulders settle."),
-    5: ("WAVE 2 / BUILD", "Heavier wave. Mixed 24+20 pair for presses and floor presses. Shouldering goes to 3 each side."),
+    5: ("WAVE 2 / BUILD", "Heavier wave. Mixed 24+20 pair for presses and floor presses. First sets at 140lbs on the sandbag."),
     6: ("WAVE 2 / BUILD", "Keep pull-ups pain-free."),
     7: ("WAVE 2 / BUILD", "Hardest week of wave 2."),
     8: ("DELOAD + RETEST", "Lighter week with a strict pull-up max test on Pull day."),
-    9: ("WAVE 3 / PEAK", "Heaviest wave. The 350 goes to 5 full rounds."),
+    9: ("WAVE 3 / PEAK", "Heaviest wave. Sandbag works at 140lbs. The 350 goes to 5 full rounds."),
     10: ("WAVE 3 / PEAK", "More volume on the size work."),
     11: ("WAVE 3 / PEAK", "Last hard week. Test week follows, so sleep and eat."),
-    12: ("TEST WEEK", "Test the numbers: ring dip top set, pull-up max, KB press 5@24+20. Sandbag day is an easy maintenance session. Everything else is light. Log everything."),
+    12: ("TEST WEEK", "Test the numbers: ring dip top set, pull-up max, clean + press max reps. Sandbag: 140lbs cleans, shouldering and carries, smooth and confident. Everything else is light. Log everything."),
     13: ("DELOAD / TRANSITION", "Easy week. Recover, then the next block is built from your week 12 numbers."),
 }
 
@@ -325,7 +348,7 @@ program = {
         "notes": (
             "Eating to grow: bodyweight should trend up slowly. Three waves of 3 build weeks plus a lighter week, then test (week 12) and deload (week 13). "
             "Schedule: keep a rest day between Sandbag Lower and Pull (e.g. Mon Push, Tue Sandbag, Thu Pull, Sat Legs). "
-            "Sandbag is maintenance: cleans, shouldering and carries hold at 130lbs all block. "
+            "Sandbag: own 130lbs in wave 1, touch 140 in wave 2, work at 140 in wave 3, so 140 feels routine by the end. "
             "Pull-ups restart at bodyweight with a neutral grip on free-rotating rings, and reps only go up when the elbows and shoulders allow. "
             "Pain rule: up to 3/10 that is gone by the next morning is OK. Anything more: band-assisted pull-ups, or KB pullovers if those hurt too. "
             "Elbow or shoulder pain that lasts more than 2 weeks is worth a physio visit. "
