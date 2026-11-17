@@ -23,11 +23,14 @@ function clock(ms) {
 // Countdowns round up, so "0:01" is on screen for the whole last second.
 const countdown = ms => clock(Math.ceil(ms / 1000) * 1000);
 const secsText = s => s >= 60 ? Math.floor(s / 60) + ':' + pad(s % 60) : String(s);
+// Big readable countdowns: "1:28", not "01:28".
+const shortClock = ms => { const s = Math.max(0, Math.ceil(ms / 1000)); return Math.floor(s / 60) + ':' + pad(s % 60); };
 
 const ICON = {
   close: '<svg viewBox="0 0 24 24"><path d="M5.6 4.2 12 10.6l6.4-6.4 1.4 1.4-6.4 6.4 6.4 6.4-1.4 1.4-6.4-6.4-6.4 6.4-1.4-1.4 6.4-6.4-6.4-6.4z"/></svg>',
   arrow: '<svg viewBox="0 0 24 24" class="day-arrow"><path d="M13 5l7 7-7 7-1.4-1.4 4.6-4.6H4v-2h12.2l-4.6-4.6z"/></svg>',
   play: '<svg viewBox="0 0 12 12"><path d="M2 1l9 5-9 5z"/></svg>',
+  stop: '<svg viewBox="0 0 12 12"><path d="M2 2h8v8H2z"/></svg>',
   plus: '<svg viewBox="0 0 24 24"><path d="M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z"/></svg>',
   soundOn: '<svg viewBox="0 0 24 24"><path d="M3 9h4l5-4v14l-5-4H3zM15 8.5a5 5 0 0 1 0 7l-1.4-1.4a3 3 0 0 0 0-4.2zM17.8 5.7a9 9 0 0 1 0 12.6l-1.4-1.4a7 7 0 0 0 0-9.8z"/></svg>',
   soundOff: '<svg viewBox="0 0 24 24"><path d="M3 9h4l5-4v14l-5-4H3zM15.3 9.7l1.4-1.4L19 10.6l2.3-2.3 1.4 1.4-2.3 2.3 2.3 2.3-1.4 1.4-2.3-2.3-2.3 2.3-1.4-1.4 2.3-2.3z"/></svg>'
@@ -145,7 +148,7 @@ function dropTarget(note) {
   return m ? m[1].replace(/\s+/g, '') : null;
 }
 
-const isEmomNote = note => /\bEMOM\b/i.test(note || '');
+const isEmomNote = note => /^\s*EMOM\b/i.test(note || '');
 const alternatingEmom = note => /odd minutes? work/i.test(note || '');
 
 /* =========================================================
@@ -168,14 +171,38 @@ function firstWorkIndex(day) {
   return day.blocks.findIndex(b => parseHeader(b.header).kind === 'work');
 }
 
-const history = () => store.json(KEYS.history, []);
-const writeHistory = h => store.set(KEYS.history, JSON.stringify(h));
+let historyCache = null;
+const history = () => historyCache || (historyCache = store.json(KEYS.history, []));
+const writeHistory = h => { historyCache = h; store.set(KEYS.history, JSON.stringify(h)); };
 const programHistory = () => history().filter(e => e.title === program.title);
 
 function entriesFor(week, day) {
   return programHistory()
     .filter(e => e.day === day && (progMeta.repeat || e.week === week))
     .sort((a, b) => b.endedAt - a.endedAt);
+}
+
+// Every logged session of a day, newest first, across all weeks of this program.
+function entriesForDay(day) {
+  return programHistory().filter(e => e.day === day).sort((a, b) => b.endedAt - a.endedAt);
+}
+
+function weekProgress(w) {
+  const days = program.weeks[w].days;
+  return { done: days.filter(d => entriesFor(w, d.day).length).length, total: days.length };
+}
+
+// The week you're on: the first one with a day still to do.
+function currentWeek() {
+  return progMeta.weeks.find(w => { const p = weekProgress(w); return p.done < p.total; }) || progMeta.weeks[progMeta.weeks.length - 1];
+}
+
+// The week the calendar says, from the program's start date (if it has one).
+function calendarWeek() {
+  if (!program.start) return null;
+  const t0 = new Date(program.start + 'T00:00:00').getTime();
+  const n = Math.floor((now() - t0) / (7 * 864e5)) + 1;
+  return String(Math.max(1, Math.min(progMeta.weeks.length, n)));
 }
 
 // With one week repeated N times, the "week" you're on is the rotation:
@@ -232,19 +259,46 @@ const sfx = {
 function buzz(p) { try { if (navigator.vibrate) navigator.vibrate(p); } catch (e) { /* ignore */ } }
 
 /* =========================================================
-   SCREEN WAKE LOCK (needs https; silently absent otherwise)
+   SCREEN WAKE LOCK (needs https)
+   The screen stays on whenever a session is open, paused or not.
+   On the home screen it stays on too, until 5 minutes without a touch.
+   The browser drops the lock when the app is hidden; it is taken
+   again as soon as the app is visible.
    ========================================================= */
 
+const HOME_IDLE_MS = 5 * 60 * 1000;
 let wakeLock = null;
+let wakeWanted = false;
+let wakeWarned = false;
+let lastTouch = Date.now();
+
 function acquireWake() {
-  if (!('wakeLock' in navigator) || wakeLock) return;
+  wakeWanted = true;
+  requestWake();
+}
+
+function requestWake() {
+  if (!wakeWanted || wakeLock || document.visibilityState !== 'visible') return;
+  if (!('wakeLock' in navigator)) { warnNoWake(); return; }
   navigator.wakeLock.request('screen').then(lock => {
     wakeLock = lock;
-    lock.addEventListener('release', () => { wakeLock = null; });
-  }).catch(() => {});
+    lock.addEventListener('release', () => {
+      wakeLock = null;
+      requestWake(); // released by the system while still visible: take it back
+    });
+  }).catch(warnNoWake);
 }
+
 function releaseWake() {
-  if (wakeLock) { wakeLock.release().catch(() => {}); wakeLock = null; }
+  wakeWanted = false;
+  if (wakeLock) { const l = wakeLock; wakeLock = null; l.release().catch(() => {}); }
+}
+
+// Said once, and only when a session needs it, so it never nags on the home screen.
+function warnNoWake() {
+  if (wakeWarned || !S) return;
+  wakeWarned = true;
+  toast("Can't hold the screen on here. Set Auto-Lock to Never for workouts.");
 }
 
 /* =========================================================
@@ -271,6 +325,8 @@ function newSession(week, day) {
         loads: exs.map(e => e.load),
         draft: exs.map(e => e.value),
         tStart: null, tEnd: null,
+        spent: 0, enteredAt: null,
+        adj: { load: 0, reps: 0 },
         emom: null
       };
     }),
@@ -287,16 +343,43 @@ const sRungs = i => parseHeader(sBlock(i).header).rungs;
 const sExs = (i, r = S.blocks[i].rounds.length) => sBlock(i).exercises.map(line => parseExercise(line, r, sRungs(i)));
 const isLadder = i => !!sRungs(i);
 
-// After a ladder round is logged or undone, reset reps and loads to the new rung.
+// Step a load n bell/plate jumps (negative = lighter).
+function stepTimes(load, n) {
+  for (let k = 0; k < Math.abs(n); k++) load = stepLoad(load, Math.sign(n));
+  return load;
+}
+
+// After a ladder round is logged or undone, reset reps and loads to the new rung,
+// keeping any drop taken mid-block (a grind) for the rest of the block.
 function syncRung(i) {
   const st = S.blocks[i];
+  const adj = st.adj || { load: 0, reps: 0 };
   sExs(i).forEach((ex, j) => {
     if (!ex.ladder) return;
-    st.draft[j] = ex.value;
-    st.loads[j] = ex.load;
+    st.draft[j] = ex.time || ex.value == null ? ex.value : Math.max(0, ex.value + adj.reps);
+    st.loads[j] = stepTimes(ex.load, adj.load);
   });
 }
 const targetRounds = i => parseHeader(sBlock(i).header).rounds + S.blocks[i].extra;
+
+// A block is done when its work is logged (or its EMOM ran out, or every item is
+// ticked). Leaving a block doesn't finish it.
+function blockDone(i) {
+  const st = S.blocks[i], blk = sBlock(i), m = parseHeader(blk.header);
+  if (m.kind !== 'work') return blk.exercises.every((line, j) => st.checks[j] >= passesNeeded(parseExercise(line)));
+  if (st.emom && st.emom.done) return true;
+  return st.rounds.length >= targetRounds(i);
+}
+const blockStarted = i => S.blocks[i].rounds.length > 0 || S.blocks[i].checks.some(c => c > 0);
+
+// Time per block is the time actually spent in it, over every visit.
+function enterBlock(i) { if (S.startedAt && S.blocks[i].enteredAt == null) S.blocks[i].enteredAt = elapsed(); }
+function leaveBlock(i) {
+  const b = S.blocks[i];
+  if (b.enteredAt == null) return;
+  b.spent = (b.spent || 0) + elapsed() - b.enteredAt;
+  b.enteredAt = null;
+}
 
 function elapsed() {
   if (!S) return 0;
@@ -308,7 +391,7 @@ function ensureRunning() {
   if (S.runSince) return;
   if (!S.startedAt) S.startedAt = now();
   S.runSince = now();
-  if (S.blocks[S.blockIndex].tStart == null) S.blocks[S.blockIndex].tStart = elapsed();
+  enterBlock(S.blockIndex);
   acquireWake();
 }
 
@@ -451,13 +534,26 @@ function renderHome() {
     }
     h += '</section>';
   } else {
-    h += '<div class="sec-head"><span class="label">Week</span><span class="label"><b>' + esc(program.weeks[week].phase) + '</b></span></div>';
-    h += '<nav class="week-chips" aria-label="Week">' + progMeta.weeks.map(w =>
-      '<button class="week-chip press" type="button" data-act="week" data-week="' + esc(w) + '" aria-current="' + (w === week) + '">' + esc(w) + '</button>'
-    ).join('') + '</nav>';
+    const cur = currentWeek();
+    const cal = calendarWeek();
+    h += '<div class="sec-head"><span class="label">Week <b>' + esc(week) + '</b> of ' + progMeta.weeks.length + '</span><span class="label"><b>' + esc(program.weeks[week].phase) + '</b></span></div>';
+    h += '<nav class="week-chips" aria-label="Week">' + progMeta.weeks.map(w => {
+      const p = weekProgress(w);
+      const state = p.done >= p.total ? ' done' : p.done ? ' part' : '';
+      return '<button class="week-chip press' + state + (w === cur ? ' now' : '') + '" type="button" data-act="week" data-week="' + esc(w) + '" aria-current="' + (w === week) + '"' +
+        ' aria-label="Week ' + esc(w) + ', ' + p.done + ' of ' + p.total + ' done">' + esc(w) + '</button>';
+    }).join('') + '</nav>';
+    // Behind the calendar: say so once, calmly, and offer the jump. Never skip ahead on its own.
+    if (cal && +cal > +cur && week === cur) {
+      h += '<p class="cal-hint">Calendar says week ' + esc(cal) + '. You\'re on week ' + esc(cur) + '. ' +
+        '<button type="button" class="link-btn go" data-act="week" data-week="' + esc(cal) + '">Go to week ' + esc(cal) + '</button></p>';
+    } else if (week !== cur) {
+      h += '<p class="cal-hint">You\'re on week ' + esc(cur) + '. <button type="button" class="link-btn go" data-act="week" data-week="' + esc(cur) + '">Back to week ' + esc(cur) + '</button></p>';
+    }
   }
 
   h += '<div class="sec-head"><span class="label">Sessions</span></div><div class="days rise">';
+  const nextDay = !rot && week === currentWeek() ? days.find(d => !entriesFor(week, d.day).length) : null;
   days.forEach(d => {
     const last = entriesFor(week, d.day)[0];
     const lift = keyLift(d);
@@ -467,6 +563,8 @@ function renderHome() {
       else if (rot.next === d.day) { state = 'is-next'; tag = '<span class="tag tag-go">Up next</span>'; }
     } else if (last) {
       state = 'is-done'; tag = '<span class="tag tag-done">Done · ' + esc(shortDate(last.endedAt)) + '</span>';
+    } else if (nextDay && nextDay.day === d.day) {
+      state = 'is-next'; tag = '<span class="tag tag-go">Up next</span>';
     }
     if (!tag && last) tag = '<span class="tag">Last ' + clock(last.duration) + '</span>';
     h += '<button class="day plate press ' + state + '" type="button" data-act="open-day" data-day="' + d.day + '">' +
@@ -478,21 +576,22 @@ function renderHome() {
   });
   h += '</div>';
 
-  // Hold line: the last eight sessions of each day's primary lift.
-  h += '<div class="sec-head"><span class="label">Hold line</span><span class="label"><b>Primary lifts</b></span></div>';
+  // Hold line: the last eight sessions of each day's primary lift, across the season.
+  h += '<div class="sec-head"><span class="label">Hold line</span><span class="label"><b>Last 8 sessions</b></span></div>';
   h += '<section class="hold plate">';
   let anyHistory = false;
   days.forEach(d => {
     const lift = keyLift(d);
     if (!lift) return;
-    const entries = entriesFor(week, d.day).slice(0, 8).reverse();
+    const entries = (progMeta.repeat ? entriesFor(week, d.day) : entriesForDay(d.day)).slice(0, 8).reverse();
     if (entries.length) anyHistory = true;
+    const status = e => heldStatus(e, (program.weeks[e.week] && getDay(e.week, e.day)) || d);
     let marks = '';
     for (let i = 0; i < 8; i++) {
       const e = entries[i];
-      marks += '<i class="' + (e ? heldStatus(e, d) : '') + '"></i>';
+      marks += '<i class="' + (e ? status(e) : '') + '"' + (e ? ' title="Week ' + esc(e.week) + '"' : '') + '></i>';
     }
-    const held = entries.filter(e => heldStatus(e, d) === 'held').length;
+    const held = entries.filter(e => status(e) === 'held').length;
     h += '<div class="hold-row"><span class="hold-name">' + esc(lift.name) + '</span>' +
       '<span class="hold-marks" aria-label="' + held + ' of ' + entries.length + ' held">' + marks + '</span>' +
       '<span class="hold-spec">' + esc(lift.spec) + (entries.length ? ' · held ' + held + '/' + entries.length : '') + '</span></div>';
@@ -512,6 +611,9 @@ function renderHome() {
   }
 
   $('#view-home').innerHTML = h;
+
+  const chip = $('#view-home .week-chip[aria-current="true"]');
+  if (chip) chip.scrollIntoView({ inline: 'center', block: 'nearest' });
 
   // Fill the current cycle segment after paint so it visibly charges.
   const seg = $('#view-home .cycle-bar .now');
@@ -566,34 +668,61 @@ function renderLog() {
 function renderSession() {
   const d = sDay();
   let h = '<header class="s-top">' +
-    '<button class="icon-btn press" type="button" data-act="close" aria-label="Back to today">' + ICON.close + '</button>' +
+    '<button class="icon-btn press" type="button" data-act="close" aria-label="Session menu" aria-expanded="false">' + ICON.close + '</button>' +
     '<div class="s-title"><span class="label">' + (progMeta.repeat ? 'Day ' + S.day : 'W' + esc(S.week) + ' · Day ' + S.day) + '</span><b>' + esc(d.name) + '</b></div>' +
     '<button class="s-clock press" type="button" data-act="clock" aria-label="Pause or resume session clock"><i></i><span id="s-clock">' + clock(elapsed()) + '</span></button>' +
     '</header>';
+  h += '<div id="s-menu"></div>';
   h += '<nav class="strip" id="strip" aria-label="Blocks"></nav>';
   h += '<div id="block-host"></div>';
   h += '<div class="dock" id="dock"></div>';
   $('#view-session').innerHTML = h;
+  renderMenu();
   renderStrip();
   renderBlock();
   updateClock();
+}
+
+// The X opens a small menu: leave (the session keeps its place) or end it now.
+function renderMenu() {
+  const host = $('#s-menu');
+  if (!host) return;
+  const btn = $('[data-act="close"]');
+  if (btn) btn.setAttribute('aria-expanded', String(!!ui.menu));
+  host.innerHTML = !ui.menu ? '' :
+    '<div class="s-menu plate">' +
+    '<button type="button" class="btn press" data-act="leave">Back to Today<small>Keeps your place</small></button>' +
+    '<button type="button" class="btn btn-ghost hold-btn" data-hold="finish" style="--hold:1s"><span>Hold to end and save</span></button>' +
+    '</div>';
 }
 
 function renderStrip() {
   const d = sDay();
   $('#strip').innerHTML = d.blocks.map((b, i) => {
     const m = parseHeader(b.header);
-    const st = S.blocks[i];
-    const done = st.tEnd != null;
-    const cls = i === S.blockIndex ? 'current' : done ? 'done' : '';
+    const cls = i === S.blockIndex ? 'current' : blockDone(i) ? 'done' : blockStarted(i) ? 'part' : '';
     return '<button type="button" class="' + cls + '" data-act="jump" data-i="' + i + '" aria-label="' + esc(m.label) + '">' + esc(m.letter) + '</button>';
   }).join('');
 }
 
-function lastRoundsFor(bi) {
-  const prev = entriesFor(S.week, S.day)[0];
-  if (!prev || !prev.blocks[bi] || prev.blocks[bi].header !== sBlock(bi).header) return null;
-  return prev.blocks[bi].rounds || null;
+let lastMemo = {};
+function lastFor(name) {
+  if (name in lastMemo) return lastMemo[name];
+  if (!lastMemo._hist) lastMemo._hist = programHistory().sort((a, b) => b.endedAt - a.endedAt);
+  let found = null;
+  for (const e of lastMemo._hist) {
+    const d = program.weeks[e.week] && getDay(e.week, e.day);
+    if (!d) continue;
+    for (let k = 0; k < d.blocks.length && !found; k++) {
+      const rounds = e.blocks[k] && e.blocks[k].rounds;
+      if (!rounds || !rounds.length) continue;
+      const j = d.blocks[k].exercises.findIndex(line => parseExercise(line).name === name);
+      if (j < 0) continue;
+      found = { reps: rounds.map(r => r.reps[j]).filter(v => v != null), loads: [...new Set(rounds.map(r => r.loads[j]).filter(Boolean))] };
+    }
+    if (found) break;
+  }
+  return (lastMemo[name] = found);
 }
 
 function renderBlock() {
@@ -603,6 +732,8 @@ function renderBlock() {
   const st = S.blocks[i];
   const exs = sExs(i);
   const emom = m.kind === 'work' && isEmomNote(blk.note);
+  const done = blockDone(i);
+  lastMemo = {};
   let h = '<article class="block plate is-' + m.kind + '">';
 
   h += '<header class="block-head"><div class="block-letter">' + esc(m.letter) + '</div>';
@@ -613,7 +744,7 @@ function renderBlock() {
       h += '<div class="block-sub">' + (alternatingEmom(blk.note) ? 'Odd minutes work · even rest' : 'Every minute on the minute') + '</div>';
     } else if (m.rungs) {
       const n = Math.min(st.rounds.length + 1, tr);
-      h += '<div class="block-spec">' + (st.tEnd != null ? 'Ladder done' : 'Rung ' + n + '<span>/</span>' + tr) + (m.rest ? '<span>·</span>' + m.rest + 's rest' : '') + '</div>';
+      h += '<div class="block-spec">' + (done ? 'Ladder done' : 'Rung ' + n + '<span>/</span>' + tr) + (m.rest ? '<span>·</span>' + m.rest + 's rest' : '') + '</div>';
       h += '<div class="block-sub">' + exs.length + ' moves · no rest inside a rung</div>';
     } else {
       const ladder = isLadder(i);
@@ -625,17 +756,16 @@ function renderBlock() {
     h += '<div class="block-spec">' + esc(m.label) + '</div>';
     h += '<div class="block-sub">' + done + ' of ' + exs.length + ' done</div>';
   }
+  if (done && m.kind === 'work') h += '<span class="cleared">Cleared</span>';
   h += '</header>';
 
-  if (st.tEnd != null && m.kind === 'work') h += '<span class="cleared">CLEARED</span>';
-
   if (m.rungs) h += ladderStrip(i);
-  else if (m.kind === 'work') {
+  else if (m.kind === 'work' && !emom) {
     const tr = targetRounds(i);
     h += '<div class="pips" aria-label="' + st.rounds.length + ' of ' + tr + ' rounds">';
     for (let r = 0; r < Math.max(tr, st.rounds.length); r++) {
       const rd = st.rounds[r];
-      let cls = rd ? (rd.effort === 'grind' ? 'on grind' : 'on') : '';
+      let cls = rd ? (rd.effort === 'grind' ? 'on grind' : 'on') : r === st.rounds.length ? 'next' : '';
       if (ui.popPip === r) cls += ' pop';
       h += '<i class="' + cls + '"></i>';
     }
@@ -644,7 +774,7 @@ function renderBlock() {
 
   if (blk.note) {
     const drop = dropTarget(blk.note);
-    h += '<button type="button" class="block-note' + (ui.noteOpen ? ' open' : '') + (drop ? ' has-drop' : '') + '" data-act="note"><span>' + esc(blk.note) + '</span></button>';
+    h += '<button type="button" class="block-note' + (ui.noteOpen ? ' open' : '') + (drop ? ' has-drop' : '') + (blk.note.length > 100 ? ' long' : '') + '" data-act="note" aria-expanded="' + !!ui.noteOpen + '"><span>' + esc(blk.note) + '</span></button>';
   }
 
   if (emom) h += emomPanel(i);
@@ -658,7 +788,8 @@ function renderBlock() {
     st.rounds.forEach((r, ri) => {
       if (m.rungs) { h += ladderLogRow(i, r, ri); return; }
       const parts = sExs(i, ri).map((ex, j) => {
-        const v = r.reps[j] == null ? '–' : (ex.time ? r.reps[j] + 's' : r.reps[j]);
+        let v = r.reps[j] == null ? '–' : (ex.time ? r.reps[j] + 's' : r.reps[j]);
+        if (r.reps[j] != null && ex.value != null && r.reps[j] < ex.value) v = '<em>' + v + '</em>';
         const changed = r.loads[j] !== ex.load;
         return changed ? v + '<em>@' + esc(loadText(r.loads[j])) + '</em>' : v;
       });
@@ -668,7 +799,7 @@ function renderBlock() {
     });
     h += '</ol>';
     h += '<div class="rlog-actions"><button type="button" class="link-btn" data-act="undo-round">Undo last</button>' +
-      (!emom ? '<button type="button" class="link-btn go" data-act="extra-round">+1 round</button>' : '') + '</div>';
+      (!emom ? '<button type="button" class="link-btn go" data-act="extra-round">+1 ' + (m.rungs ? 'rung' : 'round') + '</button>' : '') + '</div>';
   }
   h += '</article>';
 
@@ -687,12 +818,13 @@ function ladderStrip(i) {
   const m = parseHeader(sBlock(i).header);
   const tr = targetRounds(i);
   const now = st.rounds.length;
+  const done = blockDone(i);
   let prev = null;
   let h = '<ol class="rungs" aria-label="Rung ' + Math.min(now + 1, tr) + ' of ' + tr + '">';
   for (let r = 0; r < Math.max(tr, now); r++) {
     const rd = st.rounds[r];
     const load = rd ? rd.loads[0] : r === now ? st.loads[0] : sExs(i, r)[0].load;
-    const state = rd ? (rd.effort === 'grind' ? 'done grind' : 'done') : r === now && st.tEnd == null ? 'now' : '';
+    const state = rd ? (rd.effort === 'grind' ? 'done grind' : 'done') : r === now && !done ? 'now' : '';
     const swap = prev != null && load !== prev;
     h += '<li class="rung ' + state + (ui.popPip === r ? ' pop' : '') + '">' +
       '<b>' + rung(m.rungs, r) + '</b>' +
@@ -700,7 +832,7 @@ function ladderStrip(i) {
     prev = load;
   }
   h += '</ol>';
-  if (st.tEnd == null && st.loads[0]) h += rungBells(i);
+  if (!done && st.loads[0]) h += rungBells(i);
   return h;
 }
 
@@ -715,7 +847,7 @@ function rungBells(i) {
   return '<div class="rung-bells' + (changed ? ' changed' : '') + '"><span class="label">Bells</span>' +
     '<b>' + esc(loadText(st.loads[0])) + '</b>' +
     (adjustable ? '<button type="button" class="press" data-act="rung-load" data-d="-1" aria-label="Lighter">−' + step + '</button>' +
-      (changed ? '<button type="button" class="press reset" data-act="rung-load-reset">' + esc(loadText(planned)) + '</button>' : '') +
+      (changed ? '<button type="button" class="press reset" data-act="rung-load-reset" aria-label="Back to plan">↺ ' + esc(loadText(planned)) + '</button>' : '') +
       '<button type="button" class="press" data-act="rung-load" data-d="1" aria-label="Heavier">+' + step + '</button>' : '') +
     '</div>';
 }
@@ -748,15 +880,17 @@ function ladderLogRow(i, r, ri) {
 
 function workList(i, exs) {
   const st = S.blocks[i];
-  const last = lastRoundsFor(i);
   let h = '<ul class="exs">';
   exs.forEach((ex, j) => {
     const load = st.loads[j];
     const loadChanged = load !== ex.load;
-    const lastVals = last ? last.map(r => r.reps[j]).filter(v => v != null) : [];
+    const repsChanged = !ex.time && ex.value != null && st.draft[j] !== ex.value;
+    const last = lastFor(ex.name);
+    const lastLoad = last && last.loads.length && !(last.loads.length === 1 && last.loads[0] === 'BW') ? ' @ ' + last.loads.map(loadText).join('/') : '';
     h += '<li class="ex"><div class="ex-name">' + esc(ex.name) + '</div>';
-    h += '<div class="ex-line"><div><span class="ex-target">' + esc(doseText(ex)) + (ex.load ? ' @ ' + esc(loadText(ex.load)) : '') + '</span>' +
-      (lastVals.length ? '<span class="ex-last">LAST <b>' + lastVals.join('·') + '</b></span>' : '') + '</div>';
+    h += '<div class="ex-line"><div>' +
+      (loadChanged || repsChanged ? '<span class="ex-target">Plan ' + esc(doseText(ex)) + (ex.load ? ' @ ' + esc(loadText(ex.load)) : '') + '</span>' : '') +
+      (last && last.reps.length ? '<span class="ex-last">Last <b>' + last.reps.join('·') + '</b>' + esc(lastLoad) + '</span>' : '') + '</div>';
     h += '<div class="ex-ctrls">';
     if (ex.time) {
       h += runButton(i, j, ex);
@@ -768,12 +902,14 @@ function workList(i, exs) {
     }
     if (load) {
       const adjustable = parseLoad(load) && !parseLoad(load).bw && !parseLoad(load).raw;
-      h += '<button type="button" class="load-chip press' + (loadChanged ? ' changed' : '') + '" data-act="load" data-ex="' + j + '"' + (adjustable ? '' : ' disabled') + '>' + esc(loadText(load)) + '</button>';
+      h += adjustable
+        ? '<button type="button" class="load-chip press' + (loadChanged ? ' changed' : '') + '" data-act="load" data-ex="' + j + '" aria-label="Load ' + esc(loadText(load)) + ', change">' + esc(loadText(load)) + '</button>'
+        : '<span class="load-text">' + esc(loadText(load)) + '</span>';
     }
     h += '</div></div>';
     if (ui.loadEdit === j) {
       h += '<div class="load-edit"><button type="button" class="press" data-act="load-step" data-ex="' + j + '" data-d="-1">− ' + (parseLoad(load).unit === 'lb' ? '5lb' : '4kg') + '</button>' +
-        (loadChanged ? '<button type="button" class="press reset" data-act="load-reset" data-ex="' + j + '">' + esc(loadText(ex.load)) + '</button>' : '') +
+        (loadChanged ? '<button type="button" class="press reset" data-act="load-reset" data-ex="' + j + '" aria-label="Back to plan">↺ ' + esc(loadText(ex.load)) + '</button>' : '') +
         '<button type="button" class="press" data-act="load-step" data-ex="' + j + '" data-d="1">+ ' + (parseLoad(load).unit === 'lb' ? '5lb' : '4kg') + '</button></div>';
     }
     h += '</li>';
@@ -801,8 +937,8 @@ function checkList(i, exs) {
 
 function runButton(i, j, ex) {
   const on = S.timer && S.timer.b === i && S.timer.ex === j;
-  return '<button type="button" class="run press' + (on ? ' is-on' : '') + '" data-act="timer" data-ex="' + j + '" id="run-' + j + '">' +
-    ICON.play + '<b>' + (on ? countdown(S.timer.endsAt - now()) : secsText(ex.value)) + '</b><span class="fill"></span></button>';
+  return '<button type="button" class="run press' + (on ? ' is-on' : '') + '" data-act="timer" data-ex="' + j + '" id="run-' + j + '" aria-label="' + (on ? 'Stop timer' : 'Start ' + ex.value + ' second timer') + '">' +
+    (on ? ICON.stop : ICON.play) + '<b>' + shortClock(on ? S.timer.endsAt - now() : ex.value * 1000) + '</b><span class="fill"></span></button>';
 }
 
 function emomPanel(i) {
@@ -821,7 +957,7 @@ function emomPanel(i) {
   return '<div class="emom' + (!e ? ' is-idle' : '') + '" id="emom">' +
     '<div><div class="emom-min">Minute <b id="emom-min">' + (e ? pad(Math.min(minute + 1, total)) : '00') + '</b> / ' + total + '</div>' +
     '<div class="emom-phase" id="emom-phase">' + (!e ? 'Standby' : e.done ? 'Done' : 'Work') + '</div></div>' +
-    '<div class="emom-sec" id="emom-sec">' + (e && !e.done ? '60' : '—') + '</div>' +
+    '<div class="emom-sec" id="emom-sec">' + (e && e.done ? '0' : '60') + '</div>' +
     '<div class="emom-bar" id="emom-bar">' + bar + '</div></div>';
 }
 
@@ -840,7 +976,11 @@ function renderDock() {
     ? '<button type="button" class="act hold-btn' + (strong ? '' : ' quiet') + '" data-hold="finish"><span class="act-l">Hold to finish</span><span class="act-r">' + clock(elapsed()) + '</span></button>'
     : '<button type="button" class="act' + (strong ? '' : ' quiet') + '" data-act="next-block"><span class="act-l">Next · ' + esc(next.label) + '</span><span class="act-r">' + (i + 2) + '/' + sDay().blocks.length + '</span></button>';
 
-  if (m.kind !== 'work') {
+  if (S.timer && S.timer.b === i) {
+    const ex = sExs(i)[S.timer.ex];
+    html = '<button type="button" class="act timer-act" data-act="timer" data-ex="' + S.timer.ex + '" aria-label="Stop timer">' +
+      '<span class="act-l">' + esc(ex.name) + '<small>Tap to stop</small></span><b id="dock-timer">' + shortClock(S.timer.endsAt - now()) + '</b></button>';
+  } else if (m.kind !== 'work') {
     const all = sExs(i).every((e, j) => st.checks[j] >= passesNeeded(e));
     html = nextBtn(all);
   } else if (emom) {
@@ -884,9 +1024,11 @@ function tickTimers() {
     if (sec <= 3 && sec >= 1 && S.timer.beep !== sec) { S.timer.beep = sec; sfx.count(sec); }
     const btn = view === 'session' && S.timer.b === S.blockIndex ? $('#run-' + S.timer.ex) : null;
     if (btn) {
-      btn.querySelector('b').textContent = countdown(Math.max(0, left));
+      btn.querySelector('b').textContent = shortClock(left);
       btn.querySelector('.fill').style.transform = 'scaleX(' + Math.max(0, left / S.timer.dur) + ')';
     }
+    const dockT = view === 'session' && S.timer.b === S.blockIndex ? $('#dock-timer') : null;
+    if (dockT) dockT.textContent = shortClock(left);
     if (left <= 0) finishTimer();
   }
 
@@ -992,12 +1134,12 @@ function finishTimer() {
   S.timer = null;
   sfx.go(); buzz([90, 60, 160]);
   const m = parseHeader(sBlock(b).header);
-  if (m.kind !== 'work') {
-    const ex = sExs(b)[j];
-    S.blocks[b].checks[j] = Math.min(passesNeeded(ex), S.blocks[b].checks[j] + 1);
-  }
+  const ex = sExs(b)[j];
+  if (m.kind !== 'work') S.blocks[b].checks[j] = Math.min(passesNeeded(ex), S.blocks[b].checks[j] + 1);
+  else S.blocks[b].draft[j] = ex.value;
   save();
   if (view === 'session' && b === S.blockIndex) renderBlock();
+  else if (view === 'session') renderDock();
 }
 
 /* ---------- rest sheet ---------- */
@@ -1034,9 +1176,9 @@ function renderRest() {
   const drop = dropTarget(blk.note);
   const unit = isLadder(b) ? 'rung' : 'round';
   let h = '<div class="rest-top"><span class="label">Rest</span><span class="label">' + esc(parseHeader(blk.header).label) + ' · ' + unit + ' ' + (r + 1) + ' of ' + tr + '</span></div>';
-  h += '<div class="rest-digits" id="rest-digits">' + countdown(S.rest.endsAt - now()) + '</div>';
+  h += '<div class="rest-digits" id="rest-digits">' + shortClock(S.rest.endsAt - now()) + '</div>';
   h += '<div class="rest-bar"><i id="rest-fill"></i></div>';
-  h += '<div class="rest-adj"><button type="button" class="btn press" data-act="rest-adj" data-d="-15">−15s</button><button type="button" class="btn press" data-act="rest-adj" data-d="15">+15s</button></div>';
+  h += '<div class="rest-adj"><button type="button" class="btn press" data-act="rest-adj" data-d="-15">−15 s</button><button type="button" class="btn press" data-act="rest-adj" data-d="15">+15 s</button></div>';
 
   h += '<div class="effort"><span class="label">How did ' + unit + ' ' + (r + 1) + ' move?</span><div class="effort-row">' +
     ['easy', 'solid', 'grind'].map(v => '<button type="button" data-act="rest-effort" data-v="' + v + '" aria-pressed="' + (round && round.effort === v) + '">' + v + '</button>').join('') +
@@ -1044,12 +1186,16 @@ function renderRest() {
   if (round && round.effort === 'grind') {
     const primary = exs[0];
     const cur = st.loads[0];
+    const many = exs.length > 1;
+    const adjustable = st.loads.some(l => { const p = parseLoad(l); return p && !p.bw && !p.raw; });
     const opts = [];
-    if (drop && drop !== cur) opts.push('<button type="button" class="btn btn-ember press" data-act="rest-drop">Drop to ' + esc(loadText(drop)) + '</button>');
-    else if (cur && parseLoad(cur) && !parseLoad(cur).bw && !parseLoad(cur).raw) opts.push('<button type="button" class="btn press" data-act="rest-down-load">−1 step load</button>');
-    if (!primary.time && primary.value != null) opts.push('<button type="button" class="btn press" data-act="rest-down-rep">−1 rep</button>');
+    if (drop && drop !== cur) opts.push('<button type="button" class="btn btn-ember press" data-act="rest-drop">→ ' + esc(loadText(drop)) + '</button>');
+    else if (adjustable) opts.push('<button type="button" class="btn press" data-act="rest-down-load">−1 step' + (many ? ' all' : '') + '</button>');
+    if (exs.some(ex => !ex.time && ex.value != null)) opts.push('<button type="button" class="btn press" data-act="rest-down-rep">−1 rep' + (many ? ' all' : '') + '</button>');
     if (opts.length) {
-      h += '<div class="drop"><p>Grinding is off-plan. ' + (drop ? 'The block says <b>drop to ' + esc(loadText(drop)) + '</b>.' : 'Drop reps or load rather than grind.') + ' Applies to the remaining rounds.</p>' +
+      const scope = drop && drop !== cur ? 'The block says drop ' + esc(primary.name) + ' to <b>' + esc(loadText(drop)) + '</b>.'
+        : many ? 'Drop load or reps on every move rather than grind.' : 'Drop load or reps rather than grind.';
+      h += '<div class="drop"><p>Grinding is off-plan. ' + scope + ' Holds for the rest of this block.</p>' +
         '<div class="drop-row">' + opts.join('') + '</div></div>';
     }
   }
@@ -1080,7 +1226,7 @@ function paintRest(left) {
   if (!digits) return;
   const sheet = $('#rest-sheet');
   const over = left <= 0;
-  digits.textContent = over ? '+' + clock(-left) : countdown(left);
+  digits.textContent = over ? '+' + shortClock(-left) : shortClock(left);
   $('#rest-fill').style.transform = 'scaleX(' + (over ? 1 : left / S.rest.dur) + ')';
   sheet.classList.toggle('final', !over && left <= 3000);
   sheet.classList.toggle('over', over);
@@ -1105,7 +1251,7 @@ function openSession(week, day, restore) {
     renderSession();
     if (S.rest) openRest();
   });
-  if (S.runSince) acquireWake();
+  acquireWake();
 }
 
 function leaveSession() {
@@ -1113,7 +1259,7 @@ function leaveSession() {
   const sheet = $('#rest-sheet');
   sheet.classList.remove('up');
   sheet.hidden = true;
-  releaseWake();
+  lastTouch = Date.now(); // home keeps the screen on until it sits idle
   S = null;
   shutter(() => { renderHome(); show('home'); });
 }
@@ -1142,19 +1288,17 @@ function logRound() {
 }
 
 function goToBlock(next) {
-  const cur = S.blocks[S.blockIndex];
-  if (cur.tEnd == null && S.startedAt) cur.tEnd = elapsed();
+  leaveBlock(S.blockIndex);
   S.blockIndex = next;
-  if (S.blocks[next].tStart == null && S.startedAt) S.blocks[next].tStart = elapsed();
+  enterBlock(next);
   ui = {};
   save();
-  shutter(() => { renderStrip(); renderBlock(); window.scrollTo(0, 0); });
+  shutter(() => { renderMenu(); renderStrip(); renderBlock(); window.scrollTo(0, 0); });
 }
 
 function finishSession() {
   const d = sDay();
-  const cur = S.blocks[S.blockIndex];
-  if (cur.tEnd == null) cur.tEnd = elapsed();
+  leaveBlock(S.blockIndex);
   if (!S.startedAt) S.startedAt = now();
   pauseClock();
   const dur = S.acc;
@@ -1166,7 +1310,7 @@ function finishSession() {
       header: d.blocks[i].header,
       rounds: b.rounds,
       checks: b.checks,
-      time: b.tStart != null && b.tEnd != null ? b.tEnd - b.tStart : null
+      time: b.rounds.length || b.checks.some(c => c > 0) ? Math.round(b.spent || 0) : null
     })),
     notation: buildNotation(d, dur)
   };
@@ -1175,10 +1319,12 @@ function finishSession() {
   h.push(entry);
   writeHistory(h);
   store.del(KEYS.session);
-  releaseWake();
+  lastTouch = Date.now();
   const sheet = $('#rest-sheet'); sheet.classList.remove('up'); sheet.hidden = true;
   const done = S;
   S = null;
+  // Ask the browser not to evict the history under storage pressure.
+  if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
   sfx.finish(); buzz([60, 40, 60, 40, 260]);
   shutter(() => { renderSummary(entry, prev, d, done); show('summary'); });
 }
@@ -1244,16 +1390,17 @@ function renderSummary(entry, prev, d, done) {
     const m = parseHeader(blk.header);
     const st = done.blocks[i];
     const full = m.kind === 'work'
-      ? st.rounds.length >= m.rounds
+      ? st.rounds.length >= m.rounds || !!(st.emom && st.emom.done)
       : st.checks.every((c, j) => c >= passesNeeded(parseExercise(blk.exercises[j])));
-    return '<i class="' + (full ? 'full' : 'part') + '" style="--d:' + (i * 0.09).toFixed(2) + 's">' + esc(m.letter) + '</i>';
+    const any = st.rounds.length || st.checks.some(c => c > 0);
+    return '<i class="' + (full ? 'full' : any ? 'part' : 'skip') + '" style="--d:' + (i * 0.09).toFixed(2) + 's">' + esc(m.letter) + '</i>';
   }).join('') + '</div>';
   h += '<h1 class="sum-name">' + esc(d.name) + '</h1>';
   h += '<div class="sum-time" id="sum-time" data-ms="' + entry.duration + '">' + clock(0) + '</div>' + delta;
   h += '<div class="stats">' +
     '<div class="stat ' + (held === 'held' ? 'go' : held === 'short' ? 'ember' : '') + '"><b>' + (held === 'held' ? 'HELD' : held === 'short' ? 'DROP' : '—') + '</b><span class="label">Primary</span></div>' +
     '<div class="stat"><b>' + rounds + '</b><span class="label">Rounds</span></div>' +
-    '<div class="stat' + (grinds ? ' ember' : '') + '"><b>' + reps + '</b><span class="label">Reps' + (grinds ? ' · ' + grinds + ' grind' : '') + '</span></div></div>';
+    '<div class="stat"><b>' + reps + '</b><span class="label">Reps</span>' + (grinds ? '<span class="stat-sub">' + grinds + ' grind' + (grinds > 1 ? 's' : '') + '</span>' : '') + '</div></div>';
 
   h += '<div class="sec-head"><span class="label">Blocks</span></div><ul class="rows plate">';
   d.blocks.forEach((blk, i) => {
@@ -1263,7 +1410,8 @@ function renderSummary(entry, prev, d, done) {
     let sub;
     if (m.kind === 'work') sub = st.rounds.length + '/' + m.rounds + ' rounds';
     else sub = st.checks.filter((c, j) => c >= passesNeeded(parseExercise(blk.exercises[j]))).length + '/' + blk.exercises.length + ' done';
-    h += '<li><span class="r-name">' + esc(m.label) + '</span><span class="r-sub">' + sub + '</span><span class="r-time">' + (t != null ? clock(t) : '—') + '</span></li>';
+    h += '<li><span class="r-name">' + esc(m.label) + '</span><span class="r-sub">' + sub + '</span>' +
+      (t != null ? '<span class="r-time">' + clock(t) + '</span>' : '<span class="r-time none">Skipped</span>') + '</li>';
   });
   h += '</ul>';
 
@@ -1361,7 +1509,8 @@ const ACTIONS = {
     openSession(homeWeek, day);
   },
   resume() { const s = loadSaved(); if (s) openSession(s.week, s.day, s); },
-  close() { leaveSession(); },
+  close() { ui.menu = !ui.menu; renderMenu(); },
+  leave() { leaveSession(); },
   clock() {
     if (!S.startedAt) { ensureRunning(); }
     else if (S.runSince) { pauseClock(); toast('Clock paused'); }
@@ -1394,7 +1543,14 @@ const ACTIONS = {
   },
   timer(t) {
     const j = +t.dataset.ex;
-    if (S.timer && S.timer.b === S.blockIndex && S.timer.ex === j) { S.timer = null; save(); renderBlock(); return; }
+    if (S.timer && S.timer.b === S.blockIndex && S.timer.ex === j) {
+      // Stopped early: a work block logs the seconds actually held.
+      const held = Math.round((now() - (S.timer.endsAt - S.timer.dur)) / 1000);
+      if (parseHeader(sBlock(S.blockIndex).header).kind === 'work') {
+        S.blocks[S.blockIndex].draft[j] = Math.min(held, sExs(S.blockIndex)[j].value);
+      }
+      S.timer = null; save(); renderBlock(); return;
+    }
     startTimer(j);
   },
   check(t) {
@@ -1458,13 +1614,18 @@ const ACTIONS = {
   },
   'rest-down-load'() {
     const st = S.blocks[S.rest.b];
-    st.loads[0] = stepLoad(st.loads[0], -1);
-    toast('Load down a step'); save(); renderRest(); renderBlock();
+    st.adj = st.adj || { load: 0, reps: 0 };
+    st.adj.load--;
+    st.loads = st.loads.map(l => stepLoad(l, -1));
+    toast(st.loads.length > 1 ? 'Every move down a step' : 'Load down a step'); save(); renderRest(); renderBlock();
   },
   'rest-down-rep'() {
     const st = S.blocks[S.rest.b];
-    st.draft[0] = Math.max(0, st.draft[0] - 1);
-    toast('One rep fewer'); save(); renderRest(); renderBlock();
+    const exs = sExs(S.rest.b);
+    st.adj = st.adj || { load: 0, reps: 0 };
+    st.adj.reps--;
+    st.draft = st.draft.map((v, j) => exs[j].time || v == null ? v : Math.max(0, v - 1));
+    toast(exs.length > 1 ? 'One rep fewer on every move' : 'One rep fewer'); save(); renderRest(); renderBlock();
   },
   'rest-done'() { closeRest(); },
   copy(t) { const e = history().find(x => x.id === t.dataset.id); if (e) copyText(e.notation); },
@@ -1473,7 +1634,10 @@ const ACTIONS = {
     if (e && navigator.share) navigator.share({ title: e.dayName, text: e.notation }).catch(() => {});
   },
   export() { exportHistory(); },
-  'summary-done'() { shutter(() => { renderHome(); show('home'); }); }
+  'summary-done'() {
+    if (!progMeta.repeat) homeWeek = currentWeek();
+    shutter(() => { renderHome(); show('home'); });
+  }
 };
 
 function stepDraft(j, dir) {
@@ -1491,7 +1655,14 @@ function stepDraft(j, dir) {
 }
 
 const HOLDS = {
-  finish() { finishSession(); },
+  finish() {
+    if (!S.blocks.some(b => b.rounds.length || b.checks.some(c => c > 0))) {
+      store.del(KEYS.session); toast('Nothing logged, nothing saved'); S = null;
+      shutter(() => { renderHome(); show('home'); });
+      return;
+    }
+    finishSession();
+  },
   discard() { store.del(KEYS.session); toast('Session discarded'); renderHome(); },
   delete(t) {
     writeHistory(history().filter(x => x.id !== t.dataset.id));
@@ -1565,8 +1736,13 @@ setInterval(() => { if (S && S.runSince) save(); }, 5000);
 
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'hidden') save();
-  else if (S && S.runSince) acquireWake();
+  else requestWake();
 });
+
+// Any touch keeps the screen on; the home screen lets it sleep after 5 idle minutes.
+document.addEventListener('pointerdown', () => { lastTouch = Date.now(); acquireWake(); }, { capture: true, passive: true });
+setInterval(() => { if (!S && wakeWanted && Date.now() - lastTouch > HOME_IDLE_MS) releaseWake(); }, 30000);
+acquireWake();
 window.addEventListener('pagehide', save);
 
 fetch('current.json', { cache: 'no-cache' })
@@ -1576,9 +1752,10 @@ fetch('current.json', { cache: 'no-cache' })
     progMeta = readProgramMeta();
     document.title = program.title + ' · Iron Log';
     const saved = loadSaved();
-    homeWeek = saved ? saved.week : progMeta.weeks[0];
+    homeWeek = saved ? saved.week : progMeta.repeat ? progMeta.weeks[0] : currentWeek();
     renderHome();
     show('home');
+    if (saved) openSession(saved.week, saved.day, saved);
   })
   .catch(err => {
     console.error(err);

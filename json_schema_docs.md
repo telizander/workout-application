@@ -38,6 +38,7 @@ The workout data file must be named `current.json` and placed in the same direct
 **Required Fields:**
 - `title` (string): Main program title (displayed in header)
 - `subtitle` (string): Program subtitle/description
+- `start` (string, optional): First day of week 1, `YYYY-MM-DD`. The app uses it to tell you which week the calendar says you are on.
 - `weeks` (object): Container for week objects
 
 **Optional Fields:**

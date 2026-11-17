@@ -297,7 +297,7 @@ def day4(w):
     lsit = ":15" if light else {1: ":20", 2: ":25", 3: ":30"}[wave]
     moves = [f"KB Swing {swings}@24", f"KB Snatch {snatch}"] + (["Ring Pull-up 3@BW"] if pullups else []) + [f"Ring L-Sit Hold {lsit}@BW"]
     d.work(2 if light else 3, 60, moves,
-           "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your EMOM engine and lockout. "
+           "Hard, snappy swings for hamstrings and glutes to balance all that squatting; snatches keep your snatch conditioning and lockout. "
            + ("Pull-ups are an easy second exposure: neutral grip, well short of failure. Skip them if Pull day broke the pain rule this week." if pullups else ""))
 
     if light:

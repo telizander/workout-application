@@ -61,4 +61,4 @@ def build(season):
         phase, goal = season.PHASES[w]
         weeks[str(w)] = {"phase": phase, "goal": goal, "days": [day(w) for day in season.DAYS]}
     notes = f"{s['season']} ({s['dates'][0]} to {s['dates'][1]}). Eating: {s['eating']} " + s["notes"]
-    return {"program": {"title": s["title"], "subtitle": s["subtitle"], "notes": notes, "weeks": weeks}}
+    return {"program": {"title": s["title"], "subtitle": s["subtitle"], "start": s["dates"][0], "notes": notes, "weeks": weeks}}
